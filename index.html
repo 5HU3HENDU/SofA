@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Adults</title>
+    <meta name="description" content="A modern guide to managing every aspect of adult life.">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192x192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .sidebar-hidden {
+            transform: translateX(-100%);
+        }
+        .nav-item.active {
+            background-color: #333;
+            color: #fff;
+            font-weight: 600;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #2d2d2d;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .list-item-todo::before {
+            content: '✓';
+            color: #22c55e;
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        .list-item-dont::before {
+            content: '✗';
+            color: #ef4444;
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <div id="app" class="flex h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar bg-[#1a1a1a] w-64 fixed inset-y-0 left-0 z-30 md:relative md:translate-x-0 transform -translate-x-full border-r border-gray-700">
+            <div class="px-6 py-4">
+                <a href="#" class="flex items-center space-x-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    <h1 class="text-xl font-bold text-white">School of Adults</h1>
+                </a>
+            </div>
+            <nav id="nav-menu" class="px-3 py-4 space-y-1">
+                <!-- Navigation items will be injected here -->
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="flex items-center justify-between p-4 bg-[#1a1a1a] border-b border-gray-700 md:hidden">
+                <a href="#" class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    <h1 class="text-lg font-bold text-white">School of Adults</h1>
+                </a>
+                <button id="menu-toggle" class="text-white p-2 rounded-md hover:bg-gray-700">
+                    <i data-feather="menu"></i>
+                </button>
+            </header>
+            
+            <!-- Content Area -->
+            <div id="content-area" class="flex-1 overflow-y-auto p-6 md:p-8 lg:p-10">
+                <!-- Content will be injected here -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const lifeTopics = {
+            home: {
+                title: "Home",
+                icon: "home",
+            },
+            health: {
+                title: "Health & Wellness",
+                icon: "heart",
+                description: "Mastering your physical and mental well-being is the foundation of a successful life. It's about balance, consistency, and listening to your body.",
+                resources: [
+                    { name: "MyFitnessPal", url: "https://www.myfitnesspal.com/" },
+                    { name: "Headspace", url: "https://www.headspace.com/" },
+                    { name: "Examine.com (Nutrition Research)", url: "https://examine.com/" },
+                ],
+                bestPractices: [
+                    "Aim for 7-9 hours of quality sleep per night.",
+                    "Incorporate both strength training and cardiovascular exercise into your routine.",
+                    "Practice mindfulness or meditation for 10-15 minutes daily.",
+                    "Eat a balanced diet rich in whole foods, protein, and healthy fats.",
+                    "Stay hydrated by drinking water throughout the day.",
+                    "Schedule regular check-ups with your doctor and dentist.",
+                ],
+                todos: [
+                    "Create a weekly workout schedule and stick to it.",
+                    "Plan your meals for the week to avoid unhealthy impulse buys.",
+                    "Find a physical activity you genuinely enjoy.",
+                    "Set aside time for relaxation and de-stressing activities.",
+                ],
+                donts: [
+                    "Don't rely on crash diets for long-term results.",
+                    "Don't ignore persistent pain or mental health struggles.",
+                    "Don't sacrifice sleep for work or entertainment.",
+                    "Don't compare your fitness journey to others'.",
+                ],
+            },
+            wealth: {
+                title: "Wealth & Finance",
+                icon: "dollar-sign",
+                description: "Financial literacy is freedom. Understand how to manage your money, invest wisely, and build long-term wealth for yourself and your family.",
+                resources: [
+                    { name: "Investopedia", url: "https://www.investopedia.com/" },
+                    { name: "YNAB (You Need A Budget)", url: "https://www.youneedabudget.com/" },
+                    { name: "Vanguard (for low-cost investing)", url: "https://investor.vanguard.com/" },
+                ],
+                bestPractices: [
+                    "Create a detailed monthly budget and track your spending.",
+                    "Build an emergency fund covering 3-6 months of living expenses.",
+                    "Pay off high-interest debt (like credit cards) as a priority.",
+                    "Automate your savings and investments.",
+                    "Educate yourself about different investment options (stocks, bonds, real estate).",
+                    "Regularly review and rebalance your investment portfolio.",
+                ],
+                todos: [
+                    "Open a high-yield savings account for your emergency fund.",
+                    "Set up automatic contributions to your retirement account (e.g., 401k, IRA).",
+                    "Review your credit report annually.",
+                    "Create a long-term financial plan with clear goals.",
+                ],
+                donts: [
+                    "Don't invest in things you don't understand.",
+                    "Don't try to time the market.",
+                    "Don't live beyond your means.",
+                    "Don't make emotional financial decisions.",
+                ],
+            },
+            career: {
+                title: "Career & Ambition",
+                icon: "briefcase",
+                description: "Navigate the modern workplace with purpose. Build a fulfilling career by continuously learning, networking, and aligning your work with your values.",
+                resources: [
+                    { name: "LinkedIn Learning", url: "https://www.linkedin.com/learning/" },
+                    { name: "Glassdoor (Company Reviews & Salaries)", url: "https://www.glassdoor.com/" },
+                    { name: "Coursera", url: "https://www.coursera.org/" },
+                ],
+                bestPractices: [
+                    "Develop 'T-shaped' skills: deep expertise in one area and broad knowledge in others.",
+                    "Build a strong professional network both online and offline.",
+                    "Seek regular feedback from your manager and peers.",
+                    "Negotiate your salary and benefits based on market research.",
+                    "Maintain a healthy work-life balance to avoid burnout.",
+                    "Keep your resume and LinkedIn profile updated.",
+                ],
+                todos: [
+                    "Identify a new skill to learn this quarter.",
+                    "Schedule coffee chats with colleagues or mentors.",
+                    "Set clear, achievable career goals for the next 1, 5, and 10 years.",
+                    "Document your accomplishments and successes regularly.",
+                ],
+                donts: [
+                    "Don't burn bridges when leaving a job.",
+                    "Don't stop learning after you get a degree.",
+                    "Don't neglect your mental health for the sake of productivity.",
+                    "Don't be afraid to ask for a promotion or raise when you deserve it.",
+                ],
+            },
+            travel: {
+                title: "Travel & Exploration",
+                icon: "map-pin",
+                description: "See the world, broaden your horizons, and create lasting memories. Travel planning can be seamless and rewarding with the right strategies.",
+                 resources: [
+                    { name: "Google Flights", url: "https://www.google.com/flights" },
+                    { name: "Scott's Cheap Flights", url: "https://scottscheapflights.com/" },
+                    { name: "Nomad List (for digital nomads)", url: "https://nomadlist.com/" },
+                ],
+                bestPractices: [
+                    "Use flight comparison tools to find the best deals.",
+                    "Travel during the shoulder season (just before or after peak season) for better prices and fewer crowds.",
+                    "Pack light and smart, using packing cubes to stay organized.",
+                    "Learn a few basic phrases in the local language.",
+                    "Have digital and physical copies of important documents.",
+                ],
+                todos: [
+                    "Create a travel bucket list.",
+                    "Sign up for a travel rewards credit card.",
+                    "Renew your passport if it's expiring within 6 months.",
+                    "Research cultural norms and etiquette before you go.",
+                ],
+                donts: [
+                    "Don't overschedule your itinerary; leave room for spontaneity.",
+                    "Don't exchange currency at the airport (rates are usually poor).",
+                    "Don't forget to inform your bank about your travel plans.",
+                    "Don't neglect travel insurance.",
+                ],
+            },
+            parenting: {
+                title: "Parenting & Family",
+                icon: "users",
+                description: "The most challenging and rewarding job. Navigate the journey of raising capable, kind, and resilient children with patience and love.",
+                 resources: [
+                    { name: "Aha! Parenting", url: "https://www.ahaparenting.com/" },
+                    { name: "Common Sense Media", url: "https://www.commonsensemedia.org/" },
+                    { name: "The Dad", url: "https://www.thedad.com/" },
+                ],
+                bestPractices: [
+                    "Practice positive discipline: focus on teaching, not punishing.",
+                    "Establish consistent routines for meals, naps, and bedtime.",
+                    "Read to your children daily to foster a love for learning.",
+                    "Model the behavior you want to see in your children.",
+                    "Prioritize quality one-on-one time with each child.",
+                ],
+                todos: [
+                    "Create a family calendar to keep everyone organized.",
+                    "Plan regular family meetings to discuss plans and issues.",
+                    "Set up age-appropriate chores.",
+                    "Start a college savings fund (e.g., a 529 plan).",
+                ],
+                donts: [
+                    "Don't compare your child to others.",
+                    "Don't overschedule your kids with activities.",
+                    "Don't forget to take care of your own well-being.",
+                    "Don't solve all of your child's problems for them.",
+                ],
+            },
+            lifeSkills: {
+                title: "Essential Life Skills",
+                icon: "tool",
+                description: "The practical, everyday skills that school didn't teach you. From basic home repair to effective communication, these are the keys to self-sufficiency.",
+                resources: [
+                    { name: "iFixit (Repair Guides)", url: "https://www.ifixit.com/" },
+                    { name: "The Art of Manliness (Practical Skills)", url: "https://www.artofmanliness.com/" },
+                    { name: "YouTube", url: "https://www.youtube.com" },
+                ],
+                bestPractices: [
+                    "Learn basic cooking techniques to prepare healthy, affordable meals.",
+                    "Understand how to read a contract before signing.",
+                    "Master the art of negotiation for everything from cars to salaries.",
+                    "Learn basic first aid and CPR.",
+                    "Develop emotional intelligence: understand and manage your own emotions and recognize them in others.",
+                ],
+                todos: [
+                    "Assemble a basic toolkit for home repairs.",
+                    "Learn how to change a tire and check your car's oil.",
+                    "Practice active listening in your conversations.",
+                    "Take a public speaking course or join Toastmasters.",
+                ],
+                donts: [
+                    "Don't be afraid to ask for help when you don't know something.",
+                    "Don't ignore warning lights on your car's dashboard.",
+                    "Don't procrastinate on important tasks like filing taxes.",
+                    "Don't assume you know everything; always be open to learning.",
+                ],
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navMenu = document.getElementById('nav-menu');
+            const contentArea = document.getElementById('content-area');
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+
+            // --- PWA Service Worker Registration ---
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(registration => {
+                            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        })
+                        .catch(err => {
+                            console.log('ServiceWorker registration failed: ', err);
+                        });
+                });
+            }
+
+            // --- UI Functions ---
+            const renderNav = () => {
+                navMenu.innerHTML = Object.keys(lifeTopics).map(key => {
+                    const topic = lifeTopics[key];
+                    return `
+                        <a href="#" class="nav-item flex items-center px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white" data-topic="${key}">
+                            <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
+                            <span>${topic.title}</span>
+                        </a>
+                    `;
+                }).join('');
+                feather.replace();
+            };
+            
+            const renderContent = (topicKey) => {
+                const topic = lifeTopics[topicKey];
+                if (!topic) return;
+                
+                if (topicKey === 'home') {
+                    contentArea.innerHTML = `
+                        <div class="animate-fade-in text-center">
+                            <h2 class="text-4xl font-bold text-white mb-4">Welcome to the School of Adults</h2>
+                            <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">Your all-in-one guide to navigating the complexities of modern life. Select a topic below or from the sidebar to get started.</p>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                                ${Object.keys(lifeTopics).filter(k => k !== 'home').map(key => {
+                                    const category = lifeTopics[key];
+                                    return `
+                                        <a href="#" class="home-card-link card p-6 rounded-xl flex flex-col items-center justify-center text-center" data-topic="${key}">
+                                            <i data-feather="${category.icon}" class="w-10 h-10 mb-4 text-indigo-400"></i>
+                                            <h3 class="font-semibold text-white">${category.title}</h3>
+                                        </a>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                     contentArea.innerHTML = `
+                        <div class="animate-fade-in">
+                            <div class="flex items-center space-x-4 mb-6">
+                               <span class="p-3 bg-indigo-500/10 rounded-xl"> <i data-feather="${topic.icon}" class="w-8 h-8 text-indigo-400"></i></span>
+                                <div>
+                                    <h2 class="text-3xl font-bold text-white">${topic.title}</h2>
+                                    <p class="text-gray-400 mt-1">${topic.description}</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                <!-- Column 1 -->
+                                <div class="space-y-6">
+                                    <div class="card p-6 rounded-xl">
+                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Best Practices</h3>
+                                        <ul class="space-y-2 text-gray-300">
+                                            ${topic.bestPractices.map(item => `<li class="flex items-start"><span class="text-indigo-400 mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
+                                        </ul>
+                                    </div>
+                                    <div class="card p-6 rounded-xl">
+                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Resources</h3>
+                                        <div class="space-y-3">
+                                            ${topic.resources.map(res => `
+                                                <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-gray-800/50 p-3 rounded-lg hover:bg-gray-700/70 transition-colors">
+                                                    <p class="font-medium text-indigo-300">${res.name}</p>
+                                                </a>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="space-y-6">
+                                    <div class="card p-6 rounded-xl">
+                                        <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>To-Do's</h3>
+                                        <ul class="space-y-3 text-gray-300">
+                                            ${topic.todos.map(item => `<li class="list-item-todo">${item}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                    <div class="card p-6 rounded-xl">
+                                        <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
+                                        <ul class="space-y-3 text-gray-300">
+                                            ${topic.donts.map(item => `<li class="list-item-dont">${item}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                feather.replace();
+                contentArea.scrollTop = 0;
+            };
+
+            const setActiveNav = (topicKey) => {
+                document.querySelectorAll('.nav-item').forEach(el => {
+                    el.classList.remove('active');
+                });
+                const activeEl = document.querySelector(`.nav-item[data-topic="${topicKey}"]`);
+                if(activeEl) {
+                    activeEl.classList.add('active');
+                }
+            };
+            
+            // --- Event Listeners ---
+            navMenu.addEventListener('click', (e) => {
+                const navItem = e.target.closest('.nav-item');
+                if (navItem) {
+                    e.preventDefault();
+                    const topicKey = navItem.dataset.topic;
+                    renderContent(topicKey);
+                    setActiveNav(topicKey);
+                    if (window.innerWidth < 768) {
+                        sidebar.classList.add('sidebar-hidden');
+                    }
+                }
+            });
+            
+            contentArea.addEventListener('click', (e) => {
+                const homeCard = e.target.closest('.home-card-link');
+                if (homeCard) {
+                    e.preventDefault();
+                    const topicKey = homeCard.dataset.topic;
+                    renderContent(topicKey);
+                    setActiveNav(topicKey);
+                }
+            });
+
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('sidebar-hidden');
+            });
+            
+            // --- Initial Load ---
+            const initialTopic = 'home';
+            renderNav();
+            renderContent(initialTopic);
+            setActiveNav(initialTopic);
+        });
+
+    </script>
+</body>
+</html>
+
