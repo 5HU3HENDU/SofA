@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,40 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        :root {
-            --background-light: #f3f4f6;
-            --background-dark: #121212;
-            --card-light: #ffffff;
-            --card-dark: #1e1e1e;
-            --text-light: #1f2937;
-            --text-dark: #e0e0e0;
-            --text-muted-light: #6b7280;
-            --text-muted-dark: #9ca3af;
-            --border-light: #e5e7eb;
-            --border-dark: #374151;
-        }
-        html.dark {
+        html {
             color-scheme: dark;
         }
         body {
             font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .sidebar {
             transition: transform 0.3s ease-in-out;
         }
         .nav-item.active {
             font-weight: 600;
+            background-color: #374151; /* bg-gray-700 */
+            color: #ffffff; /* text-white */
+        }
+        .nav-item-parent.active {
+            font-weight: 600;
+            color: #ffffff;
         }
         .card {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .dark .card:hover {
-             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
         }
         .list-item-todo::before {
             content: '✓';
@@ -63,34 +53,25 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--card-light);
-        }
-        .dark ::-webkit-scrollbar-track {
-             background: var(--card-dark);
+             background: #1e1e1e;
         }
         ::-webkit-scrollbar-thumb {
-            background: #d1d5db;
+            background: #4b5563;
             border-radius: 4px;
         }
-        .dark ::-webkit-scrollbar-thumb {
-            background: #4b5563;
-        }
         ::-webkit-scrollbar-thumb:hover {
-             background: #9ca3af;
-        }
-        .dark ::-webkit-scrollbar-thumb:hover {
              background: #6b7280;
         }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-[#121212] text-gray-800 dark:text-gray-200">
+<body class="bg-[#121212] text-gray-200">
     <div id="app" class="flex h-screen">
         <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar bg-white dark:bg-[#1a1a1a] w-64 fixed inset-y-0 left-0 z-40 md:relative md:translate-x-0 transform -translate-x-full border-r border-gray-200 dark:border-gray-800">
+        <aside id="sidebar" class="sidebar bg-[#1a1a1a] w-64 fixed inset-y-0 left-0 z-40 md:relative md:translate-x-0 transform -translate-x-full border-r border-gray-800">
             <div class="px-6 py-4 flex items-center justify-between">
                 <a href="#home" class="flex items-center space-x-2">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                    <h1 class="text-xl font-bold text-gray-900 dark:text-white">School of Adults</h1>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    <h1 class="text-xl font-bold text-white">School of Adults</h1>
                 </a>
             </div>
             <nav id="nav-menu" class="px-3 py-4 space-y-1">
@@ -104,15 +85,12 @@
         <!-- Main Content -->
         <main class="flex-1 flex flex-col overflow-hidden">
             <!-- Header -->
-            <header class="flex items-center justify-between p-4 bg-white dark:bg-[#1a1a1a] border-b border-gray-200 dark:border-gray-800">
-                 <button id="menu-toggle" class="text-gray-600 dark:text-gray-300 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 md:hidden">
+            <header class="flex items-center justify-between p-4 bg-[#1a1a1a] border-b border-gray-800">
+                 <button id="menu-toggle" class="text-gray-300 p-2 rounded-md hover:bg-gray-700 md:hidden">
                     <i data-feather="menu"></i>
                 </button>
-                 <h1 class="text-lg font-bold text-gray-900 dark:text-white md:hidden">School of Adults</h1>
-                <div class="hidden md:block"></div> <!-- Spacer for desktop -->
-                <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <i id="theme-icon" data-feather="sun"></i>
-                </button>
+                 <h1 id="header-title" class="text-lg font-bold text-white md:hidden">School of Adults</h1>
+                <div class="flex-1"></div> <!-- Spacer -->
             </header>
             
             <!-- Content Area -->
@@ -123,7 +101,6 @@
     </div>
 
     <script>
-        // ... (lifeTopics object remains the same)
         const lifeTopics = {
             home: {
                 title: "Home",
@@ -162,32 +139,131 @@
             wealth: {
                 title: "Wealth & Finance",
                 icon: "dollar-sign",
-                description: "Financial literacy is freedom. Understand how to manage your money, invest wisely, and build long-term wealth for yourself and your family.",
-                resources: [
-                    { name: "Investopedia", url: "https://www.investopedia.com/" },
-                    { name: "YNAB (You Need A Budget)", url: "https://www.youneedabudget.com/" },
-                    { name: "Vanguard (for low-cost investing)", url: "https://investor.vanguard.com/" },
-                ],
-                bestPractices: [
-                    "Create a detailed monthly budget and track your spending.",
-                    "Build an emergency fund covering 3-6 months of living expenses.",
-                    "Pay off high-interest debt (like credit cards) as a priority.",
-                    "Automate your savings and investments.",
-                    "Educate yourself about different investment options (stocks, bonds, real estate).",
-                    "Regularly review and rebalance your investment portfolio.",
-                ],
-                todos: [
-                    "Open a high-yield savings account for your emergency fund.",
-                    "Set up automatic contributions to your retirement account (e.g., 401k, IRA).",
-                    "Review your credit report annually.",
-                    "Create a long-term financial plan with clear goals.",
-                ],
-                donts: [
-                    "Don't invest in things you don't understand.",
-                    "Don't try to time the market.",
-                    "Don't live beyond your means.",
-                    "Don't make emotional financial decisions.",
-                ],
+                description: "Financial literacy is freedom. This section covers the essential pillars of building a secure financial future: generating income, investing wisely, protecting your assets, managing spending, and using debt strategically.",
+                subtopics: {
+                    generate: {
+                        title: "Generate",
+                        description: "Maximizing your income is the first step to building wealth. This involves your primary career, side hustles, and creating new streams of revenue.",
+                        resources: [
+                            { name: "Salary.com", url: "https://www.salary.com/" },
+                            { name: "Upwork (for freelancing)", url: "https://www.upwork.com/" },
+                            { name: "Pat Flynn's Smart Passive Income Blog", url: "https://www.smartpassiveincome.com/" }
+                        ],
+                        bestPractices: [
+                            "Regularly research your market value and negotiate your salary.",
+                            "Develop high-demand skills to increase your earning potential.",
+                            "Consider a side hustle that aligns with your passions or skills.",
+                            "Build multiple, independent income streams over time."
+                        ],
+                        todos: [
+                            "Update your resume and LinkedIn profile this month.",
+                            "Identify one skill to learn that can increase your income.",
+                            "Brainstorm three potential side hustle ideas."
+                        ],
+                        donts: [
+                            "Don't solely rely on one source of income.",
+                            "Don't undervalue your skills or time.",
+                            "Don't burn out by taking on too much at once."
+                        ]
+                    },
+                    invest: {
+                        title: "Invest",
+                        description: "Investing is how you make your money work for you. It's the engine of wealth creation, focused on long-term growth and compounding.",
+                        resources: [
+                            { name: "Investopedia", url: "https://www.investopedia.com/" },
+                            { name: "Vanguard (for low-cost index funds)", url: "https://investor.vanguard.com/" },
+                             { name: "A Simple Path to Wealth by JL Collins", url: "#" }
+                        ],
+                        bestPractices: [
+                            "Start investing early and consistently, no matter how small the amount.",
+                            "Focus on low-cost, diversified index funds for long-term growth.",
+                            "Automate your investments to maintain discipline.",
+                            "Understand your risk tolerance and invest accordingly."
+                        ],
+                        todos: [
+                            "Open a retirement account (like a Roth IRA).",
+                            "Set up automatic monthly contributions to your investment account.",
+                            "Read a book about basic investing principles."
+                        ],
+                        donts: [
+                            "Don't try to time the market.",
+                            "Don't put all your money into a single stock.",
+                            "Don't panic and sell during market downturns."
+                        ]
+                    },
+                    insurance: {
+                        title: "Insurance",
+                        description: "Insurance is about protecting your wealth and well-being from unforeseen events. It's a defense strategy for your financial plan.",
+                        resources: [
+                            { name: "Policygenius (Comparison tool)", url: "https://www.policygenius.com/" },
+                            { name: "Healthcare.gov", url: "https://www.healthcare.gov/" }
+                        ],
+                        bestPractices: [
+                            "Have adequate health insurance to cover major medical events.",
+                            "Consider term life insurance if you have dependents.",
+                            "Get renters or homeowners insurance to protect your property.",
+                            "Ensure you have sufficient auto and liability coverage."
+                        ],
+                        todos: [
+                            "Review your insurance policies annually.",
+                            "Get quotes from multiple providers to ensure you're getting a good deal.",
+                            "Create a home inventory for your homeowners/renters policy."
+                        ],
+                        donts: [
+                            "Don't be underinsured, especially for health and liability.",
+                            "Don't ignore the details and coverage limits of your policies.",
+                            "Don't assume your employer's insurance is always the best or cheapest option."
+                        ]
+                    },
+                    spends: {
+                        title: "Spends",
+                        description: "Managing your spending is about mindful allocation of resources. A budget isn't about restriction; it's about empowerment.",
+                        resources: [
+                            { name: "YNAB (You Need A Budget)", url: "https://www.youneedabudget.com/" },
+                            { name: "Mint (Budgeting App)", url: "https://mint.intuit.com/" }
+                        ],
+                        bestPractices: [
+                            "Create a detailed monthly budget and track every dollar.",
+                            "Use the 50/30/20 rule as a guideline: 50% for needs, 30% for wants, 20% for savings.",
+                            "Differentiate between 'needs' and 'wants'.",
+                            "Review your spending habits monthly to find areas for improvement."
+                        ],
+                        todos: [
+                            "Set up a budget using an app or a spreadsheet.",
+                            "Identify three non-essential expenses you can cut back on.",
+                            "Try a 'no-spend' weekend."
+                        ],
+                        donts: [
+                            "Don't let lifestyle inflation consume every raise you get.",
+                            "Don't make large purchases on impulse.",
+                            "Don't ignore small, recurring subscriptions that add up."
+                        ]
+                    },
+                    loans: {
+                        title: "Loans",
+                        description: "Debt is a tool that can be used for leverage (good debt) or can become a burden (bad debt). Understanding the difference is crucial.",
+                        resources: [
+                            { name: "AnnualCreditReport.com (Free Credit Report)", url: "https://www.annualcreditreport.com/" },
+                            { name: "NerdWallet (Loan comparison)", url: "https://www.nerdwallet.com/" }
+                        ],
+                        bestPractices: [
+                            "Aggressively pay down high-interest debt (e.g., credit cards).",
+                            "Understand the terms of any loan before you sign.",
+                            "Maintain a good credit score by paying bills on time.",
+                            "Use debt strategically for assets that appreciate, like a home."
+                        ],
+                        todos: [
+                            "Check your credit score and report for free.",
+                            "Create a debt-repayment plan (e.g., snowball or avalanche method).",
+                            "Consider consolidating or refinancing high-interest loans."
+                        ],
+                        donts: [
+                            "Don't take on debt for depreciating assets like new cars if you can avoid it.",
+                            "Don't miss loan payments, as it severely impacts your credit.",
+                            "Don't co-sign a loan for someone unless you are prepared to pay it in full."
+                        ]
+                    }
+                }
             },
             career: {
                 title: "Career & Ambition",
@@ -314,8 +390,7 @@
             const menuToggle = document.getElementById('menu-toggle');
             const sidebar = document.getElementById('sidebar');
             const sidebarOverlay = document.getElementById('sidebar-overlay');
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
+            const headerTitle = document.getElementById('header-title');
 
             // --- PWA Service Worker ---
             if ('serviceWorker' in navigator) {
@@ -324,53 +399,68 @@
                 });
             }
 
-            // --- Theme Management ---
-            const applyTheme = (theme) => {
-                if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                    themeIcon.setAttribute('data-feather', 'moon');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    themeIcon.setAttribute('data-feather', 'sun');
-                }
-                feather.replace();
-            };
-
-            const toggleTheme = () => {
-                const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-                localStorage.setItem('theme', newTheme);
-                applyTheme(newTheme);
-            };
-
             // --- UI Rendering ---
             const renderNav = () => {
-                navMenu.innerHTML = Object.keys(lifeTopics).map(key => {
+                let navHtml = '';
+                for (const key in lifeTopics) {
                     const topic = lifeTopics[key];
-                    return `
-                        <a href="#${key}" class="nav-item flex items-center px-4 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white" data-topic="${key}">
-                            <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
-                            <span>${topic.title}</span>
-                        </a>
-                    `;
-                }).join('');
+                    if (topic.subtopics) {
+                         const firstSubKey = Object.keys(topic.subtopics)[0];
+                         navHtml += `
+                            <div>
+                                <a href="#${key}/${firstSubKey}" class="nav-item-parent flex items-center px-4 py-2 text-gray-400" data-topic-parent="${key}">
+                                    <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
+                                    <span>${topic.title}</span>
+                                </a>
+                                <div class="pl-5">
+                                    ${Object.keys(topic.subtopics).map(subKey => {
+                                        const subTopic = topic.subtopics[subKey];
+                                        return `<a href="#${key}/${subKey}" class="nav-item flex items-center px-4 py-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white" data-topic="${key}/${subKey}">
+                                            <span>${subTopic.title}</span>
+                                        </a>`;
+                                    }).join('')}
+                                </div>
+                            </div>
+                         `;
+                    } else {
+                        navHtml += `
+                            <a href="#${key}" class="nav-item flex items-center px-4 py-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white" data-topic="${key}">
+                                <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
+                                <span>${topic.title}</span>
+                            </a>
+                        `;
+                    }
+                }
+                navMenu.innerHTML = navHtml;
             };
 
-            const renderContent = (topicKey) => {
-                const topic = lifeTopics[topicKey];
-                if (!topic) return;
+            const renderContent = (mainKey, subKey) => {
+                let topic;
+                if (subKey && lifeTopics[mainKey] && lifeTopics[mainKey].subtopics) {
+                    topic = lifeTopics[mainKey].subtopics[subKey];
+                } else {
+                    topic = lifeTopics[mainKey];
+                }
                 
-                if (topicKey === 'home') {
+                if (!topic) return;
+
+                // Update mobile header title
+                headerTitle.textContent = topic.title;
+                
+                if (mainKey === 'home') {
+                    headerTitle.textContent = "School of Adults";
                     contentArea.innerHTML = `
                         <div class="animate-fade-in text-center">
-                            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Welcome to the School of Adults</h2>
-                            <p class="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto">Your all-in-one guide to navigating the complexities of modern life. Select a topic to get started.</p>
+                            <h2 class="text-4xl font-bold text-white mb-4">Welcome to the School of Adults</h2>
+                            <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">Your all-in-one guide to navigating the complexities of modern life. Select a topic to get started.</p>
                             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                                 ${Object.keys(lifeTopics).filter(k => k !== 'home').map(key => {
                                     const category = lifeTopics[key];
+                                    const firstSubKey = category.subtopics ? `/${Object.keys(category.subtopics)[0]}` : '';
                                     return `
-                                        <a href="#${key}" class="home-card-link card p-6 rounded-xl flex flex-col items-center justify-center text-center bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800" data-topic="${key}">
-                                            <i data-feather="${category.icon}" class="w-10 h-10 mb-4 text-indigo-500"></i>
-                                            <h3 class="font-semibold text-gray-800 dark:text-white">${category.title}</h3>
+                                        <a href="#${key}${firstSubKey}" class="home-card-link card p-6 rounded-xl flex flex-col items-center justify-center text-center bg-[#1e1e1e] border border-gray-800" data-topic="${key}">
+                                            <i data-feather="${category.icon}" class="w-10 h-10 mb-4 text-indigo-400"></i>
+                                            <h3 class="font-semibold text-white">${category.title}</h3>
                                         </a>
                                     `;
                                 }).join('')}
@@ -378,45 +468,46 @@
                         </div>
                     `;
                 } else {
+                    const icon = subKey ? lifeTopics[mainKey].icon : topic.icon;
                      contentArea.innerHTML = `
                         <div class="animate-fade-in">
                             <div class="flex items-start space-x-4 mb-8">
-                               <span class="p-3 bg-indigo-500/10 rounded-xl"> <i data-feather="${topic.icon}" class="w-8 h-8 text-indigo-500"></i></span>
+                               <span class="p-3 bg-indigo-500/10 rounded-xl"> <i data-feather="${icon}" class="w-8 h-8 text-indigo-400"></i></span>
                                 <div>
-                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">${topic.title}</h2>
-                                    <p class="text-gray-600 dark:text-gray-400 mt-1">${topic.description}</p>
+                                    <h2 class="text-3xl font-bold text-white">${topic.title}</h2>
+                                    <p class="text-gray-400 mt-1">${topic.description}</p>
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                 <div class="space-y-6">
-                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Best Practices</h3>
-                                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-                                            ${topic.bestPractices.map(item => `<li class="flex items-start"><span class="text-indigo-500 dark:text-indigo-400 mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
+                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Best Practices</h3>
+                                        <ul class="space-y-2 text-gray-300">
+                                            ${topic.bestPractices.map(item => `<li class="flex items-start"><span class="text-indigo-400 mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
                                         </ul>
                                     </div>
-                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Resources</h3>
+                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Resources</h3>
                                         <div class="space-y-3">
                                             ${topic.resources.map(res => `
-                                                <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-gray-100 dark:bg-gray-800/50 p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/70 transition-colors">
-                                                    <p class="font-medium text-indigo-600 dark:text-indigo-400">${res.name}</p>
+                                                <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-gray-800/50 p-3 rounded-lg hover:bg-gray-700/70 transition-colors">
+                                                    <p class="font-medium text-indigo-400">${res.name}</p>
                                                 </a>
                                             `).join('')}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="space-y-6">
-                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-green-600 dark:text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>To-Do's</h3>
-                                        <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>To-Do's</h3>
+                                        <ul class="space-y-3 text-gray-300">
                                             ${topic.todos.map(item => `<li class="list-item-todo">${item}</li>`).join('')}
                                         </ul>
                                     </div>
-                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-red-600 dark:text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
-                                        <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
+                                        <ul class="space-y-3 text-gray-300">
                                             ${topic.donts.map(item => `<li class="list-item-dont">${item}</li>`).join('')}
                                         </ul>
                                     </div>
@@ -431,25 +522,39 @@
             };
 
             const setActiveNav = (topicKey) => {
-                document.querySelectorAll('.nav-item').forEach(el => {
-                    if (el.dataset.topic === topicKey) {
-                        el.classList.add('active', 'bg-indigo-50', 'dark:bg-gray-700', 'text-indigo-600', 'dark:text-white');
-                    } else {
-                        el.classList.remove('active', 'bg-indigo-50', 'dark:bg-gray-700', 'text-indigo-600', 'dark:text-white');
-                    }
+                 const [mainKey, subKey] = topicKey.split('/');
+                
+                document.querySelectorAll('.nav-item, .nav-item-parent').forEach(el => {
+                    el.classList.remove('active');
                 });
-            };
-
-            // --- Navigation & History Management ---
-            const navigateTo = (topicKey, isPopState = false) => {
-                const newTopic = lifeTopics[topicKey] ? topicKey : 'home';
-
-                if (!isPopState) {
-                    history.pushState({ topic: newTopic }, '', `#${newTopic}`);
+                
+                const activeEl = document.querySelector(`.nav-item[data-topic="${topicKey}"]`);
+                if (activeEl) {
+                    activeEl.classList.add('active');
                 }
 
-                renderContent(newTopic);
-                setActiveNav(newTopic);
+                if (subKey) {
+                    const parentEl = document.querySelector(`.nav-item-parent[data-topic-parent="${mainKey}"]`);
+                    if(parentEl) parentEl.classList.add('active');
+                }
+            };
+
+
+            // --- Navigation & History Management ---
+            const navigateTo = (path, isPopState = false) => {
+                const [mainKey, subKey] = path.split('/');
+                const topicExists = lifeTopics[mainKey];
+                const subTopicExists = subKey ? (topicExists && topicExists.subtopics && topicExists.subtopics[subKey]) : true;
+
+                const newPath = (topicExists && subTopicExists) ? path : 'home';
+
+                if (!isPopState) {
+                    history.pushState({ path: newPath }, '', `#${newPath}`);
+                }
+                
+                const [finalMainKey, finalSubKey] = newPath.split('/');
+                renderContent(finalMainKey, finalSubKey);
+                setActiveNav(newPath);
 
                 // Close sidebar on navigation on mobile
                 if (window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
@@ -457,9 +562,9 @@
                 }
             };
             
-            const handlePopState = () => {
-                const topicFromHash = window.location.hash.substring(1) || 'home';
-                navigateTo(topicFromHash, true);
+            const handlePopState = (event) => {
+                const path = event.state?.path || window.location.hash.substring(1) || 'home';
+                navigateTo(path, true);
             };
 
             const toggleSidebar = () => {
@@ -470,27 +575,22 @@
             // --- Event Listeners ---
             menuToggle.addEventListener('click', toggleSidebar);
             sidebarOverlay.addEventListener('click', toggleSidebar);
-            themeToggle.addEventListener('click', toggleTheme);
             window.addEventListener('popstate', handlePopState);
             
             document.body.addEventListener('click', (e) => {
                 const link = e.target.closest('a');
                 if (link && link.hash) {
-                    const topic = link.hash.substring(1);
-                    if (lifeTopics[topic]) {
-                        e.preventDefault();
-                        navigateTo(topic);
-                    }
+                    const path = link.hash.substring(1);
+                    e.preventDefault();
+                    navigateTo(path);
                 }
             });
 
             // --- Initial Load ---
-            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            applyTheme(savedTheme);
             renderNav();
-            
-            const initialTopicFromHash = window.location.hash.substring(1);
-            navigateTo(initialTopicFromHash || 'home', true);
+            feather.replace();
+            const initialPath = window.location.hash.substring(1) || 'home';
+            navigateTo(initialPath, true);
         });
     </script>
 </body>
