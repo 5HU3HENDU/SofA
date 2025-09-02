@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,30 +12,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
+        :root {
+            --background-light: #f3f4f6;
+            --background-dark: #121212;
+            --card-light: #ffffff;
+            --card-dark: #1e1e1e;
+            --text-light: #1f2937;
+            --text-dark: #e0e0e0;
+            --text-muted-light: #6b7280;
+            --text-muted-dark: #9ca3af;
+            --border-light: #e5e7eb;
+            --border-dark: #374151;
+        }
+        html.dark {
+            color-scheme: dark;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .sidebar {
             transition: transform 0.3s ease-in-out;
         }
-        .sidebar-hidden {
-            transform: translateX(-100%);
-        }
         .nav-item.active {
-            background-color: #333;
-            color: #fff;
             font-weight: 600;
         }
         .card {
-            background-color: #1e1e1e;
-            border: 1px solid #2d2d2d;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .dark .card:hover {
+             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
         }
         .list-item-todo::before {
             content: '✓';
@@ -53,42 +63,55 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #1e1e1e;
+            background: var(--card-light);
+        }
+        .dark ::-webkit-scrollbar-track {
+             background: var(--card-dark);
         }
         ::-webkit-scrollbar-thumb {
-            background: #444;
+            background: #d1d5db;
             border-radius: 4px;
         }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+        }
         ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+             background: #9ca3af;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+             background: #6b7280;
         }
     </style>
 </head>
-<body class="overflow-x-hidden">
+<body class="bg-gray-100 dark:bg-[#121212] text-gray-800 dark:text-gray-200">
     <div id="app" class="flex h-screen">
         <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar bg-[#1a1a1a] w-64 fixed inset-y-0 left-0 z-30 md:relative md:translate-x-0 transform -translate-x-full border-r border-gray-700">
-            <div class="px-6 py-4">
-                <a href="#" class="flex items-center space-x-2">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                    <h1 class="text-xl font-bold text-white">School of Adults</h1>
+        <aside id="sidebar" class="sidebar bg-white dark:bg-[#1a1a1a] w-64 fixed inset-y-0 left-0 z-40 md:relative md:translate-x-0 transform -translate-x-full border-r border-gray-200 dark:border-gray-800">
+            <div class="px-6 py-4 flex items-center justify-between">
+                <a href="#home" class="flex items-center space-x-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    <h1 class="text-xl font-bold text-gray-900 dark:text-white">School of Adults</h1>
                 </a>
             </div>
             <nav id="nav-menu" class="px-3 py-4 space-y-1">
                 <!-- Navigation items will be injected here -->
             </nav>
         </aside>
+        
+        <!-- Sidebar Overlay -->
+        <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
 
         <!-- Main Content -->
         <main class="flex-1 flex flex-col overflow-hidden">
             <!-- Header -->
-            <header class="flex items-center justify-between p-4 bg-[#1a1a1a] border-b border-gray-700 md:hidden">
-                <a href="#" class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                    <h1 class="text-lg font-bold text-white">School of Adults</h1>
-                </a>
-                <button id="menu-toggle" class="text-white p-2 rounded-md hover:bg-gray-700">
+            <header class="flex items-center justify-between p-4 bg-white dark:bg-[#1a1a1a] border-b border-gray-200 dark:border-gray-800">
+                 <button id="menu-toggle" class="text-gray-600 dark:text-gray-300 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 md:hidden">
                     <i data-feather="menu"></i>
+                </button>
+                 <h1 class="text-lg font-bold text-gray-900 dark:text-white md:hidden">School of Adults</h1>
+                <div class="hidden md:block"></div> <!-- Spacer for desktop -->
+                <button id="theme-toggle" class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <i id="theme-icon" data-feather="sun"></i>
                 </button>
             </header>
             
@@ -100,6 +123,7 @@
     </div>
 
     <script>
+        // ... (lifeTopics object remains the same)
         const lifeTopics = {
             home: {
                 title: "Home",
@@ -289,34 +313,48 @@
             const contentArea = document.getElementById('content-area');
             const menuToggle = document.getElementById('menu-toggle');
             const sidebar = document.getElementById('sidebar');
+            const sidebarOverlay = document.getElementById('sidebar-overlay');
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
 
-            // --- PWA Service Worker Registration ---
+            // --- PWA Service Worker ---
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js')
-                        .then(registration => {
-                            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                        })
-                        .catch(err => {
-                            console.log('ServiceWorker registration failed: ', err);
-                        });
+                    navigator.serviceWorker.register('/sw.js').catch(err => console.log('ServiceWorker registration failed: ', err));
                 });
             }
 
-            // --- UI Functions ---
+            // --- Theme Management ---
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    themeIcon.setAttribute('data-feather', 'moon');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    themeIcon.setAttribute('data-feather', 'sun');
+                }
+                feather.replace();
+            };
+
+            const toggleTheme = () => {
+                const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+                localStorage.setItem('theme', newTheme);
+                applyTheme(newTheme);
+            };
+
+            // --- UI Rendering ---
             const renderNav = () => {
                 navMenu.innerHTML = Object.keys(lifeTopics).map(key => {
                     const topic = lifeTopics[key];
                     return `
-                        <a href="#" class="nav-item flex items-center px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white" data-topic="${key}">
+                        <a href="#${key}" class="nav-item flex items-center px-4 py-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white" data-topic="${key}">
                             <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
                             <span>${topic.title}</span>
                         </a>
                     `;
                 }).join('');
-                feather.replace();
             };
-            
+
             const renderContent = (topicKey) => {
                 const topic = lifeTopics[topicKey];
                 if (!topic) return;
@@ -324,15 +362,15 @@
                 if (topicKey === 'home') {
                     contentArea.innerHTML = `
                         <div class="animate-fade-in text-center">
-                            <h2 class="text-4xl font-bold text-white mb-4">Welcome to the School of Adults</h2>
-                            <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">Your all-in-one guide to navigating the complexities of modern life. Select a topic below or from the sidebar to get started.</p>
+                            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Welcome to the School of Adults</h2>
+                            <p class="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto">Your all-in-one guide to navigating the complexities of modern life. Select a topic to get started.</p>
                             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                                 ${Object.keys(lifeTopics).filter(k => k !== 'home').map(key => {
                                     const category = lifeTopics[key];
                                     return `
-                                        <a href="#" class="home-card-link card p-6 rounded-xl flex flex-col items-center justify-center text-center" data-topic="${key}">
-                                            <i data-feather="${category.icon}" class="w-10 h-10 mb-4 text-indigo-400"></i>
-                                            <h3 class="font-semibold text-white">${category.title}</h3>
+                                        <a href="#${key}" class="home-card-link card p-6 rounded-xl flex flex-col items-center justify-center text-center bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800" data-topic="${key}">
+                                            <i data-feather="${category.icon}" class="w-10 h-10 mb-4 text-indigo-500"></i>
+                                            <h3 class="font-semibold text-gray-800 dark:text-white">${category.title}</h3>
                                         </a>
                                     `;
                                 }).join('')}
@@ -342,45 +380,43 @@
                 } else {
                      contentArea.innerHTML = `
                         <div class="animate-fade-in">
-                            <div class="flex items-center space-x-4 mb-6">
-                               <span class="p-3 bg-indigo-500/10 rounded-xl"> <i data-feather="${topic.icon}" class="w-8 h-8 text-indigo-400"></i></span>
+                            <div class="flex items-start space-x-4 mb-8">
+                               <span class="p-3 bg-indigo-500/10 rounded-xl"> <i data-feather="${topic.icon}" class="w-8 h-8 text-indigo-500"></i></span>
                                 <div>
-                                    <h2 class="text-3xl font-bold text-white">${topic.title}</h2>
-                                    <p class="text-gray-400 mt-1">${topic.description}</p>
+                                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">${topic.title}</h2>
+                                    <p class="text-gray-600 dark:text-gray-400 mt-1">${topic.description}</p>
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <!-- Column 1 -->
                                 <div class="space-y-6">
-                                    <div class="card p-6 rounded-xl">
-                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Best Practices</h3>
-                                        <ul class="space-y-2 text-gray-300">
-                                            ${topic.bestPractices.map(item => `<li class="flex items-start"><span class="text-indigo-400 mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
+                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Best Practices</h3>
+                                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                                            ${topic.bestPractices.map(item => `<li class="flex items-start"><span class="text-indigo-500 dark:text-indigo-400 mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
                                         </ul>
                                     </div>
-                                    <div class="card p-6 rounded-xl">
-                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Resources</h3>
+                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Resources</h3>
                                         <div class="space-y-3">
                                             ${topic.resources.map(res => `
-                                                <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-gray-800/50 p-3 rounded-lg hover:bg-gray-700/70 transition-colors">
-                                                    <p class="font-medium text-indigo-300">${res.name}</p>
+                                                <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-gray-100 dark:bg-gray-800/50 p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700/70 transition-colors">
+                                                    <p class="font-medium text-indigo-600 dark:text-indigo-400">${res.name}</p>
                                                 </a>
                                             `).join('')}
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Column 2 -->
                                 <div class="space-y-6">
-                                    <div class="card p-6 rounded-xl">
-                                        <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>To-Do's</h3>
-                                        <ul class="space-y-3 text-gray-300">
+                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-green-600 dark:text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>To-Do's</h3>
+                                        <ul class="space-y-3 text-gray-600 dark:text-gray-300">
                                             ${topic.todos.map(item => `<li class="list-item-todo">${item}</li>`).join('')}
                                         </ul>
                                     </div>
-                                    <div class="card p-6 rounded-xl">
-                                        <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
-                                        <ul class="space-y-3 text-gray-300">
+                                    <div class="card p-6 rounded-xl bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-800">
+                                        <h3 class="text-xl font-semibold mb-4 text-red-600 dark:text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
+                                        <ul class="space-y-3 text-gray-600 dark:text-gray-300">
                                             ${topic.donts.map(item => `<li class="list-item-dont">${item}</li>`).join('')}
                                         </ul>
                                     </div>
@@ -396,49 +432,66 @@
 
             const setActiveNav = (topicKey) => {
                 document.querySelectorAll('.nav-item').forEach(el => {
-                    el.classList.remove('active');
+                    if (el.dataset.topic === topicKey) {
+                        el.classList.add('active', 'bg-indigo-50', 'dark:bg-gray-700', 'text-indigo-600', 'dark:text-white');
+                    } else {
+                        el.classList.remove('active', 'bg-indigo-50', 'dark:bg-gray-700', 'text-indigo-600', 'dark:text-white');
+                    }
                 });
-                const activeEl = document.querySelector(`.nav-item[data-topic="${topicKey}"]`);
-                if(activeEl) {
-                    activeEl.classList.add('active');
+            };
+
+            // --- Navigation & History Management ---
+            const navigateTo = (topicKey, isPopState = false) => {
+                const newTopic = lifeTopics[topicKey] ? topicKey : 'home';
+
+                if (!isPopState) {
+                    history.pushState({ topic: newTopic }, '', `#${newTopic}`);
+                }
+
+                renderContent(newTopic);
+                setActiveNav(newTopic);
+
+                // Close sidebar on navigation on mobile
+                if (window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
+                    toggleSidebar();
                 }
             };
             
+            const handlePopState = () => {
+                const topicFromHash = window.location.hash.substring(1) || 'home';
+                navigateTo(topicFromHash, true);
+            };
+
+            const toggleSidebar = () => {
+                 sidebar.classList.toggle('-translate-x-full');
+                 sidebarOverlay.classList.toggle('hidden');
+            }
+
             // --- Event Listeners ---
-            navMenu.addEventListener('click', (e) => {
-                const navItem = e.target.closest('.nav-item');
-                if (navItem) {
-                    e.preventDefault();
-                    const topicKey = navItem.dataset.topic;
-                    renderContent(topicKey);
-                    setActiveNav(topicKey);
-                    if (window.innerWidth < 768) {
-                        sidebar.classList.add('sidebar-hidden');
+            menuToggle.addEventListener('click', toggleSidebar);
+            sidebarOverlay.addEventListener('click', toggleSidebar);
+            themeToggle.addEventListener('click', toggleTheme);
+            window.addEventListener('popstate', handlePopState);
+            
+            document.body.addEventListener('click', (e) => {
+                const link = e.target.closest('a');
+                if (link && link.hash) {
+                    const topic = link.hash.substring(1);
+                    if (lifeTopics[topic]) {
+                        e.preventDefault();
+                        navigateTo(topic);
                     }
                 }
             });
-            
-            contentArea.addEventListener('click', (e) => {
-                const homeCard = e.target.closest('.home-card-link');
-                if (homeCard) {
-                    e.preventDefault();
-                    const topicKey = homeCard.dataset.topic;
-                    renderContent(topicKey);
-                    setActiveNav(topicKey);
-                }
-            });
 
-            menuToggle.addEventListener('click', () => {
-                sidebar.classList.toggle('sidebar-hidden');
-            });
-            
             // --- Initial Load ---
-            const initialTopic = 'home';
+            const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(savedTheme);
             renderNav();
-            renderContent(initialTopic);
-            setActiveNav(initialTopic);
+            
+            const initialTopicFromHash = window.location.hash.substring(1);
+            navigateTo(initialTopicFromHash || 'home', true);
         });
-
     </script>
 </body>
 </html>
