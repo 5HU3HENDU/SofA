@@ -1,0 +1,21 @@
+{
+  "name": "School of Adults",
+  "short_name": "Adulting",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#1a1a1a",
+  "description": "A modern guide to managing every aspect of adult life.",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
