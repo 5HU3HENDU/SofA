@@ -1,0 +1,27 @@
+{
+    "title": "Learning to Swim",
+    "description": "Swimming is a crucial life-saving skill, a fantastic full-body workout, and a relaxing recreational activity. It's never too late to learn how to swim.",
+    "sentences": [
+        "Find a clean, safe swimming pool with certified lifeguards and instructors.",
+        "Start with the basics: getting comfortable in the water, learning to float on your back, and controlling your breath.",
+        "Focus on technique rather than speed. Proper form will make swimming much easier and more efficient.",
+        "Consistency is key. Try to practice at least two to three times a week to build muscle memory.",
+        "Join a beginner's group class for adults to learn in a structured and supportive environment."
+    ],
+    "websites": [
+        { "name": "Fitso (Swimming Classes)", "url": "https://www.fitso.com/swimming-classes" },
+        { "name": "Cult.fit (Swimming Pools)", "url": "https://www.cult.fit/sports/swimming" }
+    ],
+    "dos": [
+        "Invest in a comfortable swimsuit and a good pair of goggles.",
+        "Always warm up before entering the pool and cool down afterwards.",
+        "Practice blowing bubbles in the water to get comfortable with breathing techniques.",
+        "Be patient with yourself; learning to swim as an adult can take time."
+    ],
+    "donts": [
+        "Don't try to learn on your own in a lake, river, or sea.",
+        "Don't panic if you swallow some water. Stay calm and regain your composure.",
+        "Don't venture into the deep end of the pool until you are a confident swimmer.",
+        "Don't compare your progress to others; everyone learns at a different pace."
+    ]
+}
