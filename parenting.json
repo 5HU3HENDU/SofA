@@ -1,0 +1,28 @@
+{
+    "title": "Parenting & Family",
+    "description": "The most challenging and rewarding job. Navigate the journey of raising capable, kind, and resilient children with patience and love.",
+    "sentences": [
+        "Practice positive discipline: focus on teaching, not punishing.",
+        "Establish consistent routines for meals, naps, and bedtime.",
+        "Read to your children daily to foster a love for learning.",
+        "Model the behavior you want to see in your children.",
+        "Prioritize quality one-on-one time with each child."
+    ],
+    "websites": [
+        { "name": "Aha! Parenting", "url": "https://www.ahaparenting.com/" },
+        { "name": "Common Sense Media", "url": "https://www.commonsensemedia.org/" },
+        { "name": "The Dad", "url": "https://www.thedad.com/" }
+    ],
+    "dos": [
+        "Create a family calendar to keep everyone organized.",
+        "Plan regular family meetings to discuss plans and issues.",
+        "Set up age-appropriate chores.",
+        "Start a college savings fund (e.g., a 529 plan)."
+    ],
+    "donts": [
+        "Don't compare your child to others.",
+        "Don't overschedule your kids with activities.",
+        "Don't forget to take care of your own well-being.",
+        "Don't solve all of your child's problems for them."
+    ]
+}
