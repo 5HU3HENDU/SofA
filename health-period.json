@@ -1,0 +1,28 @@
+{
+    "title": "Period Health",
+    "description": "Understanding your menstrual cycle is key to understanding your overall health. Tracking your cycle can provide insights into your hormones, fertility, and well-being.",
+    "sentences": [
+        "A typical menstrual cycle lasts between 21 and 35 days.",
+        "Track your cycle using an app to monitor length, symptoms, and flow.",
+        "Common PMS symptoms include bloating, cramps, mood swings, and fatigue.",
+        "Different period products are available; find what works best for you (pads, tampons, cups, discs, underwear).",
+        "Your cycle can be affected by stress, diet, exercise, and sleep."
+    ],
+    "websites": [
+        { "name": "Clue (Period Tracking App)", "url": "https://helloclue.com/" },
+        { "name": "Flo (Period & Ovulation Tracker)", "url": "https://flo.health/" },
+        { "name": "The Office on Women's Health (U.S.)", "url": "https://www.womenshealth.gov/menstrual-cycle" }
+    ],
+    "dos": [
+        "Eat iron-rich foods during your period to combat fatigue.",
+        "Engage in gentle exercise like walking or yoga to ease cramps.",
+        "Use a heat pad to help with menstrual pain.",
+        "Talk to your doctor about severe pain or irregular cycles."
+    ],
+    "donts": [
+        "Don't ignore severe pain that disrupts your daily life.",
+        "Don't feel ashamed or embarrassed to talk about your period.",
+        "Don't forget to change your tampon, pad, or empty your cup regularly.",
+        "Don't rely solely on caffeine for energy; prioritize rest."
+    ]
+}
