@@ -1,0 +1,24 @@
+{
+    "title": "Protect with Insurance",
+    "description": "Insurance is about protecting your wealth and well-being from unforeseen events. It's a defense strategy for your financial plan.",
+    "sentences": [
+        "Have adequate health insurance to cover major medical events.",
+        "Consider term life insurance if you have dependents.",
+        "Get renters or homeowners insurance to protect your property.",
+        "Ensure you have sufficient auto and liability coverage."
+    ],
+    "websites": [
+        { "name": "Policygenius (Comparison tool)", "url": "https://www.policygenius.com/" },
+        { "name": "Healthcare.gov", "url": "https://www.healthcare.gov/" }
+    ],
+    "dos": [
+        "Review your insurance policies annually.",
+        "Get quotes from multiple providers to ensure you're getting a good deal.",
+        "Create a home inventory for your homeowners/renters policy."
+    ],
+    "donts": [
+        "Don't be underinsured, especially for health and liability.",
+        "Don't ignore the details and coverage limits of your policies.",
+        "Don't assume your employer's insurance is always the best or cheapest option."
+    ]
+}
