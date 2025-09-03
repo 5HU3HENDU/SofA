@@ -1,0 +1,28 @@
+{
+    "title": "Cat Care Essentials",
+    "description": "Understanding the needs of your feline friend is key to a happy and healthy relationship. Cats are independent, but they thrive on routine, a clean environment, and your affection.",
+    "sentences": [
+        "Cats are obligate carnivores and need a high-protein diet; choose quality cat food (wet or dry).",
+        "Provide fresh, clean water at all times, preferably in a separate location from their food bowl.",
+        "A clean litter box is non-negotiable; scoop it daily and completely change the litter weekly.",
+        "Annual vet check-ups, deworming, and vaccinations are crucial for preventative healthcare.",
+        "Provide scratching posts to save your furniture and satisfy their natural instinct to scratch."
+    ],
+    "websites": [
+        { "name": "Heads Up For Tails (Pet Supplies)", "url": "https://headsupfortails.com/" },
+        { "name": "PetSutra (Pet Supplies & Food)", "url": "https://www.petsutra.com/" },
+        { "name": "VetsIn (Find Vets in India)", "url": "https://www.vetsin.com/" }
+    ],
+    "dos": [
+        "Play with your cat daily using interactive toys to provide mental and physical stimulation.",
+        "Create vertical spaces like cat trees or shelves for them to climb and observe.",
+        "Brush them regularly, especially long-haired breeds, to prevent hairballs and matting.",
+        "Pay close attention to changes in their behavior, appetite, or litter box habits as they can be signs of illness."
+    ],
+    "donts": [
+        "Don't feed them dog food, milk, onions, garlic, or chocolate as these can be toxic.",
+        "Don't use physical punishment; use positive reinforcement to correct behavior.",
+        "Don't declaw your cat; it is a painful and unnecessary amputation.",
+        "Don't let them roam freely outdoors unsupervised in busy urban areas to protect them from traffic and diseases."
+    ]
+}
