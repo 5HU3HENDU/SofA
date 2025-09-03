@@ -1,0 +1,27 @@
+{
+    "title": "Health Check-Ups",
+    "description": "Preventative care is the best care. Regular health check-ups help you stay on top of your health, catch potential issues early, and build a relationship with your doctor.",
+    "sentences": [
+        "Schedule an annual physical with your general practitioner.",
+        "Visit the dentist for a cleaning and check-up every 6-12 months.",
+        "Get your eyes checked every 1-2 years, even if you don't wear glasses.",
+        "Know your key numbers: blood pressure, cholesterol, and blood sugar.",
+        "Keep a record of your family's medical history."
+    ],
+    "websites": [
+        { "name": "MyHealthfinder (U.S. Dept. of Health)", "url": "https://health.gov/myhealthfinder" },
+        { "name": "Apollo 24/7 (India)", "url": "https://www.apollo247.com/" }
+    ],
+    "dos": [
+        "Prepare a list of questions and concerns before your doctor's appointment.",
+        "Be honest and open with your doctor about your lifestyle and symptoms.",
+        "Follow through on recommended tests and follow-up appointments.",
+        "Know what your health insurance covers."
+    ],
+    "donts": [
+        "Don't ignore persistent or unusual symptoms.",
+        "Don't self-diagnose using the internet; consult a professional.",
+        "Don't skip appointments because you feel healthy.",
+        "Don't be afraid to get a second opinion."
+    ]
+}
