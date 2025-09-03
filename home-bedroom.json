@@ -1,0 +1,28 @@
+{
+    "title": "Creating a Peaceful Bedroom",
+    "description": "Your bedroom should be a sanctuary for rest and rejuvenation. An organized and calm environment is essential for quality sleep and starting your day right.",
+    "sentences": [
+        "The primary function of the bedroom is sleep; minimize distractions like TVs and work desks.",
+        "Invest in quality bedding and pillows that are comfortable for you.",
+        "Use blackout curtains to control light for better sleep.",
+        "A clutter-free environment leads to a clutter-free mind and better rest.",
+        "Develop a system for managing laundry to prevent clothes from piling up."
+    ],
+    "websites": [
+        { "name": "The Sleep Foundation", "url": "https://www.sleepfoundation.org/bedroom-environment" },
+        { "name": "IKEA (Bedroom Storage Solutions)", "url": "https://www.ikea.com/in/en/" },
+        { "name": "Wakefit (Mattresses & Bedding)", "url": "https://www.wakefit.co/" }
+    ],
+    "dos": [
+        "Make your bed every morning to instantly make the room look tidier.",
+        "Use bedside tables with drawers for storage.",
+        "Organize your wardrobe seasonally to make more space.",
+        "Incorporate calming scents through diffusers or candles."
+    ],
+    "donts": [
+        "Don't use your bed as a storage area for clothes or other items.",
+        "Don't use bright, stimulating colors on all walls.",
+        "Don't let dust accumulate under the bed and on surfaces.",
+        "Don't work or eat in your bed."
+    ]
+}
