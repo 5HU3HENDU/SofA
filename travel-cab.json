@@ -1,0 +1,28 @@
+{
+    "title": "Local & Outstation Cabs",
+    "description": "Cabs provide door-to-door convenience for getting around a city or for day trips to nearby locations.",
+    "sentences": [
+        "For in-city travel, ride-hailing apps like Ola and Uber are the most convenient options.",
+        "For outstation trips, you can book round trips or one-way drops on these apps or dedicated services like Savaari.",
+        "Always confirm the final fare, including any tolls, state taxes, and parking fees, before starting your trip.",
+        "Before boarding, verify that the car number and driver details match what's shown in the app.",
+        "Always share your ride details with a friend or family member for safety."
+    ],
+    "websites": [
+        { "name": "Ola Cabs", "url": "https://www.olacabs.com/" },
+        { "name": "Uber India", "url": "https://www.uber.com/in/en/" },
+        { "name": "Savaari Car Rentals", "url": "https://www.savaari.com/" }
+    ],
+    "dos": [
+        "Use the in-app SOS or safety features if you ever feel uncomfortable or unsafe.",
+        "Check the driver's rating before the ride begins.",
+        "If possible, try to pay via the app or UPI to have a digital record of your payment.",
+        "For airport or station drops, book your cab well in advance to account for traffic."
+    ],
+    "donts": [
+        "Don't board a cab if the driver's identity or car details do not match the app.",
+        "Don't get into verbal arguments with the driver, especially while on the move.",
+        "Don't leave your belongings in the cab; double-check the seats and boot before you leave.",
+        "Don't agree to off-the-app (offline) trips with the driver, as you lose all safety tracking."
+    ]
+}
