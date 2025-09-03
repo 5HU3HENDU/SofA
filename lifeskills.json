@@ -1,0 +1,28 @@
+{
+    "title": "Essential Life Skills",
+    "description": "The practical, everyday skills that school didn't teach you. From basic home repair to effective communication, these are the keys to self-sufficiency.",
+    "sentences": [
+        "Learn basic cooking techniques to prepare healthy, affordable meals.",
+        "Understand how to read a contract before signing.",
+        "Master the art of negotiation for everything from cars to salaries.",
+        "Learn basic first aid and CPR.",
+        "Develop emotional intelligence: understand and manage your own emotions and recognize them in others."
+    ],
+    "websites": [
+        { "name": "iFixit (Repair Guides)", "url": "https://www.ifixit.com/" },
+        { "name": "The Art of Manliness (Practical Skills)", "url": "https://www.artofmanliness.com/" },
+        { "name": "YouTube", "url": "https://www.youtube.com" }
+    ],
+    "dos": [
+        "Assemble a basic toolkit for home repairs.",
+        "Learn how to change a tire and check your car's oil.",
+        "Practice active listening in your conversations.",
+        "Take a public speaking course or join Toastmasters."
+    ],
+    "donts": [
+        "Don't be afraid to ask for help when you don't know something.",
+        "Don't ignore warning lights on your car's dashboard.",
+        "Don't procrastinate on important tasks like filing taxes.",
+        "Don't assume you know everything; always be open to learning."
+    ]
+}
