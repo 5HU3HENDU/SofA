@@ -1,0 +1,24 @@
+{
+    "title": "Handle Loans",
+    "description": "Debt is a tool that can be used for leverage (good debt) or can become a burden (bad debt). Understanding the difference is crucial.",
+    "sentences": [
+        "Aggressively pay down high-interest debt (e.g., credit cards).",
+        "Understand the terms of any loan before you sign.",
+        "Maintain a good credit score by paying bills on time.",
+        "Use debt strategically for assets that appreciate, like a home."
+    ],
+    "websites": [
+        { "name": "AnnualCreditReport.com (Free Credit Report)", "url": "https://www.annualcreditreport.com/" },
+        { "name": "NerdWallet (Loan comparison)", "url": "https://www.nerdwallet.com/" }
+    ],
+    "dos": [
+        "Check your credit score and report for free.",
+        "Create a debt-repayment plan (e.g., snowball or avalanche method).",
+        "Consider consolidating or refinancing high-interest loans."
+    ],
+    "donts": [
+        "Don't take on debt for depreciating assets like new cars if you can avoid it.",
+        "Don't miss loan payments, as it severely impacts your credit.",
+        "Don't co-sign a loan for someone unless you are prepared to pay it in full."
+    ]
+}
