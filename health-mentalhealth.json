@@ -1,0 +1,28 @@
+{
+    "title": "Mental Health",
+    "description": "Your mental well-being is just as important as your physical health. Cultivating resilience, managing stress, and seeking support are signs of strength.",
+    "sentences": [
+        "Practice mindfulness through meditation, deep breathing, or journaling.",
+        "Identify your stress triggers and develop healthy coping mechanisms.",
+        "Nurture your social connections with friends and family.",
+        "It's okay to not be okay, and it's okay to ask for help.",
+        "Therapy can provide valuable tools for navigating life's challenges."
+    ],
+    "websites": [
+        { "name": "Headspace (Meditation App)", "url": "https://www.headspace.com/" },
+        { "name": "BetterHelp (Online Therapy)", "url": "https://www.betterhelp.com/" },
+        { "name": "NIMH (National Institute of Mental Health)", "url": "https://www.nimh.nih.gov/" }
+    ],
+    "dos": [
+        "Set boundaries to protect your time and energy.",
+        "Engage in hobbies and activities that bring you joy.",
+        "Prioritize getting enough quality sleep.",
+        "Practice self-compassion and treat yourself with kindness."
+    ],
+    "donts": [
+        "Don't isolate yourself when you're struggling.",
+        "Don't use unhealthy coping mechanisms like excessive drinking or avoidance.",
+        "Don't believe the stigma around seeking mental health support.",
+        "Don't compare your mental health journey to anyone else's."
+    ]
+}
