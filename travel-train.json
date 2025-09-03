@@ -1,0 +1,28 @@
+{
+    "title": "Booking Trains",
+    "description": "Indian Railways is the lifeline of the country, offering an affordable, extensive, and scenic way to travel. Planning is key to securing a confirmed seat.",
+    "sentences": [
+        "Book train tickets as soon as the booking window opens (usually 120 days in advance) via the IRCTC website or app.",
+        "Understand the different travel classes: Sleeper (SL), Third AC (3A), Second AC (2A), and First AC (1A).",
+        "The 'Tatkal' quota opens one day before the journey starts, at 10 AM for AC classes and 11 AM for non-AC.",
+        "Regularly check your PNR status for updates on your waitlisted ticket.",
+        "For food, you can use IRCTC's e-catering service to order from restaurants at upcoming stations."
+    ],
+    "websites": [
+        { "name": "IRCTC (Official)", "url": "https://www.irctc.co.in/" },
+        { "name": "RailYatri (PNR & Tracking)", "url": "https://www.railyatri.in/" },
+        { "name": "ConfirmTkt", "url": "https://www.confirmtkt.com/" }
+    ],
+    "dos": [
+        "Always carry a valid government-issued ID that matches the name on the ticket.",
+        "Secure your luggage with a chain and lock under the lower berth.",
+        "Arrive at the station at least 30 minutes before departure to find your platform and coach.",
+        "Be aware of your train's schedule and expected arrival time at your destination."
+    ],
+    "donts": [
+        "Don't rely solely on a waitlisted ticket for a confirmed journey, always have a backup plan.",
+        "Don't buy tickets from unauthorized touts or agents.",
+        "Don't eat food from unauthorized vendors on the train or at stations.",
+        "Don't leave your valuables like mobile phones and wallets unattended, especially while sleeping."
+    ]
+}
