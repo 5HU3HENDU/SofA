@@ -1,0 +1,28 @@
+{
+    "title": "Relationship with Your Partner",
+    "description": "A healthy partnership is built on a foundation of trust, communication, shared values, and mutual respect. It requires continuous effort and a commitment to growing together through life's ups and downs.",
+    "sentences": [
+        "Master the art of active listening: hear to understand, not just to reply.",
+        "Schedule regular, dedicated time for each other, free from distractions.",
+        "Discuss finances openly and create a shared budget or financial plan.",
+        "Maintain your individual identities and hobbies outside of the relationship.",
+        "Learn each other's 'love languages' to show affection in meaningful ways."
+    ],
+    "websites": [
+        { "name": "The Gottman Institute (Relationship Research)", "url": "https://www.gottman.com/" },
+        { "name": "Talkspace (Couples Therapy)", "url": "https://www.talkspace.com/couples-therapy" },
+        { "name": "OurRelationship (Online Program)", "url": "https://www.ourrelationship.com/" }
+    ],
+    "dos": [
+        "Communicate your needs and expectations clearly and kindly.",
+        "Be each other's biggest cheerleader.",
+        "Learn to argue constructively, focusing on the problem, not the person.",
+        "Share responsibilities for household chores and life admin."
+    ],
+    "donts": [
+        "Don't assume your partner can read your mind.",
+        "Don't keep score or bring up past arguments in a new fight.",
+        "Don't neglect physical intimacy and affection.",
+        "Don't compare your relationship to others."
+    ]
+}
