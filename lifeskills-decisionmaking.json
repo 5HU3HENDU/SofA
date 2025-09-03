@@ -1,0 +1,27 @@
+{
+    "title": "Effective Decision Making",
+    "description": "Making good decisions is a fundamental life skill that impacts your career, finances, and personal well-being. A structured approach can help you navigate choices more effectively.",
+    "sentences": [
+        "Clearly define the decision you need to make and what you want to achieve.",
+        "Gather all the relevant information and identify your available options.",
+        "Weigh the pros and cons of each option. Consider both short-term and long-term consequences.",
+        "Once you've made a decision, commit to it and take action.",
+        "Reflect on your past decisions, both good and bad, to learn and improve your process."
+    ],
+    "websites": [
+        { "name": "Harvard Business Review (On Decision Making)", "url": "https://hbr.org/topic/decision-making" },
+        { "name": "Forbes (Articles on making better choices)", "url": "https://www.forbes.com/leadership/decision-making/" }
+    ],
+    "dos": [
+        "Consider seeking advice from a trusted friend, mentor, or expert.",
+        "Trust your gut instinct, but back it up with facts and logic.",
+        "For big decisions, give yourself a deadline to avoid procrastination.",
+        "Understand that 'good enough' is often better than waiting for a 'perfect' option that may not exist."
+    ],
+    "donts": [
+        "Don't make important decisions when you are tired, hungry, or emotional.",
+        "Don't let 'analysis paralysis' (overthinking) stop you from making a choice.",
+        "Don't let fear of making the wrong choice paralyze you. Most decisions are reversible.",
+        "Don't let others pressure you into a decision that you're not comfortable with."
+    ]
+}
