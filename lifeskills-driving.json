@@ -1,0 +1,27 @@
+{
+    "title": "Learning to Drive",
+    "description": "Learning to drive is a key skill for independence. It involves understanding traffic rules, mastering vehicle control, and developing road awareness to ensure your safety and that of others.",
+    "sentences": [
+        "Enroll in a reputable local driving school to learn from a certified instructor.",
+        "Obtain your learner's license from the local RTO before you start practicing on public roads.",
+        "Thoroughly learn and understand all traffic signs, signals, and road markings.",
+        "Practice consistently, starting in empty grounds or low-traffic areas and gradually moving to busier roads.",
+        "Learn basic car maintenance like checking tire pressure, engine oil, and coolant levels."
+    ],
+    "websites": [
+        { "name": "Parivahan Sarathi (License Application)", "url": "https://sarathi.parivahan.gov.in/" },
+        { "name": "Maruti Suzuki Driving School", "url": "https://www.marutisuzukidrivingschool.com/" }
+    ],
+    "dos": [
+        "Always wear your seatbelt, and ensure your co-passengers do too.",
+        "Be patient and defensive. Assume other drivers might make mistakes.",
+        "Master the use of mirrors and indicators for changing lanes and turning.",
+        "Practice parking, especially parallel parking, as it's often the trickiest part."
+    ],
+    "donts": [
+        "Don't use your mobile phone while driving, not even on speaker or with earphones.",
+        "Don't drive without a valid learner's license (with a licensed co-driver) or a permanent license.",
+        "Don't get intimidated by honking from other vehicles; focus on driving safely.",
+        "Don't ever drink and drive."
+    ]
+}
