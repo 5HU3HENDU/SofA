@@ -1,0 +1,29 @@
+{
+    "title": "Interactive Fun: Games",
+    "description": "Gaming is a diverse and engaging hobby for adults, offering everything from relaxing puzzles and rich stories to epic online adventures and competitive sports.",
+    "sentences": [
+        "Gaming is available on various platforms: PC (Steam, Epic Games), consoles (PlayStation, Xbox), and mobile (iOS, Android).",
+        "Many games have a strong social component, allowing you to connect and play with friends online.",
+        "Indie games often offer unique, creative experiences that are different from big-budget titles.",
+        "Gaming can be a great way to unwind and de-stress after a long day.",
+        "Setting a budget for games and in-game purchases is important for financial management."
+    ],
+    "websites": [
+        { "name": "Steam (PC Games)", "url": "https://store.steampowered.com/" },
+        { "name": "IGN India (Reviews & News)", "url": "https://in.ign.com/" },
+        { "name": "PlayStation India", "url": "https://www.playstation.com/en-in/" },
+        { "name": "Xbox India", "url": "https://www.xbox.com/en-IN/" }
+    ],
+    "dos": [
+        "Set clear time limits for your gaming sessions to maintain a healthy balance.",
+        "Try game genres you haven't played before; you might discover a new favorite.",
+        "Look for sales and bundles to get games at a lower price.",
+        "Engage with positive online communities for tips and discussions."
+    ],
+    "donts": [
+        "Don't let gaming interfere with your work, sleep, or social responsibilities.",
+        "Don't get drawn into making unplanned in-game purchases ('microtransactions').",
+        "Don't engage with toxic players or communities; use the mute, block, and report functions.",
+        "Don't neglect physical activity; take regular breaks to stretch and move around."
+    ]
+}
