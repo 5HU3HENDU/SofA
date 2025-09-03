@@ -1,0 +1,29 @@
+{
+    "title": "Entertainment: TV Shows & Movies",
+    "description": "A guide to navigating the vast world of streaming services and cinematic experiences, helping you find quality content without endless scrolling.",
+    "sentences": [
+        "Major streaming platforms in India include Netflix, Amazon Prime Video, and Disney+ Hotstar.",
+        "Use platforms like IMDb or Rotten Tomatoes to check ratings and reviews before watching.",
+        "Explore regional cinema, which often produces critically acclaimed and unique films.",
+        "Creating a watchlist helps you keep track of shows and movies you want to see.",
+        "Balancing screen time is important for your health and well-being."
+    ],
+    "websites": [
+        { "name": "Netflix", "url": "https://www.netflix.com/in/" },
+        { "name": "Amazon Prime Video", "url": "https://www.primevideo.com/" },
+        { "name": "Disney+ Hotstar", "url": "https://www.hotstar.com/in" },
+        { "name": "IMDb (for ratings)", "url": "https://www.imdb.com/" }
+    ],
+    "dos": [
+        "Explore different genres to discover new interests.",
+        "Watch movies or shows with friends or family for a shared experience.",
+        "Pay attention to recommendations from friends with similar tastes.",
+        "Consider watching documentaries to learn something new."
+    ],
+    "donts": [
+        "Don't subscribe to too many streaming services at once; rotate them if needed.",
+        "Don't let binge-watching negatively impact your sleep schedule or daily responsibilities.",
+        "Don't read spoilers if you want to enjoy the suspense.",
+        "Don't feel pressured to watch something just because it's popular."
+    ]
+}
