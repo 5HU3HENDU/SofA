@@ -1,0 +1,28 @@
+{
+    "title": "Efficient Kitchen Management",
+    "description": "An organized kitchen saves time, reduces food waste, and makes cooking more enjoyable. It's about creating logical systems for storage, cleaning, and meal preparation.",
+    "sentences": [
+        "Organize your pantry and fridge by category (e.g., grains, spices, canned goods).",
+        "Keep frequently used tools and ingredients within easy reach of your cooking station.",
+        "Adopt a 'clean as you go' policy while cooking to minimize the final cleanup.",
+        "Regularly check for and dispose of expired food items.",
+        "Plan your meals for the week to streamline grocery shopping and reduce waste."
+    ],
+    "websites": [
+        { "name": "The Kitchn (Organization Tips)", "url": "https://www.thekitchn.com/organization" },
+        { "name": "BigBasket (Online Grocery)", "url": "https://www.bigbasket.com/" },
+        { "name": "Hebbar's Kitchen (Indian Recipes)", "url": "https://hebbarskitchen.com/" }
+    ],
+    "dos": [
+        "Wipe down countertops and the stove after every use.",
+        "Sharpen your knives regularly for safety and efficiency.",
+        "Create an inventory of your pantry and freezer items.",
+        "Deep clean your fridge and microwave on a monthly basis."
+    ],
+    "donts": [
+        "Don't overcrowd your refrigerator; allow air to circulate.",
+        "Don't store perishable items on the fridge door.",
+        "Don't let dishes pile up in the sink for days.",
+        "Don't ignore strange smells from the fridge or garbage disposal."
+    ]
+}
