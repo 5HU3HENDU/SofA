@@ -1,0 +1,29 @@
+{
+    "title": "The Modern Job Search",
+    "description": "Landing a job today requires a strategic and proactive approach. It's about marketing yourself effectively across multiple platforms and tailoring your application to each opportunity.",
+    "sentences": [
+        "Your resume/CV should be a marketing document, not a historical record. Tailor it for every job application.",
+        "A complete and active LinkedIn profile is non-negotiable for most professional roles.",
+        "Prepare for interviews using the STAR method (Situation, Task, Action, Result) to structure your answers.",
+        "Networking is often the most effective job search strategy; leverage your connections.",
+        "Be prepared for multi-stage interviews, including technical rounds, HR discussions, and cultural fit assessments."
+    ],
+    "websites": [
+        { "name": "LinkedIn Jobs", "url": "https://www.linkedin.com/jobs/" },
+        { "name": "Naukri.com (India's Largest Job Portal)", "url": "https://www.naukri.com/" },
+        { "name": "AngelList (For Startup Jobs)", "url": "https://angel.co/" },
+        { "name": "IIMJobs (For Management Roles)", "url": "https://www.iimjobs.com/" }
+    ],
+    "dos": [
+        "Write a compelling cover letter that connects your skills to the company's needs.",
+        "Practice common interview questions with a friend.",
+        "Send a polite thank-you email after each interview stage.",
+        "Clean up your social media profiles to ensure they are professional."
+    ],
+    "donts": [
+        "Don't mass-apply with a generic, one-size-fits-all resume.",
+        "Don't lie or exaggerate your skills and experience.",
+        "Don't discuss salary expectations too early in the process.",
+        "Don't stop searching after one or two good interviews; keep your options open."
+    ]
+}
