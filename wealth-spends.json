@@ -1,0 +1,24 @@
+{
+    "title": "Manage Spends",
+    "description": "Managing your spending is about mindful allocation of resources. A budget isn't about restriction; it's about empowerment.",
+    "sentences": [
+        "Create a detailed monthly budget and track every dollar.",
+        "Use the 50/30/20 rule as a guideline: 50% for needs, 30% for wants, 20% for savings.",
+        "Differentiate between 'needs' and 'wants'.",
+        "Review your spending habits monthly to find areas for improvement."
+    ],
+    "websites": [
+        { "name": "YNAB (You Need A Budget)", "url": "https://www.youneedabudget.com/" },
+        { "name": "Mint (Budgeting App)", "url": "https://mint.intuit.com/" }
+    ],
+    "dos": [
+        "Set up a budget using an app or a spreadsheet.",
+        "Identify three non-essential expenses you can cut back on.",
+        "Try a 'no-spend' weekend."
+    ],
+    "donts": [
+        "Don't let lifestyle inflation consume every raise you get.",
+        "Don't make large purchases on impulse.",
+        "Don't ignore small, recurring subscriptions that add up."
+    ]
+}
