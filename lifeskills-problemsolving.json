@@ -1,0 +1,27 @@
+{
+    "title": "General Problem Solving",
+    "description": "Life is full of challenges. Developing a systematic approach to problem-solving helps you tackle issues calmly and effectively, rather than feeling overwhelmed.",
+    "sentences": [
+        "First, clearly identify and define the root of the problem, not just its symptoms.",
+        "Break down large, complex problems into smaller, more manageable parts.",
+        "Brainstorm a wide range of potential solutions without judging them initially.",
+        "Evaluate your potential solutions and select the one that is most practical and effective.",
+        "Create an action plan to implement your chosen solution and monitor its progress."
+    ],
+    "websites": [
+        { "name": "Coursera (Critical Thinking Skills)", "url": "https://www.coursera.org/browse/personal-development/critical-thinking" },
+        { "name": "Mind Tools (Problem Solving Techniques)", "url": "https://www.mindtools.com/pages/main/newMN_TMC.htm" }
+    ],
+    "dos": [
+        "Approach problems with a positive and proactive mindset.",
+        "Stay calm and objective, separating emotions from facts.",
+        "Collaborate with others to get different perspectives and ideas.",
+        "Be persistent and willing to try another solution if your first attempt doesn't work."
+    ],
+    "donts": [
+        "Don't jump to the first solution that comes to mind.",
+        "Don't focus on blaming someone for the problem; focus on finding a solution.",
+        "Don't ignore a problem, hoping it will go away on its own.",
+        "Don't be afraid to ask for help or admit that you don't know the answer."
+    ]
+}
