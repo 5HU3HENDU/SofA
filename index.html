@@ -40,6 +40,9 @@
         .nav-sidebar {
             transition: transform 0.3s ease-in-out;
         }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        
         @media (max-width: 1024px) {
             .nav-sidebar {
                 transform: translateX(100%);
@@ -57,7 +60,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <!-- Header -->
                 <header class="flex items-center justify-between pb-8">
-                     <div class="flex items-center space-x-3">
+                     <div class="flex items-center space-x-3" id="header-content">
                          <span class="text-3xl">🎓</span>
                         <h1 class="text-3xl font-bold text-white">School of Adults</h1>
                     </div>
@@ -98,7 +101,7 @@
         const root = document.documentElement;
         const homeGrid = document.getElementById('home-grid');
         const contentDisplay = document.getElementById('content-display');
-        const headerTitle = document.querySelector('header h1');
+        const headerContent = document.getElementById('header-content');
         const navSidebar = document.getElementById('nav-sidebar');
         const navToggle = document.getElementById('nav-toggle');
         const navLinksContainer = document.getElementById('nav-links');
@@ -111,11 +114,11 @@
                 color1: "#1f2937", 
                 color2: "#ef4444",
                 subtopics: {
-                    food: { title: "Food", file: "health-food.json" },
-                    exercise: { title: "Exercise", file: "health-exercise.json" },
-                    healthCheckUp: { title: "Health Check Up", file: "health-healthcheckup.json" },
-                    mentalHealth: { title: "Mental Health", file: "health-mentalhealth.json" },
-                    period: { title: "Period Health", file: "health-period.json" },
+                    food: { title: "Food", icon: "🥗", file: "health-food.json" },
+                    exercise: { title: "Exercise", icon: "🏋️", file: "health-exercise.json" },
+                    healthCheckUp: { title: "Health Check Up", icon: "🩺", file: "health-healthcheckup.json" },
+                    mentalHealth: { title: "Mental Health", icon: "🧠", file: "health-mentalhealth.json" },
+                    period: { title: "Period Health", icon: "🩸", file: "health-period.json" },
                 }
             },
             wealth: { 
@@ -124,11 +127,11 @@
                 color1: "#1e3a8a",
                 color2: "#3b82f6",
                 subtopics: {
-                    generate: { title: "Generate", file: "wealth-generate.json" },
-                    invest: { title: "Invest", file: "wealth-invest.json" },
-                    insurance: { title: "Insurance", file: "wealth-insurance.json" },
-                    spends: { title: "Spends", file: "wealth-spends.json" },
-                    loans: { title: "Loans", file: "wealth-loans.json" },
+                    generate: { title: "Generate", icon: "📈", file: "wealth-generate.json" },
+                    invest: { title: "Invest", icon: "🏦", file: "wealth-invest.json" },
+                    insurance: { title: "Insurance", icon: "🛡️", file: "wealth-insurance.json" },
+                    spends: { title: "Spends", icon: "💸", file: "wealth-spends.json" },
+                    loans: { title: "Loans", icon: "🧾", file: "wealth-loans.json" },
                 }
             },
             career: { 
@@ -137,10 +140,10 @@
                 color1: "#4a044e", 
                 color2: "#a21caf",
                 subtopics: {
-                    choosing: { title: "Choosing Career", file: "career-choosing.json" },
-                    jobsearch: { title: "Job Search", file: "career-jobsearch.json" },
-                    ladder: { title: "Career Ladder", file: "career-ladder.json" },
-                    resignation: { title: "Resignation", file: "career-resignation.json" },
+                    choosing: { title: "Choosing Career", icon: "🤔", file: "career-choosing.json" },
+                    jobsearch: { title: "Job Search", icon: "💼", file: "career-jobsearch.json" },
+                    ladder: { title: "Career Ladder", icon: "🧗", file: "career-ladder.json" },
+                    resignation: { title: "Resignation", icon: "👋", file: "career-resignation.json" },
                 }
             },
             homeManagement: {
@@ -149,11 +152,11 @@
                 color1: "#3f6212",
                 color2: "#84cc16",
                 subtopics: {
-                    livingroom: { title: "Living Room", file: "home-livingroom.json" },
-                    bedroom: { title: "Bedroom", file: "home-bedroom.json" },
-                    kitchen: { title: "Kitchen", file: "home-kitchen.json" },
-                    garden: { title: "Garden", file: "home-garden.json" },
-                    bathroom: { title: "Bathroom", file: "home-bathroom.json" },
+                    livingroom: { title: "Living Room", icon: "🛋️", file: "home-livingroom.json" },
+                    bedroom: { title: "Bedroom", icon: "🛏️", file: "home-bedroom.json" },
+                    kitchen: { title: "Kitchen", icon: "🍳", file: "home-kitchen.json" },
+                    garden: { title: "Garden", icon: "🌳", file: "home-garden.json" },
+                    bathroom: { title: "Bathroom", icon: "🛁", file: "home-bathroom.json" },
                 }
             },
             travel: { 
@@ -162,14 +165,14 @@
                 color1: "#064e3b", 
                 color2: "#10b981",
                 subtopics: {
-                    place: { title: "Place", file: "travel-place.json" },
-                    stay: { title: "Stay", file: "travel-stay.json" },
-                    flight: { title: "Flight", file: "travel-flight.json" },
-                    train: { title: "Train", file: "travel-train.json" },
-                    bus: { title: "Bus", file: "travel-bus.json" },
-                    cab: { title: "Cab", file: "travel-cab.json" },
-                    itinerary: { title: "Itinerary", file: "travel-itinerary.json" },
-                    thingstocarry: { title: "Things to Carry", file: "travel-thingstocarry.json" },
+                    place: { title: "Place", icon: "🗺️", file: "travel-place.json" },
+                    stay: { title: "Stay", icon: "🏨", file: "travel-stay.json" },
+                    flight: { title: "Flight", icon: "✈️", file: "travel-flight.json" },
+                    train: { title: "Train", icon: "🚆", file: "travel-train.json" },
+                    bus: { title: "Bus", icon: "🚌", file: "travel-bus.json" },
+                    cab: { title: "Cab", icon: "🚕", file: "travel-cab.json" },
+                    itinerary: { title: "Itinerary", icon: "📝", file: "travel-itinerary.json" },
+                    thingstocarry: { title: "Things to Carry", icon: "🎒", file: "travel-thingstocarry.json" },
                 }
             },
             people: {
@@ -178,14 +181,14 @@
                 color1: "#581c87",
                 color2: "#a855f7",
                 subtopics: {
-                    self: { title: "Self", file: "people-self.json" },
-                    parents: { title: "Parents", file: "people-parents.json" },
-                    partner: { title: "Partner", file: "people-partner.json" },
-                    kids: { title: "Kids", file: "people-kids.json" },
-                    friends: { title: "Friends", file: "people-friends.json" },
-                    relatives: { title: "Relatives", file: "people-relatives.json" },
-                    colleagues: { title: "Colleagues", file: "people-colleagues.json" },
-                    enemy: { title: "Difficult People", file: "people-enemy.json" },
+                    self: { title: "Self", icon: "❤️‍🩹", file: "people-self.json" },
+                    parents: { title: "Parents", icon: "👨‍👩‍👧", file: "people-parents.json" },
+                    partner: { title: "Partner", icon: "💞", file: "people-partner.json" },
+                    kids: { title: "Kids", icon: "👶", file: "people-kids.json" },
+                    friends: { title: "Friends", icon: "🧑‍🤝‍🧑", file: "people-friends.json" },
+                    relatives: { title: "Relatives", icon: "👨‍👩‍👧‍👦", file: "people-relatives.json" },
+                    colleagues: { title: "Colleagues", icon: "👔", file: "people-colleagues.json" },
+                    enemy: { title: "Difficult People", icon: "😒", file: "people-enemy.json" },
                 }
             },
             lifeSkills: {
@@ -194,10 +197,10 @@
                 color1: "#854d0e",
                 color2: "#f59e0b",
                 subtopics: {
-                    driving: { title: "Driving", file: "lifeskills-driving.json" },
-                    swimming: { title: "Swimming", file: "lifeskills-swimming.json" },
-                    decisionmaking: { title: "Decision Making", file: "lifeskills-decisionmaking.json" },
-                    problemsolving: { title: "Problem Solving", file: "lifeskills-problemsolving.json" }
+                    driving: { title: "Driving", icon: "🚗", file: "lifeskills-driving.json" },
+                    swimming: { title: "Swimming", icon: "🏊", file: "lifeskills-swimming.json" },
+                    decisionmaking: { title: "Decision Making", icon: "🧠", file: "lifeskills-decisionmaking.json" },
+                    problemsolving: { title: "Problem Solving", icon: "🧩", file: "lifeskills-problemsolving.json" }
                 }
             },
             lifeEvents: {
@@ -206,10 +209,10 @@
                 color1: "#0c4a6e",
                 color2: "#0ea5e9",
                 subtopics: {
-                    buyinghouse: { title: "Buying House", file: "lifeevents-buyinghouse.json" },
-                    gettingmarried: { title: "Getting Married", file: "lifeevents-gettingmarried.json" },
-                    pregnancy: { title: "Pregnancy", file: "lifeevents-pregnancy.json" },
-                    moving: { title: "Moving to a New City", file: "lifeevents-moving.json" }
+                    buyinghouse: { title: "Buying House", icon: "🏠", file: "lifeevents-buyinghouse.json" },
+                    gettingmarried: { title: "Getting Married", icon: "💍", file: "lifeevents-gettingmarried.json" },
+                    pregnancy: { title: "Pregnancy", icon: "🤰", file: "lifeevents-pregnancy.json" },
+                    moving: { title: "Moving to a New City", icon: "🏙️", file: "lifeevents-moving.json" }
                 }
             },
             pets: {
@@ -218,8 +221,8 @@
                 color1: "#6d28d9",
                 color2: "#c084fc",
                 subtopics: {
-                    cats: { title: "Cats", file: "pets-cats.json" },
-                    dogs: { title: "Dogs", file: "pets-dogs.json" }
+                    cats: { title: "Cats", icon: "🐈", file: "pets-cats.json" },
+                    dogs: { title: "Dogs", icon: "🐕", file: "pets-dogs.json" }
                 }
             },
             content: {
@@ -228,11 +231,11 @@
                 color1: "#0f766e",
                 color2: "#14b8a6",
                 subtopics: {
-                    news: { title: "News", file: "content-news.json" },
-                    tvmovies: { title: "TV Shows & Movies", file: "content-tvmovies.json" },
-                    songs: { title: "Songs", file: "content-songs.json" },
-                    books: { title: "Books", file: "content-books.json" },
-                    games: { title: "Games", file: "content-games.json" }
+                    news: { title: "News", icon: "📰", file: "content-news.json" },
+                    tvmovies: { title: "TV Shows & Movies", icon: "🎞️", file: "content-tvmovies.json" },
+                    songs: { title: "Songs", icon: "🎵", file: "content-songs.json" },
+                    books: { title: "Books", icon: "📚", file: "content-books.json" },
+                    games: { title: "Games", icon: "🎮", file: "content-games.json" }
                 }
             },
             fashion: {
@@ -241,9 +244,9 @@
                 color1: "#831843",
                 color2: "#e11d48",
                 subtopics: {
-                    men: { title: "Men", file: "fashion-men.json" },
-                    women: { title: "Women", file: "fashion-women.json" },
-                    kids: { title: "Kids", file: "fashion-kids.json" }
+                    men: { title: "Men", icon: "👨", file: "fashion-men.json" },
+                    women: { title: "Women", icon: "👩", file: "fashion-women.json" },
+                    kids: { title: "Kids", icon: "👧", file: "fashion-kids.json" }
                 }
             }
         };
@@ -259,25 +262,44 @@
             root.style.setProperty('--theme-color-1', theme.color1);
             root.style.setProperty('--theme-color-2', theme.color2);
         };
+
+        const updateHeader = (title, icon = '🎓') => {
+            headerContent.innerHTML = `
+                <span class="text-3xl">${icon}</span>
+                <h1 class="text-3xl font-bold text-white">${title}</h1>
+            `;
+        };
         
         const renderNavLinks = () => {
-            let linksHtml = '<a href="#" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="home">🏠 Home</a>';
+            let linksHtml = '<a href="#home" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="home">🏠 Home</a>';
             for (const key in topics) {
                 const topic = topics[key];
-                const mainPath = topic.file ? key : key;
-                linksHtml += `<a href="#${mainPath}" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="${mainPath}">${topic.icon} ${topic.title}</a>`;
-                
                 if (topic.subtopics) {
-                    linksHtml += '<div class="pl-6 border-l-2 border-white/10 ml-4 space-y-1">';
-                    for (const subKey in topic.subtopics) {
-                        const subTopic = topic.subtopics[subKey];
-                        const subPath = `${key}-${subKey}`;
-                        linksHtml += `<a href="#${subPath}" class="nav-link block font-medium text-base py-1 px-2 rounded-lg hover:bg-white/10 text-gray-300" data-path="${subPath}">${subTopic.title}</a>`;
-                    }
-                    linksHtml += '</div>';
+                    linksHtml += `
+                        <details class="group">
+                            <summary class="flex items-center justify-between font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10 cursor-pointer">
+                                <a href="#${key}" class="flex items-center flex-1" data-path="${key}">
+                                    <span class="mr-3">${topic.icon}</span>
+                                    <span>${topic.title}</span>
+                                </a>
+                                <i data-feather="chevron-down" class="ml-2 h-5 w-5 group-open:rotate-180 transition-transform flex-shrink-0"></i>
+                            </summary>
+                            <div class="pl-8 border-l-2 border-white/10 ml-6 mt-1 space-y-1">
+                                ${Object.entries(topic.subtopics).map(([subKey, subTopic]) => `
+                                    <a href="#${key}-${subKey}" class="nav-link flex items-center font-medium text-base py-1 px-2 rounded-lg hover:bg-white/10 text-gray-300" data-path="${key}-${subKey}">
+                                        <span class="mr-2">${subTopic.icon}</span>
+                                        <span>${subTopic.title}</span>
+                                    </a>
+                                `).join('')}
+                            </div>
+                        </details>
+                    `;
+                } else {
+                    linksHtml += `<a href="#${key}" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="${key}">${topic.icon} ${topic.title}</a>`;
                 }
             }
             navLinksContainer.innerHTML = linksHtml;
+            feather.replace();
         };
 
         const renderHomeGrid = () => {
@@ -285,7 +307,7 @@
             homeGrid.innerHTML = '';
             homeGrid.style.display = 'grid';
             contentDisplay.style.display = 'none';
-            headerTitle.textContent = "School of Adults";
+            updateHeader("School of Adults");
 
             homeGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
             let rotation = -2;
@@ -315,7 +337,7 @@
             homeGrid.innerHTML = '';
             homeGrid.style.display = 'grid';
             contentDisplay.style.display = 'none';
-            headerTitle.textContent = parentTopic.title;
+            updateHeader(parentTopic.title, parentTopic.icon);
 
             homeGrid.className = 'grid grid-cols-2 md:grid-cols-3 gap-6';
 
@@ -327,12 +349,14 @@
                 tile.style.borderColor = parentTopic.color2;
                 tile.style.backgroundColor = 'rgba(0,0,0,0.2)';
                 
-                tile.innerHTML = `<h3 class="font-semibold text-white text-xl">${item.title}</h3>`;
+                tile.innerHTML = `
+                    <span class="text-4xl mb-3">${item.icon}</span>
+                    <h3 class="font-semibold text-white text-lg">${item.title}</h3>`;
                 homeGrid.appendChild(tile);
             }
         };
 
-        const renderTopicContent = async (filePath, theme) => {
+        const renderTopicContent = async (filePath, theme, topicItem) => {
             setTheme({bgColor: theme.color1, color1: theme.color1, color2: theme.color2});
             try {
                 const response = await fetch(filePath);
@@ -341,7 +365,7 @@
 
                 homeGrid.style.display = 'none';
                 contentDisplay.style.display = 'block';
-                headerTitle.textContent = data.title;
+                updateHeader(data.title, topicItem.icon);
                 
                 contentDisplay.innerHTML = `
                     <div class="animate-fade-in bg-black/20 p-6 sm:p-8 rounded-2xl">
@@ -398,17 +422,19 @@
             } else if (topics[parentKey] && topics[parentKey].subtopics && !childKey) {
                 renderSubtopicGrid(parentKey);
             } else {
-                let filePath, theme;
+                let topicItem, theme, filePath;
                 if (childKey) {
-                    filePath = topics[parentKey]?.subtopics[childKey]?.file;
+                    topicItem = topics[parentKey]?.subtopics[childKey];
                     theme = topics[parentKey];
+                    filePath = topicItem?.file;
                 } else {
-                    filePath = topics[parentKey]?.file;
-                    theme = topics[parentKey];
+                    topicItem = topics[parentKey];
+                    theme = topicItem;
+                    filePath = topicItem?.file;
                 }
                 
                 if (filePath) {
-                    renderTopicContent(filePath, theme);
+                    renderTopicContent(filePath, theme, topicItem);
                 } else {
                     renderHomeGrid(); // Fallback to home
                 }
