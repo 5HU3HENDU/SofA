@@ -1,0 +1,25 @@
+{
+    "title": "Invest Wisely",
+    "description": "Investing is how you make your money work for you. It's the engine of wealth creation, focused on long-term growth and compounding.",
+    "sentences": [
+        "Start investing early and consistently, no matter how small the amount.",
+        "Focus on low-cost, diversified index funds for long-term growth.",
+        "Automate your investments to maintain discipline.",
+        "Understand your risk tolerance and invest accordingly."
+    ],
+    "websites": [
+        { "name": "Investopedia", "url": "https://www.investopedia.com/" },
+        { "name": "Vanguard (for low-cost index funds)", "url": "https://investor.vanguard.com/" },
+        { "name": "A Simple Path to Wealth by JL Collins", "url": "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926" }
+    ],
+    "dos": [
+        "Open a retirement account (like a Roth IRA).",
+        "Set up automatic monthly contributions to your investment account.",
+        "Read a book about basic investing principles."
+    ],
+    "donts": [
+        "Don't try to time the market.",
+        "Don't put all your money into a single stock.",
+        "Don't panic and sell during market downturns."
+    ]
+}
