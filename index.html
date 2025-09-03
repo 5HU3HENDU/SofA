@@ -34,7 +34,7 @@
         .list-item-do::before { content: '✓'; color: var(--theme-color-2); margin-right: 0.75rem; font-weight: bold; }
         .list-item-dont::before { content: '✗'; color: #ef4444; margin-right: 0.75rem; font-weight: bold; }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--theme-color-1); }
+        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
         ::-webkit-scrollbar-thumb { background: var(--theme-color-2); border-radius: 4px; }
         #content-display { display: none; }
         .nav-sidebar {
@@ -81,8 +81,8 @@
         </div>
         
         <!-- Right Navigation Sidebar -->
-        <nav id="nav-sidebar" class="nav-sidebar fixed top-0 right-0 h-full w-72 bg-black/30 backdrop-blur-lg border-l border-white/10 z-40 lg:relative lg:w-72 lg:translate-x-0 lg:flex-shrink-0">
-             <div class="p-8">
+        <nav id="nav-sidebar" class="nav-sidebar fixed top-0 right-0 h-full w-72 bg-black/30 backdrop-blur-lg border-l border-white/10 z-40 lg:relative lg:w-72 lg:translate-x-0 lg:flex-shrink-0 flex flex-col">
+             <div class="p-8 overflow-y-auto flex-1">
                 <h2 class="text-2xl font-bold mb-6 text-white">Topics</h2>
                 <div id="nav-links" class="space-y-2">
                     <!-- Nav links injected here -->
