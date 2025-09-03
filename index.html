@@ -105,7 +105,19 @@
         const sidebarOverlay = document.getElementById('sidebar-overlay');
 
         const topics = {
-            health: { title: "Health & Wellness", icon: "❤️", file: "health.json", color1: "#1f2937", color2: "#ef4444" },
+            health: { 
+                title: "Health & Wellness", 
+                icon: "❤️", 
+                color1: "#1f2937", 
+                color2: "#ef4444",
+                subtopics: {
+                    food: { title: "Food", file: "health-food.json" },
+                    exercise: { title: "Exercise", file: "health-exercise.json" },
+                    healthCheckUp: { title: "Health Check Up", file: "health-healthcheckup.json" },
+                    mentalHealth: { title: "Mental Health", file: "health-mentalhealth.json" },
+                    period: { title: "Period Health", file: "health-period.json" },
+                }
+            },
             wealth: { 
                 title: "Wealth & Finance", 
                 icon: "💰",
@@ -119,7 +131,18 @@
                     loans: { title: "Loans", file: "wealth-loans.json" },
                 }
             },
-            career: { title: "Career & Ambition", icon: "🚀", file: "career.json", color1: "#4a044e", color2: "#a21caf" },
+            career: { 
+                title: "Career & Ambition", 
+                icon: "🚀", 
+                color1: "#4a044e", 
+                color2: "#a21caf",
+                subtopics: {
+                    choosing: { title: "Choosing Career", file: "career-choosing.json" },
+                    jobsearch: { title: "Job Search", file: "career-jobsearch.json" },
+                    ladder: { title: "Career Ladder", file: "career-ladder.json" },
+                    resignation: { title: "Resignation", file: "career-resignation.json" },
+                }
+            },
             travel: { title: "Travel & Exploration", icon: "✈️", file: "travel.json", color1: "#064e3b", color2: "#10b981" },
             parenting: { title: "Parenting & Family", icon: "👨‍👩‍👧‍👦", file: "parenting.json", color1: "#581c87", color2: "#a855f7" },
             lifeSkills: { title: "Essential Life Skills", icon: "🛠️", file: "lifeskills.json", color1: "#854d0e", color2: "#f59e0b" },
@@ -141,8 +164,18 @@
             let linksHtml = '<a href="#" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="home">🏠 Home</a>';
             for (const key in topics) {
                 const topic = topics[key];
-                const path = topic.file ? key : `${key}-${Object.keys(topic.subtopics)[0]}`;
-                linksHtml += `<a href="#${path}" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="${path}">${topic.icon} ${topic.title}</a>`;
+                const mainPath = topic.file ? key : key;
+                linksHtml += `<a href="#${mainPath}" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="${mainPath}">${topic.icon} ${topic.title}</a>`;
+                
+                if (topic.subtopics) {
+                    linksHtml += '<div class="pl-6 border-l-2 border-white/10 ml-4 space-y-1">';
+                    for (const subKey in topic.subtopics) {
+                        const subTopic = topic.subtopics[subKey];
+                        const subPath = `${key}-${subKey}`;
+                        linksHtml += `<a href="#${subPath}" class="nav-link block font-medium text-base py-1 px-2 rounded-lg hover:bg-white/10 text-gray-300" data-path="${subPath}">${subTopic.title}</a>`;
+                    }
+                    linksHtml += '</div>';
+                }
             }
             navLinksContainer.innerHTML = linksHtml;
         };
@@ -322,4 +355,6 @@
     </script>
 </body>
 </html>
+
+
 
