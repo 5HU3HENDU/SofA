@@ -1,0 +1,28 @@
+{
+    "title": "The Pregnancy Journey",
+    "description": "Pregnancy is a transformative experience. This guide provides essential information for expecting parents in India to ensure a healthy and happy journey.",
+    "sentences": [
+        "Choose a trusted gynecologist and hospital early on for consistent prenatal care.",
+        "Focus on a nutritious diet rich in iron, folic acid, calcium, and protein.",
+        "Undergo all recommended prenatal scans and tests as advised by your doctor.",
+        "Plan your finances for delivery costs, and the baby's future needs.",
+        "Educate yourself about the stages of labor, delivery options, and newborn care."
+    ],
+    "websites": [
+        { "name": "BabyCenter India", "url": "https://www.babycenter.in/" },
+        { "name": "Ministry of Women & Child Development (Govt. Schemes)", "url": "https://wcd.nic.in/" },
+        { "name": "World Health Organization (Pregnancy Care)", "url": "https://www.who.int/health-topics/maternal-health" }
+    ],
+    "dos": [
+        "Engage in light to moderate exercise like walking and prenatal yoga after consulting your doctor.",
+        "Get adequate rest and sleep.",
+        "Communicate your feelings and anxieties with your partner and support system.",
+        "Enroll in prenatal or 'birthing' classes to prepare for childbirth and parenting."
+    ],
+    "donts": [
+        "Don't take any medication without consulting your doctor, including over-the-counter drugs.",
+        "Don't ignore warning signs like severe pain, bleeding, or reduced fetal movement.",
+        "Don't consume alcohol, smoke, or be around secondhand smoke.",
+        "Don't hesitate to ask for help, both during pregnancy and after the baby arrives."
+    ]
+}
