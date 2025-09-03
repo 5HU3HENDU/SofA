@@ -1,0 +1,28 @@
+{
+    "title": "Travel & Exploration",
+    "description": "See the world, broaden your horizons, and create lasting memories. Travel planning can be seamless and rewarding with the right strategies.",
+    "sentences": [
+        "Use flight comparison tools to find the best deals.",
+        "Travel during the shoulder season for better prices and fewer crowds.",
+        "Pack light and smart, using packing cubes to stay organized.",
+        "Learn a few basic phrases in the local language.",
+        "Have digital and physical copies of important documents."
+    ],
+    "websites": [
+        { "name": "Google Flights", "url": "https://www.google.com/flights" },
+        { "name": "Scott's Cheap Flights", "url": "https://scottscheapflights.com/" },
+        { "name": "Nomad List (for digital nomads)", "url": "https://nomadlist.com/" }
+    ],
+    "dos": [
+        "Create a travel bucket list.",
+        "Sign up for a travel rewards credit card.",
+        "Renew your passport if it's expiring within 6 months.",
+        "Research cultural norms and etiquette before you go."
+    ],
+    "donts": [
+        "Don't overschedule your itinerary; leave room for spontaneity.",
+        "Don't exchange currency at the airport (rates are usually poor).",
+        "Don't forget to inform your bank about your travel plans.",
+        "Don't neglect travel insurance."
+    ]
+}
