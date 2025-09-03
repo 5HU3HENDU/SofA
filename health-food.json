@@ -1,0 +1,28 @@
+{
+    "title": "Nourishing Your Body",
+    "description": "Food is fuel. Understanding nutrition helps you make conscious choices that boost energy, improve mood, and support long-term health. It's not about restriction, but about abundance of the right things.",
+    "sentences": [
+        "Focus on a balanced plate: 1/2 vegetables, 1/4 protein, 1/4 complex carbs.",
+        "Prioritize whole, unprocessed foods over packaged items.",
+        "Meal prepping on weekends can save time and prevent unhealthy choices during the week.",
+        "Hydration is key; aim for at least 2-3 litres of water a day.",
+        "Understand your body's hunger and fullness cues."
+    ],
+    "websites": [
+        { "name": "EatRight.org", "url": "https://www.eatright.org/" },
+        { "name": "Budget Bytes (Affordable Recipes)", "url": "https://www.budgetbytes.com/" },
+        { "name": "Healthline Nutrition", "url": "https://www.healthline.com/nutrition" }
+    ],
+    "dos": [
+        "Learn to cook a few simple, healthy meals you love.",
+        "Read nutrition labels to understand what's in your food.",
+        "Incorporate a variety of colorful fruits and vegetables.",
+        "Eat mindfully, without distractions like your phone or TV."
+    ],
+    "donts": [
+        "Don't label foods as 'good' or 'bad'; focus on balance.",
+        "Don't rely on sugary drinks for energy.",
+        "Don't go grocery shopping when you're hungry.",
+        "Don't follow fad diets that promise quick, unsustainable results."
+    ]
+}
