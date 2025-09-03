@@ -1,0 +1,29 @@
+{
+    "title": "Health & Wellness",
+    "description": "Mastering your physical and mental well-being is the foundation of a successful life. It's about balance, consistency, and listening to your body.",
+    "sentences": [
+        "Aim for 7-9 hours of quality sleep per night.",
+        "Incorporate both strength training and cardiovascular exercise into your routine.",
+        "Practice mindfulness or meditation for 10-15 minutes daily.",
+        "Eat a balanced diet rich in whole foods, protein, and healthy fats.",
+        "Stay hydrated by drinking water throughout the day.",
+        "Schedule regular check-ups with your doctor and dentist."
+    ],
+    "websites": [
+        { "name": "MyFitnessPal", "url": "https://www.myfitnesspal.com/" },
+        { "name": "Headspace", "url": "https://www.headspace.com/" },
+        { "name": "Examine.com (Nutrition Research)", "url": "https://examine.com/" }
+    ],
+    "dos": [
+        "Create a weekly workout schedule and stick to it.",
+        "Plan your meals for the week to avoid unhealthy impulse buys.",
+        "Find a physical activity you genuinely enjoy.",
+        "Set aside time for relaxation and de-stressing activities."
+    ],
+    "donts": [
+        "Don't rely on crash diets for long-term results.",
+        "Don't ignore persistent pain or mental health struggles.",
+        "Don't sacrifice sleep for work or entertainment.",
+        "Don't compare your fitness journey to others'."
+    ]
+}
