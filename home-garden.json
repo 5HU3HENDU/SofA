@@ -1,0 +1,28 @@
+{
+    "title": "Basic Garden & Plant Care",
+    "description": "Whether it's a balcony garden or a collection of indoor plants, greenery adds life to your home. Understanding the basics of plant care is key to helping them thrive.",
+    "sentences": [
+        "Understand the light requirements for each of your plants (full sun, partial shade, low light).",
+        "Most common houseplant deaths are due to overwatering, not underwatering.",
+        "Choose plants that are well-suited to the local climate in India.",
+        "Use pots with drainage holes to prevent water from stagnating at the roots.",
+        "Regularly check leaves for signs of pests or diseases."
+    ],
+    "websites": [
+        { "name": "Ugaoo (Plants & Gardening Supplies)", "url": "https://www.ugaoo.com/" },
+        { "name": "Nurserylive (Online Plant Nursery)", "url": "https://nurserylive.com/" },
+        { "name": "Gardener's World", "url": "https://www.gardenersworld.com/" }
+    ],
+    "dos": [
+        "Water plants in the morning or evening, not in the hot midday sun.",
+        "Prune dead or yellowing leaves to encourage new growth.",
+        "Fertilize your plants during their growing season.",
+        "Rotate your indoor plants so all sides get light."
+    ],
+    "donts": [
+        "Don't water on a fixed schedule; check the soil moisture first.",
+        "Don't place sun-loving plants in a dark corner.",
+        "Don't use a pot that is too large or too small for the plant.",
+        "Don't forget to dust the leaves of your indoor plants."
+    ]
+}
