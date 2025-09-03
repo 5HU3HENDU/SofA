@@ -1,0 +1,29 @@
+{
+    "title": "Booking Flights",
+    "description": "For long distances, flights are the fastest option. Booking smartly can save you a significant amount of money and potential hassle.",
+    "sentences": [
+        "For domestic travel, book flights at least 6-8 weeks in advance for better pricing.",
+        "Use search engines like Skyscanner or Google Flights to compare prices across all airlines.",
+        "Flights on weekdays (Tuesday, Wednesday) and at odd hours are often cheaper.",
+        "Always check the airline's baggage allowance to avoid expensive fees at the airport.",
+        "Web check-in is mandatory for most airlines now and saves a lot of time."
+    ],
+    "websites": [
+        { "name": "Skyscanner", "url": "https://www.skyscanner.co.in/" },
+        { "name": "EaseMyTrip", "url": "https://www.easemytrip.com/" },
+        { "name": "IndiGo", "url": "https://www.goindigo.in/" },
+        { "name": "Vistara", "url": "https://www.airvistara.com/" }
+    ],
+    "dos": [
+        "Clear your browser cookies or use incognito mode when searching for flights to prevent price hikes.",
+        "Arrive at the airport at least 2 hours before your domestic flight's departure.",
+        "Keep your ID card and boarding pass (digital or physical) handy.",
+        "Check the flight's on-time performance history if possible."
+    ],
+    "donts": [
+        "Don't book the very last flight of the day, as it has a higher chance of being delayed or cancelled.",
+        "Don't carry prohibited items like power banks in your check-in luggage.",
+        "Don't forget to factor in the cost of travel to and from the airport, which can be far from the city.",
+        "Don't book tickets with very short layovers, especially at large airports."
+    ]
+}
