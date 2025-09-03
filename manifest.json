@@ -1,21 +1,29 @@
 {
-  "name": "School of Adults",
-  "short_name": "Adulting",
+  "name": "SofA",
+  "short_name": "SofA",
+  "description": "A modern, modular guide to managing every aspect of adult life.",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#121212",
   "theme_color": "#1a1a1a",
-  "description": "A modern guide to managing every aspect of adult life.",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "images/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
       "src": "images/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "images/maskable-icon-512x512.png",
+      "type": "image/png",
       "sizes": "512x512",
-      "type": "image/png"
+      "purpose": "any maskable"
     }
   ]
 }
+
