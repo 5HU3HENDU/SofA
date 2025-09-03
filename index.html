@@ -4,594 +4,321 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School of Adults</title>
-    <meta name="description" content="A modern guide to managing every aspect of adult life.">
+    <meta name="description" content="A modern, modular guide to managing every aspect of adult life.">
     <meta name="theme-color" content="#1a1a1a">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="images/icon-192x192.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        html {
-            color-scheme: dark;
+        :root {
+            --bg-color: #121212;
+            --text-color: #e5e7eb;
+            --theme-color-1: #374151;
+            --theme-color-2: #4f46e5;
         }
-        body {
-            font-family: 'Inter', sans-serif;
+        html { color-scheme: dark; }
+        body { 
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.5s ease;
         }
-        .sidebar {
+        .tile {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transform: rotate(var(--rotate, 0deg));
+        }
+        .tile:hover {
+            transform: translateY(-10px) scale(1.05) rotate(var(--rotate-hover, 0deg));
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        .list-item-do::before { content: '✓'; color: var(--theme-color-2); margin-right: 0.75rem; font-weight: bold; }
+        .list-item-dont::before { content: '✗'; color: #ef4444; margin-right: 0.75rem; font-weight: bold; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--theme-color-1); }
+        ::-webkit-scrollbar-thumb { background: var(--theme-color-2); border-radius: 4px; }
+        #content-display { display: none; }
+        .nav-sidebar {
             transition: transform 0.3s ease-in-out;
         }
-        .nav-item.active {
-            font-weight: 600;
-            background-color: #374151; /* bg-gray-700 */
-            color: #ffffff; /* text-white */
-        }
-        .nav-item-parent.active {
-            font-weight: 600;
-            color: #ffffff;
-        }
-        .card {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
-        }
-        .list-item-todo::before {
-            content: '✓';
-            color: #22c55e;
-            margin-right: 0.75rem;
-            font-weight: bold;
-        }
-        .list-item-dont::before {
-            content: '✗';
-            color: #ef4444;
-            margin-right: 0.75rem;
-            font-weight: bold;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-             background: #1e1e1e;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4b5563;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-             background: #6b7280;
+        @media (max-width: 1024px) {
+            .nav-sidebar {
+                transform: translateX(100%);
+            }
+            .nav-sidebar.open {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
-<body class="bg-[#121212] text-gray-200">
-    <div id="app" class="flex h-screen">
-        <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar bg-[#1a1a1a] w-64 fixed inset-y-0 left-0 z-40 md:relative md:translate-x-0 transform -translate-x-full border-r border-gray-800">
-            <div class="px-6 py-4 flex items-center justify-between">
-                <a href="#home" class="flex items-center space-x-2">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                    <h1 class="text-xl font-bold text-white">School of Adults</h1>
-                </a>
-            </div>
-            <nav id="nav-menu" class="px-3 py-4 space-y-1">
-                <!-- Navigation items will be injected here -->
-            </nav>
-        </aside>
-        
-        <!-- Sidebar Overlay -->
-        <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+<body class="text-gray-200">
+    <div id="app" class="relative min-h-screen flex">
+        <!-- Main Content Area -->
+        <div class="flex-1 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <!-- Header -->
+                <header class="flex items-center justify-between pb-8">
+                     <div class="flex items-center space-x-3">
+                         <span class="text-3xl">🎓</span>
+                        <h1 class="text-3xl font-bold text-white">School of Adults</h1>
+                    </div>
+                    <button id="nav-toggle" class="lg:hidden z-50 p-2 rounded-md hover:bg-white/10">
+                        <i data-feather="menu" class="w-7 h-7"></i>
+                    </button>
+                </header>
+                
+                <main>
+                    <!-- Home Grid -->
+                    <div id="home-grid">
+                        <!-- Tiles will be injected here -->
+                    </div>
 
-        <!-- Main Content -->
-        <main class="flex-1 flex flex-col overflow-hidden">
-            <!-- Header -->
-            <header class="flex items-center justify-between p-4 bg-[#1a1a1a] border-b border-gray-800">
-                 <button id="menu-toggle" class="text-gray-300 p-2 rounded-md hover:bg-gray-700 md:hidden">
-                    <i data-feather="menu"></i>
-                </button>
-                 <h1 id="header-title" class="text-lg font-bold text-white md:hidden">School of Adults</h1>
-                <div class="flex-1"></div> <!-- Spacer -->
-            </header>
-            
-            <!-- Content Area -->
-            <div id="content-area" class="flex-1 overflow-y-auto p-6 md:p-8 lg:p-10">
-                <!-- Content will be injected here -->
+                    <!-- Content Display -->
+                    <div id="content-display">
+                        <!-- Topic content will be injected here -->
+                    </div>
+                </main>
             </div>
-        </main>
+        </div>
+        
+        <!-- Right Navigation Sidebar -->
+        <nav id="nav-sidebar" class="nav-sidebar fixed top-0 right-0 h-full w-72 bg-black/30 backdrop-blur-lg border-l border-white/10 z-40 lg:relative lg:w-72 lg:translate-x-0 lg:flex-shrink-0">
+             <div class="p-8">
+                <h2 class="text-2xl font-bold mb-6 text-white">Topics</h2>
+                <div id="nav-links" class="space-y-2">
+                    <!-- Nav links injected here -->
+                </div>
+            </div>
+        </nav>
+         <!-- Sidebar Overlay -->
+        <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
     </div>
 
     <script>
-        const lifeTopics = {
-            home: {
-                title: "Home",
-                icon: "home",
-            },
-            health: {
-                title: "Health & Wellness",
-                icon: "heart",
-                description: "Mastering your physical and mental well-being is the foundation of a successful life. It's about balance, consistency, and listening to your body.",
-                resources: [
-                    { name: "MyFitnessPal", url: "https://www.myfitnesspal.com/" },
-                    { name: "Headspace", url: "https://www.headspace.com/" },
-                    { name: "Examine.com (Nutrition Research)", url: "https://examine.com/" },
-                ],
-                bestPractices: [
-                    "Aim for 7-9 hours of quality sleep per night.",
-                    "Incorporate both strength training and cardiovascular exercise into your routine.",
-                    "Practice mindfulness or meditation for 10-15 minutes daily.",
-                    "Eat a balanced diet rich in whole foods, protein, and healthy fats.",
-                    "Stay hydrated by drinking water throughout the day.",
-                    "Schedule regular check-ups with your doctor and dentist.",
-                ],
-                todos: [
-                    "Create a weekly workout schedule and stick to it.",
-                    "Plan your meals for the week to avoid unhealthy impulse buys.",
-                    "Find a physical activity you genuinely enjoy.",
-                    "Set aside time for relaxation and de-stressing activities.",
-                ],
-                donts: [
-                    "Don't rely on crash diets for long-term results.",
-                    "Don't ignore persistent pain or mental health struggles.",
-                    "Don't sacrifice sleep for work or entertainment.",
-                    "Don't compare your fitness journey to others'.",
-                ],
-            },
-            wealth: {
-                title: "Wealth & Finance",
-                icon: "dollar-sign",
-                description: "Financial literacy is freedom. This section covers the essential pillars of building a secure financial future: generating income, investing wisely, protecting your assets, managing spending, and using debt strategically.",
+    document.addEventListener('DOMContentLoaded', () => {
+        const root = document.documentElement;
+        const homeGrid = document.getElementById('home-grid');
+        const contentDisplay = document.getElementById('content-display');
+        const headerTitle = document.querySelector('header h1');
+        const navSidebar = document.getElementById('nav-sidebar');
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinksContainer = document.getElementById('nav-links');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        const topics = {
+            health: { title: "Health & Wellness", icon: "❤️", file: "health.json", color1: "#1f2937", color2: "#ef4444" },
+            wealth: { 
+                title: "Wealth & Finance", 
+                icon: "💰",
+                color1: "#1e3a8a",
+                color2: "#3b82f6",
                 subtopics: {
-                    generate: {
-                        title: "Generate",
-                        description: "Maximizing your income is the first step to building wealth. This involves your primary career, side hustles, and creating new streams of revenue.",
-                        resources: [
-                            { name: "Salary.com", url: "https://www.salary.com/" },
-                            { name: "Upwork (for freelancing)", url: "https://www.upwork.com/" },
-                            { name: "Pat Flynn's Smart Passive Income Blog", url: "https://www.smartpassiveincome.com/" }
-                        ],
-                        bestPractices: [
-                            "Regularly research your market value and negotiate your salary.",
-                            "Develop high-demand skills to increase your earning potential.",
-                            "Consider a side hustle that aligns with your passions or skills.",
-                            "Build multiple, independent income streams over time."
-                        ],
-                        todos: [
-                            "Update your resume and LinkedIn profile this month.",
-                            "Identify one skill to learn that can increase your income.",
-                            "Brainstorm three potential side hustle ideas."
-                        ],
-                        donts: [
-                            "Don't solely rely on one source of income.",
-                            "Don't undervalue your skills or time.",
-                            "Don't burn out by taking on too much at once."
-                        ]
-                    },
-                    invest: {
-                        title: "Invest",
-                        description: "Investing is how you make your money work for you. It's the engine of wealth creation, focused on long-term growth and compounding.",
-                        resources: [
-                            { name: "Investopedia", url: "https://www.investopedia.com/" },
-                            { name: "Vanguard (for low-cost index funds)", url: "https://investor.vanguard.com/" },
-                             { name: "A Simple Path to Wealth by JL Collins", url: "#" }
-                        ],
-                        bestPractices: [
-                            "Start investing early and consistently, no matter how small the amount.",
-                            "Focus on low-cost, diversified index funds for long-term growth.",
-                            "Automate your investments to maintain discipline.",
-                            "Understand your risk tolerance and invest accordingly."
-                        ],
-                        todos: [
-                            "Open a retirement account (like a Roth IRA).",
-                            "Set up automatic monthly contributions to your investment account.",
-                            "Read a book about basic investing principles."
-                        ],
-                        donts: [
-                            "Don't try to time the market.",
-                            "Don't put all your money into a single stock.",
-                            "Don't panic and sell during market downturns."
-                        ]
-                    },
-                    insurance: {
-                        title: "Insurance",
-                        description: "Insurance is about protecting your wealth and well-being from unforeseen events. It's a defense strategy for your financial plan.",
-                        resources: [
-                            { name: "Policygenius (Comparison tool)", url: "https://www.policygenius.com/" },
-                            { name: "Healthcare.gov", url: "https://www.healthcare.gov/" }
-                        ],
-                        bestPractices: [
-                            "Have adequate health insurance to cover major medical events.",
-                            "Consider term life insurance if you have dependents.",
-                            "Get renters or homeowners insurance to protect your property.",
-                            "Ensure you have sufficient auto and liability coverage."
-                        ],
-                        todos: [
-                            "Review your insurance policies annually.",
-                            "Get quotes from multiple providers to ensure you're getting a good deal.",
-                            "Create a home inventory for your homeowners/renters policy."
-                        ],
-                        donts: [
-                            "Don't be underinsured, especially for health and liability.",
-                            "Don't ignore the details and coverage limits of your policies.",
-                            "Don't assume your employer's insurance is always the best or cheapest option."
-                        ]
-                    },
-                    spends: {
-                        title: "Spends",
-                        description: "Managing your spending is about mindful allocation of resources. A budget isn't about restriction; it's about empowerment.",
-                        resources: [
-                            { name: "YNAB (You Need A Budget)", url: "https://www.youneedabudget.com/" },
-                            { name: "Mint (Budgeting App)", url: "https://mint.intuit.com/" }
-                        ],
-                        bestPractices: [
-                            "Create a detailed monthly budget and track every dollar.",
-                            "Use the 50/30/20 rule as a guideline: 50% for needs, 30% for wants, 20% for savings.",
-                            "Differentiate between 'needs' and 'wants'.",
-                            "Review your spending habits monthly to find areas for improvement."
-                        ],
-                        todos: [
-                            "Set up a budget using an app or a spreadsheet.",
-                            "Identify three non-essential expenses you can cut back on.",
-                            "Try a 'no-spend' weekend."
-                        ],
-                        donts: [
-                            "Don't let lifestyle inflation consume every raise you get.",
-                            "Don't make large purchases on impulse.",
-                            "Don't ignore small, recurring subscriptions that add up."
-                        ]
-                    },
-                    loans: {
-                        title: "Loans",
-                        description: "Debt is a tool that can be used for leverage (good debt) or can become a burden (bad debt). Understanding the difference is crucial.",
-                        resources: [
-                            { name: "AnnualCreditReport.com (Free Credit Report)", url: "https://www.annualcreditreport.com/" },
-                            { name: "NerdWallet (Loan comparison)", url: "https://www.nerdwallet.com/" }
-                        ],
-                        bestPractices: [
-                            "Aggressively pay down high-interest debt (e.g., credit cards).",
-                            "Understand the terms of any loan before you sign.",
-                            "Maintain a good credit score by paying bills on time.",
-                            "Use debt strategically for assets that appreciate, like a home."
-                        ],
-                        todos: [
-                            "Check your credit score and report for free.",
-                            "Create a debt-repayment plan (e.g., snowball or avalanche method).",
-                            "Consider consolidating or refinancing high-interest loans."
-                        ],
-                        donts: [
-                            "Don't take on debt for depreciating assets like new cars if you can avoid it.",
-                            "Don't miss loan payments, as it severely impacts your credit.",
-                            "Don't co-sign a loan for someone unless you are prepared to pay it in full."
-                        ]
-                    }
+                    generate: { title: "Generate", file: "wealth-generate.json" },
+                    invest: { title: "Invest", file: "wealth-invest.json" },
+                    insurance: { title: "Insurance", file: "wealth-insurance.json" },
+                    spends: { title: "Spends", file: "wealth-spends.json" },
+                    loans: { title: "Loans", file: "wealth-loans.json" },
                 }
             },
-            career: {
-                title: "Career & Ambition",
-                icon: "briefcase",
-                description: "Navigate the modern workplace with purpose. Build a fulfilling career by continuously learning, networking, and aligning your work with your values.",
-                resources: [
-                    { name: "LinkedIn Learning", url: "https://www.linkedin.com/learning/" },
-                    { name: "Glassdoor (Company Reviews & Salaries)", url: "https://www.glassdoor.com/" },
-                    { name: "Coursera", url: "https://www.coursera.org/" },
-                ],
-                bestPractices: [
-                    "Develop 'T-shaped' skills: deep expertise in one area and broad knowledge in others.",
-                    "Build a strong professional network both online and offline.",
-                    "Seek regular feedback from your manager and peers.",
-                    "Negotiate your salary and benefits based on market research.",
-                    "Maintain a healthy work-life balance to avoid burnout.",
-                    "Keep your resume and LinkedIn profile updated.",
-                ],
-                todos: [
-                    "Identify a new skill to learn this quarter.",
-                    "Schedule coffee chats with colleagues or mentors.",
-                    "Set clear, achievable career goals for the next 1, 5, and 10 years.",
-                    "Document your accomplishments and successes regularly.",
-                ],
-                donts: [
-                    "Don't burn bridges when leaving a job.",
-                    "Don't stop learning after you get a degree.",
-                    "Don't neglect your mental health for the sake of productivity.",
-                    "Don't be afraid to ask for a promotion or raise when you deserve it.",
-                ],
-            },
-            travel: {
-                title: "Travel & Exploration",
-                icon: "map-pin",
-                description: "See the world, broaden your horizons, and create lasting memories. Travel planning can be seamless and rewarding with the right strategies.",
-                 resources: [
-                    { name: "Google Flights", url: "https://www.google.com/flights" },
-                    { name: "Scott's Cheap Flights", url: "https://scottscheapflights.com/" },
-                    { name: "Nomad List (for digital nomads)", url: "https://nomadlist.com/" },
-                ],
-                bestPractices: [
-                    "Use flight comparison tools to find the best deals.",
-                    "Travel during the shoulder season (just before or after peak season) for better prices and fewer crowds.",
-                    "Pack light and smart, using packing cubes to stay organized.",
-                    "Learn a few basic phrases in the local language.",
-                    "Have digital and physical copies of important documents.",
-                ],
-                todos: [
-                    "Create a travel bucket list.",
-                    "Sign up for a travel rewards credit card.",
-                    "Renew your passport if it's expiring within 6 months.",
-                    "Research cultural norms and etiquette before you go.",
-                ],
-                donts: [
-                    "Don't overschedule your itinerary; leave room for spontaneity.",
-                    "Don't exchange currency at the airport (rates are usually poor).",
-                    "Don't forget to inform your bank about your travel plans.",
-                    "Don't neglect travel insurance.",
-                ],
-            },
-            parenting: {
-                title: "Parenting & Family",
-                icon: "users",
-                description: "The most challenging and rewarding job. Navigate the journey of raising capable, kind, and resilient children with patience and love.",
-                 resources: [
-                    { name: "Aha! Parenting", url: "https://www.ahaparenting.com/" },
-                    { name: "Common Sense Media", url: "https://www.commonsensemedia.org/" },
-                    { name: "The Dad", url: "https://www.thedad.com/" },
-                ],
-                bestPractices: [
-                    "Practice positive discipline: focus on teaching, not punishing.",
-                    "Establish consistent routines for meals, naps, and bedtime.",
-                    "Read to your children daily to foster a love for learning.",
-                    "Model the behavior you want to see in your children.",
-                    "Prioritize quality one-on-one time with each child.",
-                ],
-                todos: [
-                    "Create a family calendar to keep everyone organized.",
-                    "Plan regular family meetings to discuss plans and issues.",
-                    "Set up age-appropriate chores.",
-                    "Start a college savings fund (e.g., a 529 plan).",
-                ],
-                donts: [
-                    "Don't compare your child to others.",
-                    "Don't overschedule your kids with activities.",
-                    "Don't forget to take care of your own well-being.",
-                    "Don't solve all of your child's problems for them.",
-                ],
-            },
-            lifeSkills: {
-                title: "Essential Life Skills",
-                icon: "tool",
-                description: "The practical, everyday skills that school didn't teach you. From basic home repair to effective communication, these are the keys to self-sufficiency.",
-                resources: [
-                    { name: "iFixit (Repair Guides)", url: "https://www.ifixit.com/" },
-                    { name: "The Art of Manliness (Practical Skills)", url: "https://www.artofmanliness.com/" },
-                    { name: "YouTube", url: "https://www.youtube.com" },
-                ],
-                bestPractices: [
-                    "Learn basic cooking techniques to prepare healthy, affordable meals.",
-                    "Understand how to read a contract before signing.",
-                    "Master the art of negotiation for everything from cars to salaries.",
-                    "Learn basic first aid and CPR.",
-                    "Develop emotional intelligence: understand and manage your own emotions and recognize them in others.",
-                ],
-                todos: [
-                    "Assemble a basic toolkit for home repairs.",
-                    "Learn how to change a tire and check your car's oil.",
-                    "Practice active listening in your conversations.",
-                    "Take a public speaking course or join Toastmasters.",
-                ],
-                donts: [
-                    "Don't be afraid to ask for help when you don't know something.",
-                    "Don't ignore warning lights on your car's dashboard.",
-                    "Don't procrastinate on important tasks like filing taxes.",
-                    "Don't assume you know everything; always be open to learning.",
-                ],
+            career: { title: "Career & Ambition", icon: "🚀", file: "career.json", color1: "#4a044e", color2: "#a21caf" },
+            travel: { title: "Travel & Exploration", icon: "✈️", file: "travel.json", color1: "#064e3b", color2: "#10b981" },
+            parenting: { title: "Parenting & Family", icon: "👨‍👩‍👧‍👦", file: "parenting.json", color1: "#581c87", color2: "#a855f7" },
+            lifeSkills: { title: "Essential Life Skills", icon: "🛠️", file: "lifeskills.json", color1: "#854d0e", color2: "#f59e0b" },
+        };
+
+        const defaultTheme = {
+            bgColor: "#121212",
+            color1: "#374151",
+            color2: "#4f46e5"
+        };
+        
+        const setTheme = (theme) => {
+            root.style.setProperty('--bg-color', theme.bgColor);
+            root.style.setProperty('--theme-color-1', theme.color1);
+            root.style.setProperty('--theme-color-2', theme.color2);
+        };
+        
+        const renderNavLinks = () => {
+            let linksHtml = '<a href="#" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="home">🏠 Home</a>';
+            for (const key in topics) {
+                const topic = topics[key];
+                const path = topic.file ? key : `${key}-${Object.keys(topic.subtopics)[0]}`;
+                linksHtml += `<a href="#${path}" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="${path}">${topic.icon} ${topic.title}</a>`;
+            }
+            navLinksContainer.innerHTML = linksHtml;
+        };
+
+        const renderHomeGrid = () => {
+            setTheme(defaultTheme);
+            homeGrid.innerHTML = '';
+            homeGrid.style.display = 'grid';
+            contentDisplay.style.display = 'none';
+            headerTitle.textContent = "School of Adults";
+
+            homeGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
+            let rotation = -2;
+
+            for (const key in topics) {
+                const item = topics[key];
+                const tile = document.createElement('a');
+                const path = item.file ? key : key;
+                tile.href = `#${path}`;
+                tile.className = 'tile p-8 rounded-2xl flex flex-col items-center justify-center text-center text-white shadow-lg';
+                tile.style.backgroundColor = item.color1;
+                tile.style.setProperty('--rotate', `${rotation}deg`);
+                tile.style.setProperty('--rotate-hover', `${rotation > 0 ? rotation - 1 : rotation + 1}deg`);
+                
+                tile.innerHTML = `
+                    <span class="text-5xl mb-4">${item.icon}</span>
+                    <h3 class="text-2xl font-bold">${item.title}</h3>
+                `;
+                homeGrid.appendChild(tile);
+                rotation = (rotation + 4) * -1;
             }
         };
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const navMenu = document.getElementById('nav-menu');
-            const contentArea = document.getElementById('content-area');
-            const menuToggle = document.getElementById('menu-toggle');
-            const sidebar = document.getElementById('sidebar');
-            const sidebarOverlay = document.getElementById('sidebar-overlay');
-            const headerTitle = document.getElementById('header-title');
+        const renderSubtopicGrid = (parentKey) => {
+            const parentTopic = topics[parentKey];
+            setTheme({bgColor: parentTopic.color1, color1: parentTopic.color1, color2: parentTopic.color2});
+            homeGrid.innerHTML = '';
+            homeGrid.style.display = 'grid';
+            contentDisplay.style.display = 'none';
+            headerTitle.textContent = parentTopic.title;
 
-            // --- PWA Service Worker ---
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js').catch(err => console.log('ServiceWorker registration failed: ', err));
-                });
+            homeGrid.className = 'grid grid-cols-2 md:grid-cols-3 gap-6';
+
+            for (const key in parentTopic.subtopics) {
+                const item = parentTopic.subtopics[key];
+                const tile = document.createElement('a');
+                tile.href = `#${parentKey}-${key}`;
+                tile.className = 'tile p-6 rounded-xl flex flex-col items-center justify-center text-center border-2';
+                tile.style.borderColor = parentTopic.color2;
+                tile.style.backgroundColor = 'rgba(0,0,0,0.2)';
+                
+                tile.innerHTML = `<h3 class="font-semibold text-white text-xl">${item.title}</h3>`;
+                homeGrid.appendChild(tile);
             }
+        };
 
-            // --- UI Rendering ---
-            const renderNav = () => {
-                let navHtml = '';
-                for (const key in lifeTopics) {
-                    const topic = lifeTopics[key];
-                    if (topic.subtopics) {
-                         const firstSubKey = Object.keys(topic.subtopics)[0];
-                         navHtml += `
-                            <div>
-                                <a href="#${key}/${firstSubKey}" class="nav-item-parent flex items-center px-4 py-2 text-gray-400" data-topic-parent="${key}">
-                                    <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
-                                    <span>${topic.title}</span>
-                                </a>
-                                <div class="pl-5">
-                                    ${Object.keys(topic.subtopics).map(subKey => {
-                                        const subTopic = topic.subtopics[subKey];
-                                        return `<a href="#${key}/${subKey}" class="nav-item flex items-center px-4 py-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white" data-topic="${key}/${subKey}">
-                                            <span>${subTopic.title}</span>
-                                        </a>`;
-                                    }).join('')}
-                                </div>
-                            </div>
-                         `;
-                    } else {
-                        navHtml += `
-                            <a href="#${key}" class="nav-item flex items-center px-4 py-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white" data-topic="${key}">
-                                <i data-feather="${topic.icon}" class="w-5 h-5 mr-3"></i>
-                                <span>${topic.title}</span>
-                            </a>
-                        `;
-                    }
-                }
-                navMenu.innerHTML = navHtml;
-            };
+        const renderTopicContent = async (filePath, theme) => {
+            setTheme({bgColor: theme.color1, color1: theme.color1, color2: theme.color2});
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error(`File not found: ${filePath}`);
+                const data = await response.json();
 
-            const renderContent = (mainKey, subKey) => {
-                let topic;
-                if (subKey && lifeTopics[mainKey] && lifeTopics[mainKey].subtopics) {
-                    topic = lifeTopics[mainKey].subtopics[subKey];
-                } else {
-                    topic = lifeTopics[mainKey];
-                }
+                homeGrid.style.display = 'none';
+                contentDisplay.style.display = 'block';
+                headerTitle.textContent = data.title;
                 
-                if (!topic) return;
-
-                // Update mobile header title
-                headerTitle.textContent = topic.title;
-                
-                if (mainKey === 'home') {
-                    headerTitle.textContent = "School of Adults";
-                    contentArea.innerHTML = `
-                        <div class="animate-fade-in text-center">
-                            <h2 class="text-4xl font-bold text-white mb-4">Welcome to the School of Adults</h2>
-                            <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">Your all-in-one guide to navigating the complexities of modern life. Select a topic to get started.</p>
-                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                                ${Object.keys(lifeTopics).filter(k => k !== 'home').map(key => {
-                                    const category = lifeTopics[key];
-                                    const firstSubKey = category.subtopics ? `/${Object.keys(category.subtopics)[0]}` : '';
-                                    return `
-                                        <a href="#${key}${firstSubKey}" class="home-card-link card p-6 rounded-xl flex flex-col items-center justify-center text-center bg-[#1e1e1e] border border-gray-800" data-topic="${key}">
-                                            <i data-feather="${category.icon}" class="w-10 h-10 mb-4 text-indigo-400"></i>
-                                            <h3 class="font-semibold text-white">${category.title}</h3>
-                                        </a>
-                                    `;
-                                }).join('')}
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    const icon = subKey ? lifeTopics[mainKey].icon : topic.icon;
-                     contentArea.innerHTML = `
-                        <div class="animate-fade-in">
-                            <div class="flex items-start space-x-4 mb-8">
-                               <span class="p-3 bg-indigo-500/10 rounded-xl"> <i data-feather="${icon}" class="w-8 h-8 text-indigo-400"></i></span>
-                                <div>
-                                    <h2 class="text-3xl font-bold text-white">${topic.title}</h2>
-                                    <p class="text-gray-400 mt-1">${topic.description}</p>
+                contentDisplay.innerHTML = `
+                    <div class="animate-fade-in bg-black/20 p-6 sm:p-8 rounded-2xl">
+                        <p class="text-gray-300 text-lg mb-8 max-w-3xl">${data.description}</p>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="space-y-6">
+                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
+                                    <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Key Information</h3>
+                                    <ul class="space-y-2 text-gray-300">
+                                        ${data.sentences.map(item => `<li class="flex items-start"><span style="color: ${theme.color2}" class="mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
+                                    </ul>
+                                </div>
+                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
+                                    <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Websites</h3>
+                                    <div class="space-y-3">
+                                        ${data.websites.map(res => `
+                                            <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-black/20 p-3 rounded-lg hover:bg-black/40 transition-colors border border-white/10">
+                                                <p class="font-medium" style="color: ${theme.color2}">${res.name}</p>
+                                            </a>`).join('')}
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <div class="space-y-6">
-                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Best Practices</h3>
-                                        <ul class="space-y-2 text-gray-300">
-                                            ${topic.bestPractices.map(item => `<li class="flex items-start"><span class="text-indigo-400 mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
-                                        </ul>
-                                    </div>
-                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Resources</h3>
-                                        <div class="space-y-3">
-                                            ${topic.resources.map(res => `
-                                                <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-gray-800/50 p-3 rounded-lg hover:bg-gray-700/70 transition-colors">
-                                                    <p class="font-medium text-indigo-400">${res.name}</p>
-                                                </a>
-                                            `).join('')}
-                                        </div>
-                                    </div>
+                            <div class="space-y-6">
+                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
+                                    <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>Do's</h3>
+                                    <ul class="space-y-3 text-gray-300">
+                                        ${data.dos.map(item => `<li class="list-item-do">${item}</li>`).join('')}
+                                    </ul>
                                 </div>
-                                <div class="space-y-6">
-                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>To-Do's</h3>
-                                        <ul class="space-y-3 text-gray-300">
-                                            ${topic.todos.map(item => `<li class="list-item-todo">${item}</li>`).join('')}
-                                        </ul>
-                                    </div>
-                                    <div class="card p-6 rounded-xl bg-[#1e1e1e] border border-gray-800">
-                                        <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
-                                        <ul class="space-y-3 text-gray-300">
-                                            ${topic.donts.map(item => `<li class="list-item-dont">${item}</li>`).join('')}
-                                        </ul>
-                                    </div>
+                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
+                                    <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
+                                    <ul class="space-y-3 text-gray-300">
+                                        ${data.donts.map(item => `<li class="list-item-dont">${item}</li>`).join('')}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    `;
-                }
-
+                    </div>`;
                 feather.replace();
-                contentArea.scrollTop = 0;
-            };
+                window.scrollTo(0, 0);
 
-            const setActiveNav = (topicKey) => {
-                 const [mainKey, subKey] = topicKey.split('/');
-                
-                document.querySelectorAll('.nav-item, .nav-item-parent').forEach(el => {
-                    el.classList.remove('active');
-                });
-                
-                const activeEl = document.querySelector(`.nav-item[data-topic="${topicKey}"]`);
-                if (activeEl) {
-                    activeEl.classList.add('active');
-                }
-
-                if (subKey) {
-                    const parentEl = document.querySelector(`.nav-item-parent[data-topic-parent="${mainKey}"]`);
-                    if(parentEl) parentEl.classList.add('active');
-                }
-            };
-
-
-            // --- Navigation & History Management ---
-            const navigateTo = (path, isPopState = false) => {
-                const [mainKey, subKey] = path.split('/');
-                const topicExists = lifeTopics[mainKey];
-                const subTopicExists = subKey ? (topicExists && topicExists.subtopics && topicExists.subtopics[subKey]) : true;
-
-                const newPath = (topicExists && subTopicExists) ? path : 'home';
-
-                if (!isPopState) {
-                    history.pushState({ path: newPath }, '', `#${newPath}`);
-                }
-                
-                const [finalMainKey, finalSubKey] = newPath.split('/');
-                renderContent(finalMainKey, finalSubKey);
-                setActiveNav(newPath);
-
-                // Close sidebar on navigation on mobile
-                if (window.innerWidth < 768 && !sidebar.classList.contains('-translate-x-full')) {
-                    toggleSidebar();
-                }
-            };
-            
-            const handlePopState = (event) => {
-                const path = event.state?.path || window.location.hash.substring(1) || 'home';
-                navigateTo(path, true);
-            };
-
-            const toggleSidebar = () => {
-                 sidebar.classList.toggle('-translate-x-full');
-                 sidebarOverlay.classList.toggle('hidden');
+            } catch (error) {
+                console.error("Error loading topic:", error);
+                contentDisplay.innerHTML = `<p class="text-red-400">Could not load content. Please try again.</p>`;
             }
+        };
+        
+        const handleNavigation = (hash) => {
+            const cleanHash = hash.replace('#', '');
+            const [parentKey, childKey] = cleanHash.split('-');
 
-            // --- Event Listeners ---
-            menuToggle.addEventListener('click', toggleSidebar);
-            sidebarOverlay.addEventListener('click', toggleSidebar);
-            window.addEventListener('popstate', handlePopState);
-            
-            document.body.addEventListener('click', (e) => {
-                const link = e.target.closest('a');
-                if (link && link.hash) {
-                    const path = link.hash.substring(1);
-                    e.preventDefault();
-                    navigateTo(path);
+            if (!cleanHash || cleanHash === 'home') {
+                renderHomeGrid();
+            } else if (topics[parentKey] && topics[parentKey].subtopics && !childKey) {
+                renderSubtopicGrid(parentKey);
+            } else {
+                let filePath, theme;
+                if (childKey) {
+                    filePath = topics[parentKey]?.subtopics[childKey]?.file;
+                    theme = topics[parentKey];
+                } else {
+                    filePath = topics[parentKey]?.file;
+                    theme = topics[parentKey];
                 }
-            });
+                
+                if (filePath) {
+                    renderTopicContent(filePath, theme);
+                } else {
+                    renderHomeGrid(); // Fallback to home
+                }
+            }
+             // Close sidebar on nav
+            if(navSidebar.classList.contains('open')) {
+                navSidebar.classList.remove('open');
+                sidebarOverlay.classList.add('hidden');
+            }
+        };
 
-            // --- Initial Load ---
-            renderNav();
-            feather.replace();
-            const initialPath = window.location.hash.substring(1) || 'home';
-            navigateTo(initialPath, true);
+        const handleNavClick = (e) => {
+            const link = e.target.closest('a');
+            if (link) {
+                e.preventDefault();
+                const path = link.getAttribute('href');
+                history.pushState({ path }, '', path);
+                handleNavigation(path);
+            }
+        };
+
+        // Event Listeners
+        homeGrid.addEventListener('click', handleNavClick);
+        navLinksContainer.addEventListener('click', handleNavClick);
+
+        navToggle.addEventListener('click', () => {
+            navSidebar.classList.toggle('open');
+            sidebarOverlay.classList.toggle('hidden');
         });
+        sidebarOverlay.addEventListener('click', () => {
+            navSidebar.classList.remove('open');
+            sidebarOverlay.classList.add('hidden');
+        });
+        
+        window.addEventListener('popstate', () => {
+             handleNavigation(window.location.hash);
+        });
+
+        // Initial Load
+        renderNavLinks();
+        handleNavigation(window.location.hash);
+        feather.replace();
+    });
     </script>
 </body>
 </html>
