@@ -188,7 +188,18 @@
                     enemy: { title: "Difficult People", file: "people-enemy.json" },
                 }
             },
-            lifeSkills: { title: "Essential Life Skills", icon: "🛠️", file: "lifeskills.json", color1: "#854d0e", color2: "#f59e0b" },
+            lifeSkills: {
+                title: "Essential Life Skills",
+                icon: "🛠️",
+                color1: "#854d0e",
+                color2: "#f59e0b",
+                subtopics: {
+                    driving: { title: "Driving", file: "lifeskills-driving.json" },
+                    swimming: { title: "Swimming", file: "lifeskills-swimming.json" },
+                    decisionmaking: { title: "Decision Making", file: "lifeskills-decisionmaking.json" },
+                    problemsolving: { title: "Problem Solving", file: "lifeskills-problemsolving.json" }
+                }
+            },
             pets: {
                 title: "Pet Care",
                 icon: "🐾",
@@ -197,6 +208,30 @@
                 subtopics: {
                     cats: { title: "Cats", file: "pets-cats.json" },
                     dogs: { title: "Dogs", file: "pets-dogs.json" }
+                }
+            },
+            content: {
+                title: "Content Consumption",
+                icon: "🎬",
+                color1: "#0f766e",
+                color2: "#14b8a6",
+                subtopics: {
+                    news: { title: "News", file: "content-news.json" },
+                    tvmovies: { title: "TV Shows & Movies", file: "content-tvmovies.json" },
+                    songs: { title: "Songs", file: "content-songs.json" },
+                    books: { title: "Books", file: "content-books.json" },
+                    games: { title: "Games", file: "content-games.json" }
+                }
+            },
+            fashion: {
+                title: "Fashion & Style",
+                icon: "👕",
+                color1: "#831843",
+                color2: "#e11d48",
+                subtopics: {
+                    men: { title: "Men", file: "fashion-men.json" },
+                    women: { title: "Women", file: "fashion-women.json" },
+                    kids: { title: "Kids", file: "fashion-kids.json" }
                 }
             }
         };
@@ -408,5 +443,4 @@
     </script>
 </body>
 </html>
-
 
