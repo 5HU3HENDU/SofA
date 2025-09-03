@@ -1,0 +1,29 @@
+{
+    "title": "Career & Ambition",
+    "description": "Navigate the modern workplace with purpose. Build a fulfilling career by continuously learning, networking, and aligning your work with your values.",
+    "sentences": [
+        "Develop 'T-shaped' skills: deep expertise in one area and broad knowledge in others.",
+        "Build a strong professional network both online and offline.",
+        "Seek regular feedback from your manager and peers.",
+        "Negotiate your salary and benefits based on market research.",
+        "Maintain a healthy work-life balance to avoid burnout.",
+        "Keep your resume and LinkedIn profile updated."
+    ],
+    "websites": [
+        { "name": "LinkedIn Learning", "url": "https://www.linkedin.com/learning/" },
+        { "name": "Glassdoor (Company Reviews & Salaries)", "url": "https://www.glassdoor.com/" },
+        { "name": "Coursera", "url": "https://www.coursera.org/" }
+    ],
+    "dos": [
+        "Identify a new skill to learn this quarter.",
+        "Schedule coffee chats with colleagues or mentors.",
+        "Set clear, achievable career goals for the next 1, 5, and 10 years.",
+        "Document your accomplishments and successes regularly."
+    ],
+    "donts": [
+        "Don't burn bridges when leaving a job.",
+        "Don't stop learning after you get a degree.",
+        "Don't neglect your mental health for the sake of productivity.",
+        "Don't be afraid to ask for a promotion or raise when you deserve it."
+    ]
+}
