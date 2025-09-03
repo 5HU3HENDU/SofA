@@ -1,0 +1,29 @@
+{
+    "title": "Booking Accommodation",
+    "description": "Where you stay can define your travel experience. From luxury hotels to cozy homestays, choosing wisely based on location, budget, and reviews is key.",
+    "sentences": [
+        "Location is crucial; staying centrally or near key attractions can save you time and money on transport.",
+        "Always read recent reviews on multiple platforms before making a booking.",
+        "Compare prices on aggregators like MakeMyTrip and Goibibo, but also check the hotel's own website.",
+        "For a local and budget-friendly experience, consider hostels, guesthouses, or Airbnb.",
+        "Ensure the accommodation provides your essential amenities (e.g., Wi-Fi, AC, hot water)."
+    ],
+    "websites": [
+        { "name": "MakeMyTrip (Hotels)", "url": "https://www.makemytrip.com/hotels/" },
+        { "name": "Goibibo (Hotels)", "url": "https://www.goibibo.com/hotels/" },
+        { "name": "Booking.com", "url": "https://www.booking.com/" },
+        { "name": "Airbnb India", "url": "https://www.airbnb.co.in/" }
+    ],
+    "dos": [
+        "Book well in advance, especially if you're traveling during peak season or holidays.",
+        "Confirm your check-in and check-out times with the property.",
+        "Call the hotel directly a day before your arrival to confirm your booking.",
+        "Take screenshots of your booking confirmation."
+    ],
+    "donts": [
+        "Don't book a place that has no reviews or consistently bad recent reviews.",
+        "Don't forget to check the hotel's cancellation policy before you book.",
+        "Don't pay the full amount upfront if there is a 'pay at hotel' option.",
+        "Don't ignore the location on a map; check its actual distance from places you want to visit."
+    ]
+}
