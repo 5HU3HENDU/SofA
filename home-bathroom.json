@@ -1,0 +1,28 @@
+{
+    "title": "Bathroom Cleaning & Maintenance",
+    "description": "A clean and hygienic bathroom is crucial for a healthy home. Regular cleaning and simple maintenance can prevent grime buildup, mold, and plumbing issues.",
+    "sentences": [
+        "Regularly clean the toilet, sink, and shower/tub to prevent germ buildup.",
+        "Ensure good ventilation by using an exhaust fan or opening a window to prevent mold and mildew.",
+        "Organize toiletries and medicines, discarding any that are expired.",
+        "Squeegee shower walls after use to prevent soap scum and water spots.",
+        "Tackle hard water stains with appropriate cleaners like vinegar."
+    ],
+    "websites": [
+        { "name": "Harpic India (Cleaning Products)", "url": "https://www.harpic.co.in/products/" },
+        { "name": "DIY Network (Basic Plumbing Fixes)", "url": "https://www.diynetwork.com/how-to/maintenance-and-repair/plumbing" },
+        { "name": "Architectural Digest India (Design)", "url": "https://www.architecturaldigest.in/" }
+    ],
+    "dos": [
+        "Do a quick wipe-down of surfaces daily.",
+        "Conduct a thorough deep clean once a week.",
+        "Wash bath mats and shower curtains regularly.",
+        "Check for and fix any minor leaks promptly to prevent water damage."
+    ],
+    "donts": [
+        "Don't use abrasive cleaners on delicate surfaces.",
+        "Don't mix different cleaning chemicals, especially bleach and ammonia.",
+        "Don't ignore slow drains; they can lead to bigger clogs.",
+        "Don't let moisture sit on floors or surfaces for long periods."
+    ]
+}
