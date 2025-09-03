@@ -1,0 +1,28 @@
+{
+    "title": "Moving Your Body",
+    "description": "Exercise is a celebration of what your body can do. A consistent routine improves cardiovascular health, builds strength, reduces stress, and boosts mental clarity.",
+    "sentences": [
+        "Aim for at least 150 minutes of moderate-intensity cardio per week (e.g., brisk walking, cycling).",
+        "Incorporate strength training 2-3 times a week to build muscle and bone density.",
+        "Flexibility and mobility work, like stretching or yoga, is crucial for preventing injuries.",
+        "Rest and recovery are just as important as the workout itself.",
+        "The best exercise is the one you enjoy and will stick with."
+    ],
+    "websites": [
+        { "name": "Fitness Blender (Free Workouts)", "url": "https://www.fitnessblender.com/" },
+        { "name": "r/bodyweightfitness Wiki", "url": "https://www.reddit.com/r/bodyweightfitness/wiki/index" },
+        { "name": "Yoga with Adriene", "url": "https://yogawithadriene.com/" }
+    ],
+    "dos": [
+        "Schedule your workouts in your calendar like appointments.",
+        "Find a workout buddy or community for accountability.",
+        "Warm up properly before exercising and cool down afterward.",
+        "Listen to your body and take rest days when needed."
+    ],
+    "donts": [
+        "Don't sacrifice proper form for heavier weights or speed.",
+        "Don't expect to see results overnight; consistency is key.",
+        "Don't compare your fitness level to others.",
+        "Don't skip rest days; they are essential for muscle repair."
+    ]
+}
