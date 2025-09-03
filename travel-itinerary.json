@@ -1,0 +1,28 @@
+{
+    "title": "Planning Your Itinerary",
+    "description": "A well-planned itinerary is your roadmap to a smooth and enjoyable trip. It helps you maximize your time without feeling rushed, balancing sightseeing with relaxation.",
+    "sentences": [
+        "Start by listing all the attractions and activities you're interested in.",
+        "Group places together based on their geographical location to minimize travel time within the city.",
+        "Keep your arrival and departure days light on activities to account for travel fatigue and potential delays.",
+        "Don't overschedule; plan for 2-3 major activities per day, leaving room for spontaneous discoveries.",
+        "Always check the opening hours, closing days (many museums are closed on Mondays), and ticket prices of attractions in advance."
+    ],
+    "websites": [
+        { "name": "Google Maps (For plotting routes)", "url": "https://maps.google.com" },
+        { "name": "TripIt (For organizing bookings)", "url": "https://www.tripit.com/" },
+        { "name": "Google Trips", "url": "https://www.google.com/travel/" }
+    ],
+    "dos": [
+        "Balance popular tourist spots with local experiences like visiting a market or trying street food.",
+        "Download offline maps of your destination city on Google Maps.",
+        "Keep a buffer day in your itinerary if possible, for relaxation or to cover anything you missed.",
+        "Share your itinerary with a family member or friend back home."
+    ],
+    "donts": [
+        "Don't plan every single minute of your day; the best moments are often unplanned.",
+        "Don't try to cover too many places in a short duration; it leads to exhaustion.",
+        "Don't forget to factor in travel time between different points of interest.",
+        "Don't book tours or activities without reading recent reviews."
+    ]
+}
