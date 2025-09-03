@@ -1,0 +1,28 @@
+{
+    "title": "Getting Married",
+    "description": "Planning a wedding in India involves a blend of traditions, logistics, and legal formalities. Here’s a guide to help you navigate this joyous occasion.",
+    "sentences": [
+        "Discuss and align on a realistic wedding budget with your partner and families.",
+        "Register your marriage legally. You can do this under the Hindu Marriage Act or the Special Marriage Act.",
+        "Create a detailed timeline or checklist for booking venues, vendors (caterer, photographer), and sending invitations.",
+        "Open communication with your partner about expectations and responsibilities is crucial for smooth planning.",
+        "Prioritize what's most important to you as a couple, whether it's the food, decor, or guest experience."
+    ],
+    "websites": [
+        { "name": "Weddingz.in (Venue & Vendor Booking)", "url": "https://weddingz.in/" },
+        { "name": "WedMeGood (Planning & Ideas)", "url": "https://www.wedmegood.com/" },
+        { "name": "Government of India (Marriage Registration Info)", "url": "https://www.india.gov.in/topics/law-justice/marriage-registration" }
+    ],
+    "dos": [
+        "Start planning at least 6-12 months in advance, especially for popular wedding dates.",
+        "Create a joint bank account for wedding expenses to track spending easily.",
+        "Delegate tasks to willing family members and friends.",
+        "Take time out as a couple to relax and connect amidst the planning chaos."
+    ],
+    "donts": [
+        "Don't go into significant debt for a one-day event. Plan a wedding you can afford.",
+        "Don't try to please everyone; it's your special day.",
+        "Don't hire vendors without checking their reviews and signing a contract.",
+        "Don't forget to plan for your life after the wedding, including finances and living arrangements."
+    ]
+}
