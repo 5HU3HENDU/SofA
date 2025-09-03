@@ -1,0 +1,29 @@
+{
+    "title": "The Soundtrack of Your Life: Songs",
+    "description": "Music is more accessible than ever before. Discovering new artists and curating playlists can significantly enrich your daily routine, mood, and focus.",
+    "sentences": [
+        "Popular music streaming services in India are Spotify, JioSaavn, Apple Music, and YouTube Music.",
+        "Algorithms on these platforms are great for discovering new music based on your listening habits.",
+        "Creating different playlists for various activities like working, exercising, or relaxing can boost productivity and mood.",
+        "Podcasts are another form of audio content available on most music streaming apps.",
+        "Attending live music concerts or local gigs can be a fantastic social experience."
+    ],
+    "websites": [
+        { "name": "Spotify", "url": "https://www.spotify.com/in-en/" },
+        { "name": "JioSaavn", "url": "https://www.jiosaavn.com/" },
+        { "name": "Apple Music", "url": "https://www.apple.com/in/apple-music/" },
+        { "name": "YouTube Music", "url": "https://music.youtube.com/" }
+    ],
+    "dos": [
+        "Explore curated playlists like 'Discover Weekly' on Spotify.",
+        "Follow your favorite artists to get notifications about new releases.",
+        "Use music to manage your mood—upbeat tracks for energy, calming tunes for stress relief.",
+        "Share playlists with friends to discover new music together."
+    ],
+    "donts": [
+        "Don't listen to music at excessively high volumes, especially with earphones, to protect your hearing.",
+        "Don't limit yourself to just one genre or language.",
+        "Don't let your music subscription auto-renew if you're not using it.",
+        "Don't be afraid to listen to older classics from different eras."
+    ]
+}
