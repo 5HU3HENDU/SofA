@@ -1,0 +1,28 @@
+{
+    "title": "Dog Care Fundamentals",
+    "description": "Dogs are loyal companions that bring immense joy and require a significant commitment. Responsible dog ownership involves dedication to their training, health, and daily exercise needs.",
+    "sentences": [
+        "Choose a high-quality dog food that is appropriate for their age, breed, and activity level.",
+        "Daily walks and playtime are essential for their physical and mental well-being.",
+        "Start basic obedience training (sit, stay, come) early using positive reinforcement techniques.",
+        "Socialize your puppy from a young age with different people, sounds, and other vaccinated dogs.",
+        "Regular vet visits for vaccinations, parasite control (ticks, fleas, worms), and health check-ups are vital."
+    ],
+    "websites": [
+        { "name": "Heads Up For Tails (Pet Supplies)", "url": "https://headsupfortails.com/" },
+        { "name": "DogSpot.in (Food & Accessories)", "url": "https://www.dogspot.in/" },
+        { "name": "Wiggles.in (Vet Services & Products)", "url": "https://wiggles.in/" }
+    ],
+    "dos": [
+        "Provide consistent rules, boundaries, and routines to make your dog feel secure.",
+        "Groom them regularly, which includes brushing their coat, nail trimming, and occasional bathing.",
+        "Provide safe chew toys to prevent destructive chewing and promote dental health.",
+        "Always keep them on a leash in public areas for their safety and the safety of others."
+    ],
+    "donts": [
+        "Don't leave a dog unattended in a parked car, as temperatures can rise to fatal levels very quickly.",
+        "Don't feed them toxic foods like chocolate, grapes, raisins, or onions.",
+        "Don't punish them for accidents in the house; focus on a consistent potty training schedule.",
+        "Don't skip their daily exercise; a tired dog is a happy and well-behaved dog."
+    ]
+}
