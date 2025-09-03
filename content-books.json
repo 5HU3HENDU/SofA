@@ -1,0 +1,29 @@
+{
+    "title": "The World of Words: Books",
+    "description": "Reading is a timeless and powerful way to learn, escape reality, and grow as a person. Finding the right books and making time to read is a highly rewarding habit.",
+    "sentences": [
+        "You can choose between physical books, e-books (on devices like Kindle), and audiobooks.",
+        "Goodreads is an excellent platform for tracking what you've read and getting recommendations.",
+        "Joining a local or online book club can make reading a more social and engaging activity.",
+        "Setting a small, achievable reading goal (e.g., 10 pages a day) can help build a consistent habit.",
+        "Exploring Indian authors offers unique perspectives and stories rooted in our culture."
+    ],
+    "websites": [
+        { "name": "Goodreads (Recommendations)", "url": "https://www.goodreads.com/" },
+        { "name": "Amazon Kindle Store", "url": "https://www.amazon.in/Kindle-eBooks/" },
+        { "name": "Audible (Audiobooks)", "url": "https://www.audible.in/" },
+        { "name": "Crossword Bookstores", "url": "https://www.crossword.in/" }
+    ],
+    "dos": [
+        "Try different genres to find out what you truly enjoy.",
+        "Visit local libraries and second-hand bookstores for hidden gems and budget-friendly options.",
+        "Make notes or highlight passages that resonate with you.",
+        "Give a book at least 50 pages before deciding to stop reading it."
+    ],
+    "donts": [
+        "Don't feel pressured to finish a book you genuinely don't enjoy.",
+        "Don't let your 'to-be-read' pile become a source of stress.",
+        "Don't just stick to bestsellers; explore diverse and indie authors too.",
+        "Don't be afraid to re-read your favorite books."
+    ]
+}
