@@ -1,0 +1,28 @@
+{
+    "title": "Choosing Your Destination",
+    "description": "Picking the right place is the first step to a memorable trip. Consider your budget, interests, the number of days you have, and the best season to visit your chosen destination.",
+    "sentences": [
+        "Research destinations based on your interests: mountains, beaches, historical cities, or spiritual retreats.",
+        "Check the weather forecast and ideal tourist season for your planned travel dates.",
+        "Consider the travel time involved and how it fits into your leave schedule.",
+        "Set a realistic budget for the destination, covering travel, stay, food, and activities.",
+        "Read recent travel blogs or watch vlogs for up-to-date information and hidden gems."
+    ],
+    "websites": [
+        { "name": "Incredible India (Official Tourism)", "url": "https://www.incredibleindia.org/" },
+        { "name": "TripAdvisor India (Reviews & Ideas)", "url": "https://www.tripadvisor.in/" },
+        { "name": "Holidify (Travel Planning)", "url": "https://www.holidify.com/" }
+    ],
+    "dos": [
+        "Be open to exploring offbeat destinations to avoid crowds.",
+        "Check if any special permits or permissions are required (e.g., for certain areas in the Northeast).",
+        "Try to plan your trip around long weekends to maximize your vacation time.",
+        "Understand and respect the local customs and traditions of the place you are visiting."
+    ],
+    "donts": [
+        "Don't base your decision solely on heavily edited pictures on social media.",
+        "Don't try to cram too many cities into a short trip.",
+        "Don't ignore travel advisories or safety warnings for a particular region.",
+        "Don't book anything without reading reviews from multiple sources."
+    ]
+}
