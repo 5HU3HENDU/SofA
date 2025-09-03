@@ -1,0 +1,28 @@
+{
+    "title": "Booking Buses",
+    "description": "Buses offer excellent connectivity to places where trains don't reach and are a popular choice for overnight journeys and budget travel.",
+    "sentences": [
+        "Use reliable platforms like RedBus or AbhiBus to book tickets and check reviews for different bus operators.",
+        "Choose your bus type carefully: AC/Non-AC, Sleeper/Semi-Sleeper, based on your comfort and budget.",
+        "Check the bus's live tracking link, if provided, on the day of your journey.",
+        "Be very sure about the exact boarding point, as there can be multiple pickup locations in a city.",
+        "Ratings and reviews for a specific bus operator are very important."
+    ],
+    "websites": [
+        { "name": "RedBus", "url": "https://www.redbus.in/" },
+        { "name": "AbhiBus", "url": "https://www.abhibus.com/" },
+        { "name": "MakeMyTrip Buses", "url": "https://www.makemytrip.com/bus-tickets/" }
+    ],
+    "dos": [
+        "Select seats in the middle of the bus for a more comfortable and less bumpy ride.",
+        "Keep your digital or physical ticket and a valid ID ready for inspection.",
+        "Reach your boarding point at least 15-20 minutes before the scheduled time.",
+        "Keep a light jacket or shawl handy as AC buses can get very cold overnight."
+    ],
+    "donts": [
+        "Don't book from unknown or unrated bus operators to save a small amount of money.",
+        "Don't expect government buses to be as punctual or comfortable as private operators.",
+        "Don't keep any valuables in the luggage that goes into the bus's storage compartment.",
+        "Don't rely on the bus stopping at clean or hygienic restaurants for breaks; carry snacks."
+    ]
+}
