@@ -1,0 +1,28 @@
+{
+    "title": "Living Room Organization",
+    "description": "The living room is the heart of the home. Keeping it organized, clean, and functional makes it a welcoming space for both relaxation and entertaining guests.",
+    "sentences": [
+        "Declutter surfaces daily; a 10-minute tidy-up can make a huge difference.",
+        "Use functional furniture with hidden storage to conceal clutter.",
+        "Arrange furniture to create conversational zones and clear pathways.",
+        "Implement a 'one in, one out' rule for decorative items, books, and magazines.",
+        "Manage cables and cords to create a cleaner, safer environment."
+    ],
+    "websites": [
+        { "name": "Apartment Therapy (Decor Ideas)", "url": "https://www.apartmenttherapy.com/" },
+        { "name": "Good Housekeeping Cleaning Tips", "url": "https://www.goodhousekeeping.com/home/cleaning/" },
+        { "name": "Urban Company (Home Cleaning Services)", "url": "https://www.urbancompany.com/" }
+    ],
+    "dos": [
+        "Assign a specific home for every item (e.g., remote controls, keys).",
+        "Use trays and decorative boxes to group small items together.",
+        "Clean dust and vacuum/mop at least once a week.",
+        "Choose lighting that is both functional and creates a warm ambiance."
+    ],
+    "donts": [
+        "Don't let mail and papers pile up on tables.",
+        "Don't push all furniture against the walls; create space.",
+        "Don't over-clutter with too many decorative objects.",
+        "Don't ignore stains on upholstery; treat them as soon as possible."
+    ]
+}
