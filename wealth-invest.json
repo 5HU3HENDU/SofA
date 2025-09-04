@@ -1,25 +1,50 @@
 {
-    "title": "Invest Wisely",
-    "description": "Investing is how you make your money work for you. It's the engine of wealth creation, focused on long-term growth and compounding.",
-    "sentences": [
-        "Start investing early and consistently, no matter how small the amount.",
-        "Focus on low-cost, diversified index funds for long-term growth.",
-        "Automate your investments to maintain discipline.",
-        "Understand your risk tolerance and invest accordingly."
-    ],
-    "websites": [
-        { "name": "Investopedia", "url": "https://www.investopedia.com/" },
-        { "name": "Vanguard (for low-cost index funds)", "url": "https://investor.vanguard.com/" },
-        { "name": "A Simple Path to Wealth by JL Collins", "url": "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926" }
-    ],
-    "dos": [
-        "Open a retirement account (like a Roth IRA).",
-        "Set up automatic monthly contributions to your investment account.",
-        "Read a book about basic investing principles."
-    ],
-    "donts": [
-        "Don't try to time the market.",
-        "Don't put all your money into a single stock.",
-        "Don't panic and sell during market downturns."
-    ]
+  "title": "Invest 🏦",
+  "description": "Investing is how you make your money work for you. It's about growing your wealth over time to achieve long-term goals like retirement, buying a house, or financial independence.",
+  "sentences": [
+    "Start investing as early as possible to take advantage of compounding.",
+    "Diversify your investments across different asset classes like stocks, bonds, and real estate.",
+    "Understand your risk tolerance before you start investing.",
+    "Systematic Investment Plans (SIPs) in mutual funds are a great way for beginners to start.",
+    "Investing is a long-term game; avoid making decisions based on short-term market fluctuations."
+  ],
+  "websites": [
+    {
+      "category": "Stock & Mutual Fund Platforms (India)",
+      "links": [
+        { "name": "Zerodha Coin / Kite", "url": "https://zerodha.com/" },
+        { "name": "Groww", "url": "https://groww.in/" },
+        { "name": "Upstox", "url": "https://upstox.com/" },
+        { "name": "Paytm Money", "url": "https://www.paytmmoney.com/" }
+      ]
+    },
+    {
+      "category": "Financial News & Analysis",
+      "links": [
+        { "name": "The Economic Times", "url": "https://economictimes.indiatimes.com/markets" },
+        { "name": "Moneycontrol", "url": "https://www.moneycontrol.com/" },
+        { "name": "Livemint", "url": "https://www.livemint.com/" }
+      ]
+    },
+    {
+      "category": "Educational Resources",
+      "links": [
+        { "name": "Zerodha Varsity", "url": "https://zerodha.com/varsity/" },
+        { "name": "Investopedia", "url": "https://www.investopedia.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Define your financial goals and investment horizon.",
+    "Do your own research before investing in any asset.",
+    "Regularly review and rebalance your portfolio.",
+    "Stay disciplined and stick to your investment plan."
+  ],
+  "donts": [
+    "Don't invest in products you don't understand.",
+    "Don't panic sell during market downturns.",
+    "Avoid timing the market.",
+    "Don't put all your eggs in one basket."
+  ]
 }
+
