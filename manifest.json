@@ -1,28 +1,69 @@
 {
-  "name": "SofA",
-  "short_name": "SofA",
-  "description": "A modern, modular guide to managing every aspect of adult life.",
-  "start_url": "/index.html",
+  "name": "School of Adults",
+  "short_name": "Adulting 101",
+  "description": "Your guide to managing health, wealth, career, and every aspect of adult life.",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#1a1a1a",
+  "background_color": "#111827",
+  "theme_color": "#1f2937",
   "orientation": "portrait-primary",
   "icons": [
     {
       "src": "images/icon-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "any"
     },
     {
       "src": "images/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any"
     },
     {
-      "src": "images/maskable-icon-512x512.png",
-      "type": "image/png",
+      "src": "images/icon-maskable-512x512.png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Health & Wellness",
+      "short_name": "Health",
+      "description": "Access tips on food, exercise, and mental health.",
+      "url": "#category=health",
+      "icons": [{ "src": "images/shortcut-health-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Wealth & Finance",
+      "short_name": "Wealth",
+      "description": "Manage your finances, investments, and spending.",
+      "url": "#category=wealth",
+      "icons": [{ "src": "images/shortcut-wealth-96x96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Career & Ambition",
+      "short_name": "Career",
+      "description": "Tips on job searching and growing your career.",
+      "url": "#category=career",
+      "icons": [{ "src": "images/shortcut-career-96x96.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot-home.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage with all topics"
+    },
+    {
+      "src": "images/screenshot-topic.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Detailed view of a topic"
     }
   ]
 }
