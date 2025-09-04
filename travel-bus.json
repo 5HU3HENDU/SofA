@@ -1,28 +1,42 @@
 {
-    "title": "Booking Buses",
-    "description": "Buses offer excellent connectivity to places where trains don't reach and are a popular choice for overnight journeys and budget travel.",
-    "sentences": [
-        "Use reliable platforms like RedBus or AbhiBus to book tickets and check reviews for different bus operators.",
-        "Choose your bus type carefully: AC/Non-AC, Sleeper/Semi-Sleeper, based on your comfort and budget.",
-        "Check the bus's live tracking link, if provided, on the day of your journey.",
-        "Be very sure about the exact boarding point, as there can be multiple pickup locations in a city.",
-        "Ratings and reviews for a specific bus operator are very important."
-    ],
-    "websites": [
-        { "name": "RedBus", "url": "https://www.redbus.in/" },
+  "title": "Buses 🚌",
+  "description": "Buses are a great option for short to medium-distance travel, connecting cities and remote areas where trains might not reach. Services range from basic state transport to luxury Volvo sleepers.",
+  "sentences": [
+    "Online portals have made booking bus tickets extremely convenient.",
+    "Choose between government-run state transport and private operators.",
+    "Sleeper buses are a comfortable option for overnight journeys.",
+    "Check the bus's rating, amenities, and pick-up/drop-off points before booking.",
+    "Keep your e-ticket or a screenshot handy for boarding."
+  ],
+  "websites": [
+    {
+      "category": "Bus Ticket Booking",
+      "links": [
+        { "name": "redBus", "url": "https://www.redbus.in/" },
         { "name": "AbhiBus", "url": "https://www.abhibus.com/" },
         { "name": "MakeMyTrip Buses", "url": "https://www.makemytrip.com/bus-tickets/" }
-    ],
-    "dos": [
-        "Select seats in the middle of the bus for a more comfortable and less bumpy ride.",
-        "Keep your digital or physical ticket and a valid ID ready for inspection.",
-        "Reach your boarding point at least 15-20 minutes before the scheduled time.",
-        "Keep a light jacket or shawl handy as AC buses can get very cold overnight."
-    ],
-    "donts": [
-        "Don't book from unknown or unrated bus operators to save a small amount of money.",
-        "Don't expect government buses to be as punctual or comfortable as private operators.",
-        "Don't keep any valuables in the luggage that goes into the bus's storage compartment.",
-        "Don't rely on the bus stopping at clean or hygienic restaurants for breaks; carry snacks."
-    ]
+      ]
+    },
+    {
+      "category": "State Road Transport Corporations",
+      "links": [
+        { "name": "KSRTC (Karnataka)", "url": "https://ksrtc.in/oprs-web/" },
+        { "name": "MSRTC (Maharashtra)", "url": "https://msrtc.maharashtra.gov.in/" },
+        { "name": "UPSRTC (Uttar Pradesh)", "url": "https://www.upsrtconline.co.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Confirm the exact pick-up point and time.",
+    "Keep your valuables with you, not in the luggage compartment.",
+    "Carry some snacks and water for the journey.",
+    "Be at the pick-up point at least 15-20 minutes before departure."
+  ],
+  "donts": [
+    "Don't book from shady websites or agents.",
+    "Avoid traveling with excessive luggage.",
+    "Don't rely on the bus's estimated arrival time; delays are common.",
+    "Don't get off at random stops during long journeys."
+  ]
 }
+
