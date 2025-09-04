@@ -1,29 +1,44 @@
 {
-    "title": "Entertainment: TV Shows & Movies",
-    "description": "A guide to navigating the vast world of streaming services and cinematic experiences, helping you find quality content without endless scrolling.",
-    "sentences": [
-        "Major streaming platforms in India include Netflix, Amazon Prime Video, and Disney+ Hotstar.",
-        "Use platforms like IMDb or Rotten Tomatoes to check ratings and reviews before watching.",
-        "Explore regional cinema, which often produces critically acclaimed and unique films.",
-        "Creating a watchlist helps you keep track of shows and movies you want to see.",
-        "Balancing screen time is important for your health and well-being."
-    ],
-    "websites": [
+  "title": "TV Shows & Movies 🎞️",
+  "description": "Cinema and television are powerful mediums for entertainment, storytelling, and art. Navigating the vast world of streaming can help you discover your next favorite show or movie.",
+  "sentences": [
+    "Streaming services offer a vast library of content at your fingertips.",
+    "Explore different genres to broaden your horizons.",
+    "Review websites can help you decide what to watch next.",
+    "Many platforms are now producing high-quality original content in India.",
+    "Consider watching content in different languages with subtitles."
+  ],
+  "websites": [
+    {
+      "category": "Streaming Services (India)",
+      "links": [
         { "name": "Netflix", "url": "https://www.netflix.com/in/" },
         { "name": "Amazon Prime Video", "url": "https://www.primevideo.com/" },
-        { "name": "Disney+ Hotstar", "url": "https://www.hotstar.com/in" },
-        { "name": "IMDb (for ratings)", "url": "https://www.imdb.com/" }
-    ],
-    "dos": [
-        "Explore different genres to discover new interests.",
-        "Watch movies or shows with friends or family for a shared experience.",
-        "Pay attention to recommendations from friends with similar tastes.",
-        "Consider watching documentaries to learn something new."
-    ],
-    "donts": [
-        "Don't subscribe to too many streaming services at once; rotate them if needed.",
-        "Don't let binge-watching negatively impact your sleep schedule or daily responsibilities.",
-        "Don't read spoilers if you want to enjoy the suspense.",
-        "Don't feel pressured to watch something just because it's popular."
-    ]
+        { "name": "Disney+ Hotstar", "url": "https://www.hotstar.com/" },
+        { "name": "SonyLIV", "url": "https://www.sonyliv.com/" },
+        { "name": "JioCinema", "url": "https://www.jiocinema.com/" }
+      ]
+    },
+    {
+      "category": "Ratings & Reviews",
+      "links": [
+        { "name": "IMDb", "url": "https://www.imdb.com/" },
+        { "name": "Rotten Tomatoes", "url": "https://www.rottentomatoes.com/" },
+        { "name": "Film Companion", "url": "https://www.filmcompanion.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Create a watchlist to keep track of things you want to see.",
+    "Discuss shows and movies with friends to enhance the experience.",
+    "Pay attention to the creators (directors, writers) of content you enjoy.",
+    "Use parental controls if you have children."
+  ],
+  "donts": [
+    "Don't let 'binge-watching' negatively impact your sleep or responsibilities.",
+    "Don't be swayed by hype alone; watch what genuinely interests you.",
+    "Avoid spoilers for shows you haven't seen yet.",
+    "Don't subscribe to too many services at once if you're on a budget."
+  ]
 }
+
