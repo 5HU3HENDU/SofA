@@ -1,27 +1,49 @@
 {
-    "title": "Health Check-Ups",
-    "description": "Preventative care is the best care. Regular health check-ups help you stay on top of your health, catch potential issues early, and build a relationship with your doctor.",
-    "sentences": [
-        "Schedule an annual physical with your general practitioner.",
-        "Visit the dentist for a cleaning and check-up every 6-12 months.",
-        "Get your eyes checked every 1-2 years, even if you don't wear glasses.",
-        "Know your key numbers: blood pressure, cholesterol, and blood sugar.",
-        "Keep a record of your family's medical history."
-    ],
-    "websites": [
-        { "name": "MyHealthfinder (U.S. Dept. of Health)", "url": "https://health.gov/myhealthfinder" },
-        { "name": "Apollo 24/7 (India)", "url": "https://www.apollo247.com/" }
-    ],
-    "dos": [
-        "Prepare a list of questions and concerns before your doctor's appointment.",
-        "Be honest and open with your doctor about your lifestyle and symptoms.",
-        "Follow through on recommended tests and follow-up appointments.",
-        "Know what your health insurance covers."
-    ],
-    "donts": [
-        "Don't ignore persistent or unusual symptoms.",
-        "Don't self-diagnose using the internet; consult a professional.",
-        "Don't skip appointments because you feel healthy.",
-        "Don't be afraid to get a second opinion."
-    ]
+  "title": "Health Check Up 🩺",
+  "description": "Regular health check-ups are essential for preventive care. They help in early detection of potential health issues, allowing for timely treatment and better outcomes.",
+  "sentences": [
+    "Adults should get a general health check-up annually or as advised by their doctor.",
+    "Key tests include blood pressure, cholesterol, blood sugar, and a complete blood count (CBC).",
+    "Screenings for specific conditions (e.g., cancer, osteoporosis) depend on age, gender, and risk factors.",
+    "Keep a record of your medical history and reports.",
+    "Don't ignore any unusual symptoms; consult a doctor."
+  ],
+  "websites": [
+    {
+      "category": "Diagnostic Labs & Home Collection (India)",
+      "links": [
+        { "name": "Dr. Lal PathLabs", "url": "https://www.lalpathlabs.com/" },
+        { "name": "SRL Diagnostics", "url": "https://www.srlworld.com/" },
+        { "name": "Metropolis Healthcare", "url": "https://www.metropolisindia.com/" },
+        { "name": "Healthians", "url": "https://www.healthians.com/" }
+      ]
+    },
+    {
+      "category": "Online Doctor Consultation",
+      "links": [
+        { "name": "Practo", "url": "https://www.practo.com/" },
+        { "name": "Apollo 24/7", "url": "https://www.apollo247.com/" },
+        { "name": "Tata 1mg", "url": "https://www.1mg.com/" }
+      ]
+    },
+    {
+      "category": "Government Health Information",
+      "links": [
+        { "name": "National Health Portal of India", "url": "https://www.nhp.gov.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Schedule regular check-ups with your doctor.",
+    "Be honest and open with your doctor about your lifestyle and symptoms.",
+    "Follow the doctor's recommendations and treatment plans.",
+    "Ask questions if you don't understand something about your health."
+  ],
+  "donts": [
+    "Don't self-diagnose based on internet searches.",
+    "Don't skip follow-up appointments.",
+    "Don't ignore prescribed medications or lifestyle changes.",
+    "Don't wait for a problem to arise before seeing a doctor."
+  ]
 }
+
