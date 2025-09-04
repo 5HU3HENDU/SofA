@@ -1,27 +1,39 @@
 {
-    "title": "Relationship with Parents",
-    "description": "As an adult, your relationship with your parents evolves into one of mutual respect and understanding. It involves navigating changing roles, setting new boundaries, and appreciating them in new ways.",
-    "sentences": [
-        "The dynamic shifts from a parent-child relationship to an adult-adult one.",
-        "Open and honest communication is key, even when it's difficult.",
-        "Establish healthy boundaries regarding your time, finances, and personal life.",
-        "As parents age, you may need to assist with their healthcare and finances.",
-        "Show appreciation and gratitude for their support throughout your life."
-    ],
-    "websites": [
-        { "name": "HelpGuide (Aging Parents)", "url": "https://www.helpguide.org/home-pages/aging-well.htm" },
-        { "name": "Psychology Today (Family Dynamics)", "url": "https://www.psychologytoday.com/intl/basics/family-dynamics" }
-    ],
-    "dos": [
-        "Schedule regular calls or visits to stay connected.",
-        "Listen to their advice, but remember you have the final say in your life.",
-        "Be patient and empathetic, especially as they navigate aging.",
-        "Involve them in your life, sharing both your successes and challenges."
-    ],
-    "donts": [
-        "Don't fall back into old childhood roles and arguments.",
-        "Don't let guilt be the primary motivator for your actions.",
-        "Don't avoid important conversations about their future and end-of-life wishes.",
-        "Don't take them for granted."
-    ]
+  "title": "Parents 🧑‍🦳",
+  "description": "Navigating the evolving relationship with parents as an adult involves respect, boundaries, and a new kind of understanding.",
+  "sentences": [
+    "Your relationship with your parents changes as you become an independent adult.",
+    "Establish healthy boundaries with love and respect.",
+    "Communication is key to understanding each other's perspectives.",
+    "Show appreciation for their support throughout your life.",
+    "As they age, your role may shift to providing them with support and care."
+  ],
+  "websites": [
+    {
+      "category": "Elder Care Resources (India)",
+      "links": [
+        { "name": "HelpAge India", "url": "https://www.helpageindia.org/" },
+        { "name": "Samvedna Senior Care", "url": "https://www.samvednacare.com/" }
+      ]
+    },
+    {
+      "category": "Communication & Relationships",
+      "links": [
+        { "name": "Psychology Today - Family Dynamics", "url": "https://www.psychologytoday.com/intl/basics/family-dynamics" }
+      ]
+    }
+  ],
+  "dos": [
+    "Make time for regular calls and visits.",
+    "Listen to their advice, even if you don't always take it.",
+    "Be patient and understanding as they navigate technology and a changing world.",
+    "Involve them in your life, but on your own terms."
+  ],
+  "donts": [
+    "Don't fall back into child-like patterns of dependency or rebellion.",
+    "Avoid trying to change their long-held beliefs.",
+    "Don't feel obligated to share every detail of your personal life.",
+    "Don't let disagreements fester; address them calmly."
+  ]
 }
+
