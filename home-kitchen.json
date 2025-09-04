@@ -1,28 +1,41 @@
 {
-    "title": "Efficient Kitchen Management",
-    "description": "An organized kitchen saves time, reduces food waste, and makes cooking more enjoyable. It's about creating logical systems for storage, cleaning, and meal preparation.",
-    "sentences": [
-        "Organize your pantry and fridge by category (e.g., grains, spices, canned goods).",
-        "Keep frequently used tools and ingredients within easy reach of your cooking station.",
-        "Adopt a 'clean as you go' policy while cooking to minimize the final cleanup.",
-        "Regularly check for and dispose of expired food items.",
-        "Plan your meals for the week to streamline grocery shopping and reduce waste."
-    ],
-    "websites": [
-        { "name": "The Kitchn (Organization Tips)", "url": "https://www.thekitchn.com/organization" },
-        { "name": "BigBasket (Online Grocery)", "url": "https://www.bigbasket.com/" },
-        { "name": "Hebbar's Kitchen (Indian Recipes)", "url": "https://hebbarskitchen.com/" }
-    ],
-    "dos": [
-        "Wipe down countertops and the stove after every use.",
-        "Sharpen your knives regularly for safety and efficiency.",
-        "Create an inventory of your pantry and freezer items.",
-        "Deep clean your fridge and microwave on a monthly basis."
-    ],
-    "donts": [
-        "Don't overcrowd your refrigerator; allow air to circulate.",
-        "Don't store perishable items on the fridge door.",
-        "Don't let dishes pile up in the sink for days.",
-        "Don't ignore strange smells from the fridge or garbage disposal."
-    ]
+  "title": "Kitchen 🍳",
+  "description": "The kitchen is the engine of the home. An efficient, organized, and clean kitchen makes cooking more enjoyable and daily life easier.",
+  "sentences": [
+    "Organize your kitchen based on the 'work triangle': the stove, sink, and refrigerator.",
+    "Ensure you have adequate counter space for food preparation.",
+    "Good ventilation (chimney or exhaust fan) is crucial for Indian cooking.",
+    "Invest in good quality basic cookware, knives, and appliances.",
+    "Keep your pantry and fridge organized to reduce food waste and make meal planning easier."
+  ],
+  "websites": [
+    {
+      "category": "Kitchenware & Appliances (India)",
+      "links": [
+        { "name": "Prestige", "url": "https://ttkprestige.com/" },
+        { "name": "Wonderchef", "url": "https://www.wonderchef.com/" },
+        { "name": "Croma", "url": "https://www.croma.com/kitchen-appliances" }
+      ]
+    },
+    {
+      "category": "Organization & Storage Ideas",
+      "links": [
+        { "name": "The Container Store (for ideas)", "url": "https://www.containerstore.com/kitchen" },
+        { "name": "Good Housekeeping Kitchen Organization", "url": "https://www.goodhousekeeping.com/home/organizing/g728/kitchen-organization-ideas/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Clean as you go while cooking to prevent a huge mess later.",
+    "Regularly sharpen your knives for safety and efficiency.",
+    "Label containers in your pantry.",
+    "Deep clean your kitchen appliances and cabinets periodically."
+  ],
+  "donts": [
+    "Don't overcrowd your countertops.",
+    "Don't put hot pans directly on the counter surface.",
+    "Avoid storing flammable items near the stove.",
+    "Don't neglect cleaning the chimney filter."
+  ]
 }
+
