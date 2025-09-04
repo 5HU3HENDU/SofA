@@ -1,28 +1,41 @@
 {
-    "title": "Choosing Your Career Path",
-    "description": "Finding the right career is a journey of self-discovery matched with practical research. It's about aligning what you love with what you're good at and what the world needs.",
-    "sentences": [
-        "Start with self-assessment: identify your interests, skills, values, and personality type.",
-        "Research different industries and roles to understand the day-to-day realities and future outlook.",
-        "Conduct informational interviews with professionals in fields that interest you.",
-        "Gain practical experience through internships, volunteering, or personal projects.",
-        "Understand that a career path isn't always linear; it's okay to pivot and adapt."
-    ],
-    "websites": [
-        { "name": "LinkedIn Career Explorer", "url": "https://www.linkedin.com/jobs/career-explorer" },
-        { "name": "Glassdoor (Company Reviews & Salaries)", "url": "https://www.glassdoor.co.in/" },
-        { "name": "Naukri.com (Job Portal)", "url": "https://www.naukri.com/" }
-    ],
-    "dos": [
-        "Talk to a career counselor for guidance.",
-        "Build a 'career board' of ideas and possibilities.",
-        "Learn a new skill that is in high demand.",
-        "Network actively both online and offline."
-    ],
-    "donts": [
-        "Don't choose a career based solely on salary or parental pressure.",
-        "Don't ignore your intuition or 'gut feeling'.",
-        "Don't be afraid to start over or change your mind.",
-        "Don't limit your research to just a few popular roles."
-    ]
+  "title": "Choosing a Career 🤔",
+  "description": "Selecting a career path is one of the most significant decisions in life. It's about finding a balance between your passion, skills, and the market demand.",
+  "sentences": [
+    "Self-assessment is the first step: understand your interests, values, and strengths.",
+    "Research different career options thoroughly before making a decision.",
+    "Talk to people working in the fields you're interested in (informational interviews).",
+    "It's okay to change your career path later in life; careers are no longer linear.",
+    "Consider the long-term prospects and work-life balance of a potential career."
+  ],
+  "websites": [
+    {
+      "category": "Career Assessment & Guidance",
+      "links": [
+        { "name": "16Personalities", "url": "https://www.16personalities.com/" },
+        { "name": "Careers360", "url": "https://www.careers360.com/" },
+        { "name": "LinkedIn Career Explorer", "url": "https://linkedin.github.io/career-explorer/" }
+      ]
+    },
+    {
+      "category": "Industry & Salary Information",
+      "links": [
+        { "name": "Glassdoor", "url": "https://www.glassdoor.co.in/" },
+        { "name": "AmbitionBox", "url": "https://www.ambitionbox.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Align your career choice with your personal values.",
+    "Gain practical experience through internships or volunteer work.",
+    "Develop transferable skills that are valuable across industries.",
+    "Create a flexible career plan that can adapt to changes."
+  ],
+  "donts": [
+    "Don't choose a career solely based on salary or parental pressure.",
+    "Don't ignore your natural talents and interests.",
+    "Avoid choosing a career based on trends without proper research.",
+    "Don't be afraid to seek guidance from career counselors."
+  ]
 }
+
