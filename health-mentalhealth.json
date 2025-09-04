@@ -1,28 +1,49 @@
 {
-    "title": "Mental Health",
-    "description": "Your mental well-being is just as important as your physical health. Cultivating resilience, managing stress, and seeking support are signs of strength.",
-    "sentences": [
-        "Practice mindfulness through meditation, deep breathing, or journaling.",
-        "Identify your stress triggers and develop healthy coping mechanisms.",
-        "Nurture your social connections with friends and family.",
-        "It's okay to not be okay, and it's okay to ask for help.",
-        "Therapy can provide valuable tools for navigating life's challenges."
-    ],
-    "websites": [
-        { "name": "Headspace (Meditation App)", "url": "https://www.headspace.com/" },
-        { "name": "BetterHelp (Online Therapy)", "url": "https://www.betterhelp.com/" },
-        { "name": "NIMH (National Institute of Mental Health)", "url": "https://www.nimh.nih.gov/" }
-    ],
-    "dos": [
-        "Set boundaries to protect your time and energy.",
-        "Engage in hobbies and activities that bring you joy.",
-        "Prioritize getting enough quality sleep.",
-        "Practice self-compassion and treat yourself with kindness."
-    ],
-    "donts": [
-        "Don't isolate yourself when you're struggling.",
-        "Don't use unhealthy coping mechanisms like excessive drinking or avoidance.",
-        "Don't believe the stigma around seeking mental health support.",
-        "Don't compare your mental health journey to anyone else's."
-    ]
+  "title": "Mental Health 🧠",
+  "description": "Mental health is as important as physical health. It encompasses our emotional, psychological, and social well-being, affecting how we think, feel, and act.",
+  "sentences": [
+    "It's okay not to be okay, and it's okay to seek help.",
+    "Practices like mindfulness, meditation, and journaling can improve mental well-being.",
+    "Maintaining healthy relationships and social connections is vital.",
+    "A balanced diet, regular exercise, and adequate sleep significantly impact mental health.",
+    "Therapy is a proactive step towards understanding and managing your mental health."
+  ],
+  "websites": [
+    {
+      "category": "Online Therapy & Counselling (India)",
+      "links": [
+        { "name": "BetterLYF", "url": "https://www.betterlyf.com/" },
+        { "name": "YourDOST", "url": "https://yourdost.com/" },
+        { "name": "iCALL Psychosocial Helpline", "url": "http://icallhelpline.org/" }
+      ]
+    },
+    {
+      "category": "Meditation & Mindfulness Apps",
+      "links": [
+        { "name": "Calm", "url": "https://www.calm.com/" },
+        { "name": "Headspace", "url": "https://www.headspace.com/" },
+        { "name": "Insight Timer", "url": "https://insighttimer.com/" }
+      ]
+    },
+    {
+      "category": "Mental Health Helplines (India)",
+      "links": [
+        { "name": "Vandrevala Foundation", "url": "https://www.vandrevalafoundation.com/" },
+        { "name": "KIRAN - Mental Health Rehabilitation Helpline", "url": "http://disabilityaffairs.gov.in/content/page/kiran-mental-health-rehabilitation-helpline.php" }
+      ]
+    }
+  ],
+  "dos": [
+    "Acknowledge and validate your feelings.",
+    "Practice self-compassion and kindness.",
+    "Set healthy boundaries in your relationships.",
+    "Reach out for professional help when needed."
+  ],
+  "donts": [
+    "Don't isolate yourself; reach out to trusted friends or family.",
+    "Don't rely on unhealthy coping mechanisms like substance abuse.",
+    "Don't ignore persistent feelings of sadness, anxiety, or stress.",
+    "Don't feel ashamed or weak for seeking help."
+  ]
 }
+
