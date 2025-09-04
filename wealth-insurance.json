@@ -1,24 +1,48 @@
 {
-    "title": "Protect with Insurance",
-    "description": "Insurance is about protecting your wealth and well-being from unforeseen events. It's a defense strategy for your financial plan.",
-    "sentences": [
-        "Have adequate health insurance to cover major medical events.",
-        "Consider term life insurance if you have dependents.",
-        "Get renters or homeowners insurance to protect your property.",
-        "Ensure you have sufficient auto and liability coverage."
-    ],
-    "websites": [
-        { "name": "Policygenius (Comparison tool)", "url": "https://www.policygenius.com/" },
-        { "name": "Healthcare.gov", "url": "https://www.healthcare.gov/" }
-    ],
-    "dos": [
-        "Review your insurance policies annually.",
-        "Get quotes from multiple providers to ensure you're getting a good deal.",
-        "Create a home inventory for your homeowners/renters policy."
-    ],
-    "donts": [
-        "Don't be underinsured, especially for health and liability.",
-        "Don't ignore the details and coverage limits of your policies.",
-        "Don't assume your employer's insurance is always the best or cheapest option."
-    ]
+  "title": "Insurance 🛡️",
+  "description": "Insurance is a crucial safety net that protects you and your family from financial hardship due to unforeseen events. It's about managing risk and ensuring peace of mind.",
+  "sentences": [
+    "Health insurance is non-negotiable to cover rising medical costs.",
+    "Term life insurance provides a large cover for a low premium, protecting your dependents.",
+    "Always disclose all information accurately when buying a policy to avoid claim rejection.",
+    "Review your insurance coverage periodically, especially after major life events.",
+    "Don't mix insurance and investment; buy pure term plans and invest the difference."
+  ],
+  "websites": [
+    {
+      "category": "Insurance Aggregators (India)",
+      "links": [
+        { "name": "Policybazaar", "url": "https://www.policybazaar.com/" },
+        { "name": "Coverfox", "url": "https://www.coverfox.com/" },
+        { "name": "Acko", "url": "https://www.acko.com/" }
+      ]
+    },
+    {
+      "category": "Major Insurance Providers",
+      "links": [
+        { "name": "LIC of India", "url": "https://licindia.in/" },
+        { "name": "HDFC Life", "url": "https://www.hdfclife.com/" },
+        { "name": "ICICI Lombard", "url": "https://www.icicilombard.com/" }
+      ]
+    },
+    {
+      "category": "Regulator Information",
+      "links": [
+        { "name": "IRDAI (Insurance Regulatory and Development Authority)", "url": "https://www.irdai.gov.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Buy a health insurance policy as early as possible.",
+    "Get adequate life insurance cover if you have financial dependents.",
+    "Read the policy document carefully before purchasing.",
+    "Inform your family members about the policies you have."
+  ],
+  "donts": [
+    "Don't rely solely on your employer's group health insurance.",
+    "Don't buy insurance just to save tax.",
+    "Avoid traditional plans (endowment, money-back) which offer low returns.",
+    "Don't delay buying insurance."
+  ]
 }
+
