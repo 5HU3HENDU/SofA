@@ -1,27 +1,39 @@
 {
-    "title": "General Problem Solving",
-    "description": "Life is full of challenges. Developing a systematic approach to problem-solving helps you tackle issues calmly and effectively, rather than feeling overwhelmed.",
-    "sentences": [
-        "First, clearly identify and define the root of the problem, not just its symptoms.",
-        "Break down large, complex problems into smaller, more manageable parts.",
-        "Brainstorm a wide range of potential solutions without judging them initially.",
-        "Evaluate your potential solutions and select the one that is most practical and effective.",
-        "Create an action plan to implement your chosen solution and monitor its progress."
-    ],
-    "websites": [
-        { "name": "Coursera (Critical Thinking Skills)", "url": "https://www.coursera.org/browse/personal-development/critical-thinking" },
-        { "name": "Mind Tools (Problem Solving Techniques)", "url": "https://www.mindtools.com/pages/main/newMN_TMC.htm" }
-    ],
-    "dos": [
-        "Approach problems with a positive and proactive mindset.",
-        "Stay calm and objective, separating emotions from facts.",
-        "Collaborate with others to get different perspectives and ideas.",
-        "Be persistent and willing to try another solution if your first attempt doesn't work."
-    ],
-    "donts": [
-        "Don't jump to the first solution that comes to mind.",
-        "Don't focus on blaming someone for the problem; focus on finding a solution.",
-        "Don't ignore a problem, hoping it will go away on its own.",
-        "Don't be afraid to ask for help or admit that you don't know the answer."
-    ]
+  "title": "Problem Solving 🧩",
+  "description": "Problem-solving is the ability to identify issues, brainstorm solutions, and implement the best one. It is a fundamental skill for navigating challenges in both personal and professional life.",
+  "sentences": [
+    "The first step is to accurately define the problem.",
+    "Break the problem down into smaller, more manageable components.",
+    "Brainstorm a wide range of potential solutions without initial judgment.",
+    "Evaluate the pros and cons of each potential solution.",
+    "Implement your chosen solution and monitor its effectiveness."
+  ],
+  "websites": [
+    {
+      "category": "Techniques & Frameworks",
+      "links": [
+        { "name": "ASQ - Problem Solving Tools", "url": "https://asq.org/quality-resources/problem-solving" },
+        { "name": "McKinsey - Problem Solving Approach", "url": "https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-problem-solving" }
+      ]
+    },
+    {
+      "category": "Critical Thinking Resources",
+      "links": [
+        { "name": "Foundation for Critical Thinking", "url": "https://www.criticalthinking.org/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Stay calm and approach the problem with a positive mindset.",
+    "Collaborate with others to get different perspectives.",
+    "Be creative and think outside the box.",
+    "Learn from your attempts, even if they are not successful."
+  ],
+  "donts": [
+    "Don't jump to conclusions or make assumptions.",
+    "Don't get stuck on finding the 'perfect' solution.",
+    "Avoid blaming others; focus on finding a solution.",
+    "Don't give up if your first attempt doesn't work."
+  ]
 }
+
