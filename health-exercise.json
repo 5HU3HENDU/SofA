@@ -1,28 +1,50 @@
 {
-    "title": "Moving Your Body",
-    "description": "Exercise is a celebration of what your body can do. A consistent routine improves cardiovascular health, builds strength, reduces stress, and boosts mental clarity.",
-    "sentences": [
-        "Aim for at least 150 minutes of moderate-intensity cardio per week (e.g., brisk walking, cycling).",
-        "Incorporate strength training 2-3 times a week to build muscle and bone density.",
-        "Flexibility and mobility work, like stretching or yoga, is crucial for preventing injuries.",
-        "Rest and recovery are just as important as the workout itself.",
-        "The best exercise is the one you enjoy and will stick with."
-    ],
-    "websites": [
-        { "name": "Fitness Blender (Free Workouts)", "url": "https://www.fitnessblender.com/" },
-        { "name": "r/bodyweightfitness Wiki", "url": "https://www.reddit.com/r/bodyweightfitness/wiki/index" },
-        { "name": "Yoga with Adriene", "url": "https://yogawithadriene.com/" }
-    ],
-    "dos": [
-        "Schedule your workouts in your calendar like appointments.",
-        "Find a workout buddy or community for accountability.",
-        "Warm up properly before exercising and cool down afterward.",
-        "Listen to your body and take rest days when needed."
-    ],
-    "donts": [
-        "Don't sacrifice proper form for heavier weights or speed.",
-        "Don't expect to see results overnight; consistency is key.",
-        "Don't compare your fitness level to others.",
-        "Don't skip rest days; they are essential for muscle repair."
-    ]
+  "title": "Exercise 🏋️",
+  "description": "Regular physical activity is crucial for physical and mental well-being. It improves cardiovascular health, strengthens muscles, boosts mood, and helps in weight management.",
+  "sentences": [
+    "Aim for at least 150 minutes of moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity exercise per week.",
+    "Incorporate strength training exercises at least two days a week.",
+    "Consistency is more important than intensity.",
+    "Listen to your body and allow for rest and recovery.",
+    "Find an activity you enjoy to make it a sustainable habit."
+  ],
+  "websites": [
+    {
+      "category": "Fitness Apps & Home Workouts",
+      "links": [
+        { "name": "Cure.fit (Cult.fit)", "url": "https://www.cult.fit/" },
+        { "name": "Nike Training Club", "url": "https://www.nike.com/ntc-app" },
+        { "name": "YouTube - BeerBiceps", "url": "https://www.youtube.com/c/BeerBiceps" },
+        { "name": "YouTube - FitnessBlender", "url": "https://www.youtube.com/user/FitnessBlender" }
+      ]
+    },
+    {
+      "category": "Gym Chains in India",
+      "links": [
+        { "name": "Cult.fit Centers", "url": "https://www.cult.fit/cult-pass" },
+        { "name": "Gold's Gym India", "url": "https://goldsgym.in/" },
+        { "name": "Anytime Fitness India", "url": "https://www.anytimefitness.co.in/" }
+      ]
+    },
+    {
+      "category": "Running & Cycling Communities",
+      "links": [
+        { "name": "Strava", "url": "https://www.strava.com/" },
+        { "name": "India Running", "url": "http://www.indiarunning.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Warm-up before exercising and cool-down afterwards.",
+    "Stay hydrated before, during, and after your workout.",
+    "Use proper form to prevent injuries.",
+    "Gradually increase the intensity and duration of your workouts."
+  ],
+  "donts": [
+    "Don't overtrain or push through sharp pain.",
+    "Don't compare your progress to others.",
+    "Don't neglect rest days.",
+    "Don't expect immediate results; be patient and consistent."
+  ]
 }
+
