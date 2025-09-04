@@ -1,29 +1,51 @@
 {
-    "title": "Women's Fashion & Skincare",
-    "description": "Fashion for women is a powerful form of self-expression. Building a versatile wardrobe that blends Indian and Western styles allows you to be ready for any occasion.",
-    "sentences": [
-        "Invest in timeless classics: a well-draped saree, a versatile kurti, a classic white shirt, and well-fitting pair of jeans.",
-        "Accessorizing can transform an outfit. A statement necklace, elegant jhumkas, or a stylish handbag can make a big difference.",
-        "Understand fabrics. Cottons and linens are great for Indian summers, while silks and velvets are perfect for festive occasions.",
-        "A consistent CTM (Cleanse, Tone, Moisturize) routine is the foundation of good skincare.",
-        "Find a signature style that makes you feel comfortable and confident."
-    ],
-    "websites": [
+  "title": "Women's Fashion 👩",
+  "description": "Women's fashion is a powerful form of self-expression. It's about creating a personal style that is comfortable, confident, and adaptable to the many roles a woman plays.",
+  "sentences": [
+    "Understanding your body shape is the first step to dressing well.",
+    "A capsule wardrobe with high-quality basics can be mixed and matched to create numerous outfits.",
+    "Indian fashion offers a beautiful blend of traditional and contemporary styles.",
+    "Accessorizing smartly can transform a simple outfit into something special.",
+    "Comfort and confidence are the best accessories you can wear."
+  ],
+  "websites": [
+    {
+      "category": "Online Shopping (Western & Ethnic)",
+      "links": [
+        { "name": "Myntra", "url": "https://www.myntra.com/women" },
         { "name": "Nykaa Fashion", "url": "https://www.nykaafashion.com/" },
-        { "name": "Myntra", "url": "https://www.myntra.com/" },
-        { "name": "Fabindia (Ethnic & Fusion)", "url": "https://www.fabindia.com/" },
-        { "name": "Nykaa (Beauty & Skincare)", "url": "https://www.nykaa.com/" }
-    ],
-    "dos": [
-        "Experiment with different drapes for your saree or dupatta.",
-        "Invest in good quality, comfortable innerwear as it affects the fit of your outer clothes.",
-        "Always use sunscreen, regardless of the weather.",
-        "Choose a 'hero' piece for your outfit and build the rest of the look around it."
-    ],
-    "donts": [
-        "Don't blindly follow trends; wear what suits your body type and personality.",
-        "Don't wear heavily embellished outfits for casual or professional settings.",
-        "Don't forget to remove your makeup before you go to sleep.",
-        "Don't be afraid to mix and match Indian and Western pieces to create a fusion look."
-    ]
+        { "name": "Ajio", "url": "https://www.ajio.com/women" },
+        { "name": "Zara India", "url": "https://www.zara.com/in/" }
+      ]
+    },
+    {
+      "category": "Ethnic Wear & Indie Brands",
+      "links": [
+        { "name": "Fabindia", "url": "https://www.fabindia.com/" },
+        { "name": "Biba", "url": "https://www.biba.in/" },
+        { "name": "Jaypore", "url": "https://www.jaypore.com/" },
+        { "name": "The Loom", "url": "https://www.theloom.in/" }
+      ]
+    },
+    {
+      "category": "Style Inspiration & Blogs",
+      "links": [
+        { "name": "Vogue India", "url": "https://www.vogue.in/fashion/" },
+        { "name": "POPxo", "url": "https://www.popxo.com/fashion" }
+      ]
+    }
+  ],
+  "dos": [
+    "Invest in good quality innerwear as it forms the foundation of your outfit.",
+    "Experiment with different silhouettes to find what flatters you.",
+    "Organize your closet so you can easily see what you own.",
+    "Find a good tailor to alter clothes for a perfect fit."
+  ],
+  "donts": [
+    "Don't buy an item just because it's on sale if it doesn't fit well or suit your style.",
+    "Don't be a slave to trends; develop your own signature style.",
+    "Avoid wearing uncomfortable shoes, no matter how good they look.",
+    "Don't save your best clothes only for special occasions."
+  ]
 }
+
