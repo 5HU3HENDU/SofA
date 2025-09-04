@@ -1,27 +1,33 @@
 {
-    "title": "Relationship with Friends",
-    "description": "Adult friendships require intention and effort to maintain. They are a vital source of support, laughter, and perspective, enriching our lives in ways that family cannot.",
-    "sentences": [
-        "Quality over quantity becomes more important as you get older.",
-        "Friendship is a two-way street; you have to give support to get it.",
-        "Schedule recurring get-togethers (e.g., monthly brunch) to ensure you connect.",
-        "Be present and an active listener when you are with your friends.",
-        "Celebrate their successes and be there for them during their struggles."
-    ],
-    "websites": [
-        { "name": "Friendship-Quotes.com (Articles on Friendship)", "url": "https://www.friendship-quotes.com/articles/" },
-        { "name": "Meetup (Find Local Groups)", "url": "https://www.meetup.com/" }
-    ],
-    "dos": [
-        "Reach out just to say hello, not only when you need something.",
-        "Remember important dates like their birthday.",
-        "Be honest, trustworthy, and reliable.",
-        "Make an effort to befriend your friends' partners."
-    ],
-    "donts": [
-        "Don't be a flaky friend who cancels plans last minute.",
-        "Don't engage in gossip or talk behind your friends' backs.",
-        "Don't make the friendship all about you.",
-        "Don't let disagreements fester; address conflicts directly and kindly."
-    ]
+  "title": "Friends 🤗",
+  "description": "Friendships are the family we choose. Nurturing these relationships is vital for happiness, support, and a sense of belonging in adult life.",
+  "sentences": [
+    "Adult friendships require conscious effort to maintain.",
+    "Quality is more important than quantity.",
+    "Be the kind of friend you want to have.",
+    "Friendships will evolve as life circumstances change (marriage, kids, moves).",
+    "A true friend celebrates your successes and supports you in your failures."
+  ],
+  "websites": [
+    {
+      "category": "Maintaining Friendships",
+      "links": [
+        { "name": "Psychology Today - Friendship", "url": "https://www.psychologytoday.com/intl/basics/friendship" },
+        { "name": "Tiny Buddha", "url": "https://tinybuddha.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Schedule regular catch-ups, even if it's just a quick call.",
+    "Remember important dates like birthdays.",
+    "Be a good listener.",
+    "Show up for them during tough times."
+  ],
+  "donts": [
+    "Don't be the friend who only reaches out when you need something.",
+    "Avoid gossip.",
+    "Don't take your friends for granted.",
+    "Don't let small misunderstandings ruin a long friendship."
+  ]
 }
+
