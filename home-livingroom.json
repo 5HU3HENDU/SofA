@@ -1,28 +1,42 @@
 {
-    "title": "Living Room Organization",
-    "description": "The living room is the heart of the home. Keeping it organized, clean, and functional makes it a welcoming space for both relaxation and entertaining guests.",
-    "sentences": [
-        "Declutter surfaces daily; a 10-minute tidy-up can make a huge difference.",
-        "Use functional furniture with hidden storage to conceal clutter.",
-        "Arrange furniture to create conversational zones and clear pathways.",
-        "Implement a 'one in, one out' rule for decorative items, books, and magazines.",
-        "Manage cables and cords to create a cleaner, safer environment."
-    ],
-    "websites": [
-        { "name": "Apartment Therapy (Decor Ideas)", "url": "https://www.apartmenttherapy.com/" },
-        { "name": "Good Housekeeping Cleaning Tips", "url": "https://www.goodhousekeeping.com/home/cleaning/" },
-        { "name": "Urban Company (Home Cleaning Services)", "url": "https://www.urbancompany.com/" }
-    ],
-    "dos": [
-        "Assign a specific home for every item (e.g., remote controls, keys).",
-        "Use trays and decorative boxes to group small items together.",
-        "Clean dust and vacuum/mop at least once a week.",
-        "Choose lighting that is both functional and creates a warm ambiance."
-    ],
-    "donts": [
-        "Don't let mail and papers pile up on tables.",
-        "Don't push all furniture against the walls; create space.",
-        "Don't over-clutter with too many decorative objects.",
-        "Don't ignore stains on upholstery; treat them as soon as possible."
-    ]
+  "title": "Living Room 🛋️",
+  "description": "The living room is the heart of the home, a space for relaxation, entertainment, and spending time with loved ones. A well-organized and comfortable living room sets the tone for the entire house.",
+  "sentences": [
+    "Define zones for different activities, like a seating area for conversation and a corner for reading.",
+    "Good lighting, combining ambient, task, and accent lights, can transform the space.",
+    "Choose a comfortable and appropriately sized sofa as the anchor piece of the room.",
+    "Incorporate storage solutions like shelves, cabinets, or ottomans to keep clutter at bay.",
+    "Personalize the space with art, photos, plants, and decor that reflects your personality."
+  ],
+  "websites": [
+    {
+      "category": "Furniture & Decor (India)",
+      "links": [
+        { "name": "Pepperfry", "url": "https://www.pepperfry.com/category/living-room.html" },
+        { "name": "Urban Ladder", "url": "https://www.urbanladder.com/living-room" },
+        { "name": "IKEA India", "url": "https://www.ikea.com/in/en/cat/living-room-fu001/" }
+      ]
+    },
+    {
+      "category": "Inspiration & Ideas",
+      "links": [
+        { "name": "Architectural Digest India", "url": "https://www.architecturaldigest.in/topics/living-rooms/" },
+        { "name": "Pinterest", "url": "https://in.pinterest.com/search/pins/?q=indian%20living%20room%20ideas" },
+        { "name": "Houzz", "url": "https://www.houzz.in/photos/living-room-ideas-phbr0-bp~t_21040" }
+      ]
+    }
+  ],
+  "dos": [
+    "Invest in a good quality rug to define the seating area.",
+    "Mix and match textures (cushions, throws, curtains) to add depth and warmth.",
+    "Ensure there is a clear pathway for walking through the room.",
+    "Use mirrors to make the space feel larger and brighter."
+  ],
+  "donts": [
+    "Don't push all furniture against the walls; create conversational groupings.",
+    "Avoid using only overhead lighting, which can feel harsh.",
+    "Don't over-clutter with too many small decorative items.",
+    "Don't choose a TV that is too large for the room's scale."
+  ]
 }
+
