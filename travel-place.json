@@ -1,28 +1,49 @@
 {
-    "title": "Choosing Your Destination",
-    "description": "Picking the right place is the first step to a memorable trip. Consider your budget, interests, the number of days you have, and the best season to visit your chosen destination.",
-    "sentences": [
-        "Research destinations based on your interests: mountains, beaches, historical cities, or spiritual retreats.",
-        "Check the weather forecast and ideal tourist season for your planned travel dates.",
-        "Consider the travel time involved and how it fits into your leave schedule.",
-        "Set a realistic budget for the destination, covering travel, stay, food, and activities.",
-        "Read recent travel blogs or watch vlogs for up-to-date information and hidden gems."
-    ],
-    "websites": [
-        { "name": "Incredible India (Official Tourism)", "url": "https://www.incredibleindia.org/" },
-        { "name": "TripAdvisor India (Reviews & Ideas)", "url": "https://www.tripadvisor.in/" },
-        { "name": "Holidify (Travel Planning)", "url": "https://www.holidify.com/" }
-    ],
-    "dos": [
-        "Be open to exploring offbeat destinations to avoid crowds.",
-        "Check if any special permits or permissions are required (e.g., for certain areas in the Northeast).",
-        "Try to plan your trip around long weekends to maximize your vacation time.",
-        "Understand and respect the local customs and traditions of the place you are visiting."
-    ],
-    "donts": [
-        "Don't base your decision solely on heavily edited pictures on social media.",
-        "Don't try to cram too many cities into a short trip.",
-        "Don't ignore travel advisories or safety warnings for a particular region.",
-        "Don't book anything without reading reviews from multiple sources."
-    ]
+  "title": "Choosing a Place 🗺️",
+  "description": "The first step to any great trip is deciding where to go. This involves research, understanding the best time to visit, and aligning the destination with your budget and interests.",
+  "sentences": [
+    "Consider the weather and season for your chosen destination.",
+    "Define your travel style: are you looking for relaxation, adventure, culture, or a mix?",
+    "Set a realistic budget for your trip, covering travel, accommodation, food, and activities.",
+    "Read travel blogs and watch vlogs for authentic reviews and hidden gems.",
+    "Check for any travel advisories or special entry requirements."
+  ],
+  "websites": [
+    {
+      "category": "Inspiration & Planning",
+      "links": [
+        { "name": "Incredible India", "url": "https://www.incredibleindia.org/" },
+        { "name": "Tripoto", "url": "https://www.tripoto.com/" },
+        { "name": "Condé Nast Traveller India", "url": "https://www.cntraveller.in/" }
+      ]
+    },
+    {
+      "category": "Reviews & Recommendations",
+      "links": [
+        { "name": "TripAdvisor", "url": "https://www.tripadvisor.in/" },
+        { "name": "Google Travel", "url": "https://www.google.com/travel/" }
+      ]
+    },
+    {
+      "category": "State Tourism Websites",
+      "links": [
+        { "name": "Kerala Tourism", "url": "https://www.keralatourism.org/" },
+        { "name": "Rajasthan Tourism", "url": "https://www.tourism.rajasthan.gov.in/" },
+        { "name": "Uttarakhand Tourism", "url": "https://uttarakhandtourism.gov.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Research the local culture and customs.",
+    "Create a flexible itinerary with a mix of planned activities and free time.",
+    "Book flights and accommodation in advance, especially during peak season.",
+    "Inform your bank about your travel plans to avoid card issues."
+  ],
+  "donts": [
+    "Don't overschedule your trip.",
+    "Don't rely on a single source of information for your planning.",
+    "Avoid carrying large amounts of cash.",
+    "Don't forget to check the validity of your passport and visa requirements for international travel."
+  ]
 }
+
