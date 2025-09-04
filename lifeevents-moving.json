@@ -1,29 +1,47 @@
 {
-    "title": "Moving to a New City",
-    "description": "Relocating to a new city can be both exciting and daunting. A structured plan can make the transition much smoother and less stressful.",
-    "sentences": [
-        "Research your new city's cost of living, neighborhoods, and public transportation system.",
-        "Declutter your belongings significantly before you move to reduce shifting costs.",
-        "Hire a professional and verified packer and mover for a hassle-free experience.",
-        "Update your new address in all essential documents like Aadhaar card, bank accounts, and passport.",
-        "Plan your finances to cover moving costs, security deposits, and initial expenses in the new city."
-    ],
-    "websites": [
-        { "name": "NoBroker (Packers & Movers, Rentals)", "url": "https://www.nobroker.in/" },
+  "title": "Moving to a New City 🏙️",
+  "description": "Moving to a new city is an exciting adventure that involves logistical planning and adapting to a new environment. A well-organized move can make the transition much smoother.",
+  "sentences": [
+    "Research the new city's neighborhoods, cost of living, and public transport.",
+    "Create a detailed moving checklist and timeline.",
+    "Declutter your belongings before you pack.",
+    "Hire a reputable packers and movers service for a hassle-free move.",
+    "Give yourself time to explore and build a new social circle."
+  ],
+  "websites": [
+    {
+      "category": "Packers & Movers",
+      "links": [
         { "name": "Agarwal Packers and Movers", "url": "https://www.agarwalpackers.com/" },
-        { "name": "Nestaway (Rentals)", "url": "https://www.nestaway.com/" },
-        { "name": "UIDAI (Aadhaar Address Update)", "url": "https://uidai.gov.in/" }
-    ],
-    "dos": [
-        "Create a detailed inventory of your belongings before the movers arrive.",
-        "Pack an 'essentials' box with items you'll need immediately upon arrival (toiletries, clothes, chargers).",
-        "Inform your bank, utility providers, and subscription services about your move in advance.",
-        "Take time to explore your new neighborhood and connect with local communities."
-    ],
-    "donts": [
-        "Don't hire movers based on the lowest quote alone; check their reviews and credibility.",
-        "Don't forget to transfer or set up new utility connections (gas, internet, electricity) beforehand.",
-        "Don't isolate yourself. Make an effort to build a new social network.",
-        "Don't transport important documents, jewelry, or cash with the movers; carry them with you."
-    ]
+        { "name": "NoBroker Packers & Movers", "url": "https://www.nobroker.in/packers-and-movers" }
+      ]
+    },
+    {
+      "category": "Renting Accommodation",
+      "links": [
+        { "name": "NoBroker", "url": "https://www.nobroker.in/" },
+        { "name": "Housing.com", "url": "https://housing.com/" }
+      ]
+    },
+    {
+      "category": "City Information & Networking",
+      "links": [
+        { "name": "Meetup", "url": "https://www.meetup.com/" },
+        { "name": "LBB (Little Black Book)", "url": "https://lbb.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Inform banks, utility companies, and subscriptions of your new address.",
+    "Pack an 'essentials' box with items you'll need on the first day.",
+    "Label all your boxes clearly with their contents and destination room.",
+    "Be open to meeting new people and trying new experiences."
+  ],
+  "donts": [
+    "Don't try to move everything yourself if it's a long-distance move.",
+    "Don't forget to get transit insurance for your belongings.",
+    "Avoid moving during peak season if possible to save costs.",
+    "Don't isolate yourself; make an effort to connect with your new community."
+  ]
 }
+
