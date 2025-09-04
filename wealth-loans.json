@@ -1,24 +1,47 @@
 {
-    "title": "Handle Loans",
-    "description": "Debt is a tool that can be used for leverage (good debt) or can become a burden (bad debt). Understanding the difference is crucial.",
-    "sentences": [
-        "Aggressively pay down high-interest debt (e.g., credit cards).",
-        "Understand the terms of any loan before you sign.",
-        "Maintain a good credit score by paying bills on time.",
-        "Use debt strategically for assets that appreciate, like a home."
-    ],
-    "websites": [
-        { "name": "AnnualCreditReport.com (Free Credit Report)", "url": "https://www.annualcreditreport.com/" },
-        { "name": "NerdWallet (Loan comparison)", "url": "https://www.nerdwallet.com/" }
-    ],
-    "dos": [
-        "Check your credit score and report for free.",
-        "Create a debt-repayment plan (e.g., snowball or avalanche method).",
-        "Consider consolidating or refinancing high-interest loans."
-    ],
-    "donts": [
-        "Don't take on debt for depreciating assets like new cars if you can avoid it.",
-        "Don't miss loan payments, as it severely impacts your credit.",
-        "Don't co-sign a loan for someone unless you are prepared to pay it in full."
-    ]
+  "title": "Loans 🧾",
+  "description": "Loans can be a useful financial tool for large purchases like a home or education, but they must be managed responsibly to avoid debt traps.",
+  "sentences": [
+    "A good credit score is crucial for getting loans at favorable interest rates.",
+    "Differentiate between 'good loans' (e.g., home, education) and 'bad loans' (e.g., high-interest personal loans for lifestyle spends).",
+    "Your total EMIs should ideally not exceed 40-50% of your take-home salary.",
+    "Always read the loan agreement carefully before signing.",
+    "Making extra payments towards the principal can significantly reduce the loan tenure and interest paid."
+  ],
+  "websites": [
+    {
+      "category": "Loan Comparison & Application",
+      "links": [
+        { "name": "BankBazaar", "url": "https://www.bankbazaar.com/" },
+        { "name": "Paisabazaar", "url": "https://www.paisabazaar.com/" }
+      ]
+    },
+    {
+      "category": "Major Banks in India",
+      "links": [
+        { "name": "State Bank of India (SBI)", "url": "https://www.onlinesbi.sbi/" },
+        { "name": "HDFC Bank", "url": "https://www.hdfcbank.com/" },
+        { "name": "ICICI Bank", "url": "https://www.icicibank.com/" }
+      ]
+    },
+    {
+      "category": "Credit Score Information",
+      "links": [
+        { "name": "CIBIL", "url": "https://www.cibil.com/knowledge-center" }
+      ]
+    }
+  ],
+  "dos": [
+    "Compare interest rates and fees from multiple lenders.",
+    "Pay your EMIs on time, every time.",
+    "Try to prepay your loan whenever you have surplus funds.",
+    "Keep your credit score high by maintaining good credit habits."
+  ],
+  "donts": [
+    "Don't borrow more than you can comfortably repay.",
+    "Don't take a loan for speculative investments.",
+    "Avoid taking on multiple high-interest loans simultaneously.",
+    "Don't co-sign a loan for someone unless you are prepared to repay it yourself."
+  ]
 }
+
