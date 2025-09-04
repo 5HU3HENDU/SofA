@@ -1,29 +1,43 @@
 {
-    "title": "The Soundtrack of Your Life: Songs",
-    "description": "Music is more accessible than ever before. Discovering new artists and curating playlists can significantly enrich your daily routine, mood, and focus.",
-    "sentences": [
-        "Popular music streaming services in India are Spotify, JioSaavn, Apple Music, and YouTube Music.",
-        "Algorithms on these platforms are great for discovering new music based on your listening habits.",
-        "Creating different playlists for various activities like working, exercising, or relaxing can boost productivity and mood.",
-        "Podcasts are another form of audio content available on most music streaming apps.",
-        "Attending live music concerts or local gigs can be a fantastic social experience."
-    ],
-    "websites": [
+  "title": "Songs 🎵",
+  "description": "Music is a universal language that can influence mood, boost productivity, and connect people. Discovering new artists and genres is a journey in itself.",
+  "sentences": [
+    "Music streaming apps provide access to millions of songs.",
+    "Creating personalized playlists can curate the perfect soundtrack for any activity.",
+    "Podcasts are a growing medium for storytelling, learning, and entertainment.",
+    "Explore curated playlists on streaming apps to discover new music.",
+    "Don't be afraid to explore genres outside of your comfort zone."
+  ],
+  "websites": [
+    {
+      "category": "Music Streaming",
+      "links": [
         { "name": "Spotify", "url": "https://www.spotify.com/in-en/" },
         { "name": "JioSaavn", "url": "https://www.jiosaavn.com/" },
-        { "name": "Apple Music", "url": "https://www.apple.com/in/apple-music/" },
+        { "name": "Gaana", "url": "https://gaana.com/" },
         { "name": "YouTube Music", "url": "https://music.youtube.com/" }
-    ],
-    "dos": [
-        "Explore curated playlists like 'Discover Weekly' on Spotify.",
-        "Follow your favorite artists to get notifications about new releases.",
-        "Use music to manage your mood—upbeat tracks for energy, calming tunes for stress relief.",
-        "Share playlists with friends to discover new music together."
-    ],
-    "donts": [
-        "Don't listen to music at excessively high volumes, especially with earphones, to protect your hearing.",
-        "Don't limit yourself to just one genre or language.",
-        "Don't let your music subscription auto-renew if you're not using it.",
-        "Don't be afraid to listen to older classics from different eras."
-    ]
+      ]
+    },
+    {
+      "category": "Podcast Platforms",
+      "links": [
+        { "name": "Google Podcasts", "url": "https://podcasts.google.com/" },
+        { "name": "Apple Podcasts", "url": "https://www.apple.com/in/apple-podcasts/" },
+        { "name": "Spotify (also for podcasts)", "url": "https://www.spotify.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Create playlists for different moods (workout, focus, relax).",
+    "Support artists by following them and sharing their music.",
+    "Explore the 'radio' feature based on a song you like.",
+    "Use high-quality headphones for a better listening experience."
+  ],
+  "donts": [
+    "Don't listen to music at excessively high volumes.",
+    "Don't limit yourself to just mainstream or popular music.",
+    "Avoid illegal music downloading websites.",
+    "Don't let your music choices disturb others in public spaces."
+  ]
 }
+
