@@ -1,29 +1,47 @@
 {
-    "title": "Interactive Fun: Games",
-    "description": "Gaming is a diverse and engaging hobby for adults, offering everything from relaxing puzzles and rich stories to epic online adventures and competitive sports.",
-    "sentences": [
-        "Gaming is available on various platforms: PC (Steam, Epic Games), consoles (PlayStation, Xbox), and mobile (iOS, Android).",
-        "Many games have a strong social component, allowing you to connect and play with friends online.",
-        "Indie games often offer unique, creative experiences that are different from big-budget titles.",
-        "Gaming can be a great way to unwind and de-stress after a long day.",
-        "Setting a budget for games and in-game purchases is important for financial management."
-    ],
-    "websites": [
-        { "name": "Steam (PC Games)", "url": "https://store.steampowered.com/" },
-        { "name": "IGN India (Reviews & News)", "url": "https://in.ign.com/" },
-        { "name": "PlayStation India", "url": "https://www.playstation.com/en-in/" },
-        { "name": "Xbox India", "url": "https://www.xbox.com/en-IN/" }
-    ],
-    "dos": [
-        "Set clear time limits for your gaming sessions to maintain a healthy balance.",
-        "Try game genres you haven't played before; you might discover a new favorite.",
-        "Look for sales and bundles to get games at a lower price.",
-        "Engage with positive online communities for tips and discussions."
-    ],
-    "donts": [
-        "Don't let gaming interfere with your work, sleep, or social responsibilities.",
-        "Don't get drawn into making unplanned in-game purchases ('microtransactions').",
-        "Don't engage with toxic players or communities; use the mute, block, and report functions.",
-        "Don't neglect physical activity; take regular breaks to stretch and move around."
-    ]
+  "title": "Games 🎮",
+  "description": "Gaming is a diverse and engaging hobby that spans across mobile, PC, and console platforms. It's a great way to unwind, socialize, and challenge your mind.",
+  "sentences": [
+    "Mobile gaming is highly accessible and offers a huge variety of casual and competitive games.",
+    "PC and console gaming provide more immersive, high-fidelity experiences.",
+    "Online multiplayer games allow you to connect and play with friends.",
+    "Indie games often offer unique and creative experiences.",
+    "Gaming can be a healthy hobby when balanced with other life responsibilities."
+  ],
+  "websites": [
+    {
+      "category": "PC Game Stores",
+      "links": [
+        { "name": "Steam", "url": "https://store.steampowered.com/" },
+        { "name": "Epic Games Store", "url": "https://store.epicgames.com/" }
+      ]
+    },
+    {
+      "category": "Gaming News & Reviews (India)",
+      "links": [
+        { "name": "IGN India", "url": "https://in.ign.com/" },
+        { "name": "Sportskeeda Esports", "url": "https://www.sportskeeda.com/esports" }
+      ]
+    },
+    {
+      "category": "Mobile Gaming",
+      "links": [
+        { "name": "Google Play Store", "url": "https://play.google.com/store/apps/category/GAME" },
+        { "name": "Apple App Store", "url": "https://www.apple.com/in/app-store/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Set time limits for your gaming sessions.",
+    "Play a variety of different game genres.",
+    "Maintain good posture while playing.",
+    "Be a positive and respectful member of the online gaming community."
+  ],
+  "donts": [
+    "Don't let gaming interfere with your sleep, work, or studies.",
+    "Don't spend more money on in-game purchases than you can afford.",
+    "Avoid engaging with toxic players.",
+    "Don't neglect physical activity."
+  ]
 }
+
