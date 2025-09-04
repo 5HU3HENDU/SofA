@@ -1,502 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School of Adults</title>
-    <meta name="description" content="A modern, modular guide to managing every aspect of adult life.">
-    <meta name="theme-color" content="#1a1a1a">
-    <link rel="manifest" href="/manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Link to the Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Theme color for browser UI -->
+    <meta name="theme-color" content="#1f2937">
     <style>
-        :root {
-            --bg-color: #121212;
-            --text-color: #e5e7eb;
-            --theme-color-1: #374151;
-            --theme-color-2: #4f46e5;
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.5s ease-in-out;
         }
-        html { color-scheme: dark; }
-        body { 
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.5s ease;
+        .font-display {
+            font-family: 'Playfair Display', serif;
         }
-        .tile {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            transform: rotate(var(--rotate, 0deg));
+        .card {
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .tile:hover {
-            transform: translateY(-10px) scale(1.05) rotate(var(--rotate-hover, 0deg));
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        .card:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
-        .list-item-do::before { content: '✓'; color: var(--theme-color-2); margin-right: 0.75rem; font-weight: bold; }
-        .list-item-dont::before { content: '✗'; color: #ef4444; margin-right: 0.75rem; font-weight: bold; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
-        ::-webkit-scrollbar-thumb { background: var(--theme-color-2); border-radius: 4px; }
-        #content-display { display: none; }
-        .nav-sidebar {
+        .topic-page {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        #nav-menu {
             transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
         }
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        
-        @media (max-width: 1024px) {
-            .nav-sidebar {
-                transform: translateX(100%);
-            }
-            .nav-sidebar.open {
-                transform: translateX(0);
-            }
+        #nav-menu.open {
+            transform: translateX(0);
+        }
+        /* Scrollbar styling for navbar */
+        #nav-scroll-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        #nav-scroll-container::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        #nav-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #4b5563;
+            border-radius: 20px;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
     </style>
 </head>
-<body class="text-gray-200">
-    <div id="app" class="relative min-h-screen flex">
-        <!-- Main Content Area -->
-        <div class="flex-1 transition-all duration-300">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <!-- Header -->
-                <header class="flex items-center justify-between pb-8">
-                     <div class="flex items-center space-x-3" id="header-content">
-                         <span class="text-3xl">🎓</span>
-                        <h1 class="text-3xl font-bold text-white">School of Adults</h1>
-                    </div>
-                    <button id="nav-toggle" class="lg:hidden z-50 p-2 rounded-md hover:bg-white/10">
-                        <i data-feather="menu" class="w-7 h-7"></i>
-                    </button>
-                </header>
-                
-                <main>
-                    <!-- Home Grid -->
-                    <div id="home-grid">
-                        <!-- Tiles will be injected here -->
-                    </div>
+<body class="bg-gray-900 text-gray-200">
 
-                    <!-- Content Display -->
-                    <div id="content-display">
-                        <!-- Topic content will be injected here -->
-                    </div>
-                </main>
-            </div>
-        </div>
-        
-        <!-- Right Navigation Sidebar -->
-        <nav id="nav-sidebar" class="nav-sidebar fixed top-0 right-0 h-full w-72 bg-black/30 backdrop-blur-lg border-l border-white/10 z-40 lg:relative lg:w-72 lg:translate-x-0 lg:flex-shrink-0 flex flex-col">
-             <div class="p-8 overflow-y-auto flex-1">
-                <h2 class="text-2xl font-bold mb-6 text-white">Topics</h2>
-                <div id="nav-links" class="space-y-2">
-                    <!-- Nav links injected here -->
+    <div id="app-container" class="relative min-h-screen">
+        <!-- Main Content Area -->
+        <main id="main-content" class="p-4 md:p-8 transition-all duration-300">
+            <!-- Content will be injected here -->
+        </main>
+
+        <!-- Navigation Toggle Button -->
+        <button id="nav-toggle" class="fixed top-5 right-5 z-50 p-2 bg-gray-800/50 backdrop-blur-sm rounded-full text-white hover:bg-gray-700/70 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+
+        <!-- Right Side Navigation Panel -->
+        <div id="nav-menu" class="fixed top-0 right-0 h-full w-72 md:w-80 bg-gray-900/80 backdrop-blur-lg shadow-2xl z-40 border-l border-gray-700/50">
+            <div class="p-5 flex flex-col h-full">
+                <h2 class="font-display text-2xl font-bold text-white mb-6">Menu</h2>
+                <div id="nav-scroll-container" class="flex-grow overflow-y-auto pr-2">
+                    <ul id="nav-links" class="space-y-2">
+                        <!-- Nav links will be injected here -->
+                    </ul>
+                </div>
+                 <!-- Install PWA Button -->
+                <div class="mt-4">
+                    <button id="install-button" class="hidden w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                        Install App
+                    </button>
                 </div>
             </div>
-        </nav>
-         <!-- Sidebar Overlay -->
-        <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+        </div>
+        <div id="nav-overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
     </div>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const root = document.documentElement;
-        const homeGrid = document.getElementById('home-grid');
-        const contentDisplay = document.getElementById('content-display');
-        const headerContent = document.getElementById('header-content');
-        const navSidebar = document.getElementById('nav-sidebar');
-        const navToggle = document.getElementById('nav-toggle');
-        const navLinksContainer = document.getElementById('nav-links');
-        const sidebarOverlay = document.getElementById('sidebar-overlay');
+        const app = {
+            topics: {
+                "health": { title: "Health & Wellness 💪", color: "#6d28d9", color2: "#a78bfa", subtopics: {
+                    "food": { title: "Food 🥗" },
+                    "exercise": { title: "Exercise 🏃" },
+                    "healthcheckup": { title: "Health Check-Up 🩺" },
+                    "mentalhealth": { title: "Mental Health 🧘" },
+                    "period": { title: "Period Health 🩸" },
+                }},
+                "wealth": { title: "Wealth & Finance 💰", color: "#059669", color2: "#34d399", subtopics: {
+                    "generate": { title: "Generate 💸" },
+                    "invest": { title: "Invest 📈" },
+                    "insurance": { title: "Insurance 🛡️" },
+                    "spends": { title: "Spends 💳" },
+                    "loans": { title: "Loans 🏦" },
+                }},
+                "career": { title: "Career & Ambition 🚀", color: "#db2777", color2: "#f472b6", subtopics: {
+                    "choosing": { title: "Choosing Career 🤔" },
+                    "jobsearch": { title: "Job Search 🔎" },
+                    "ladder": { title: "Career Ladder 🪜" },
+                    "resignation": { title: "Resignation 📄" },
+                }},
+                "travel": { title: "Travel & Exploration ✈️", color: "#d97706", color2: "#fbbf24", subtopics: {
+                    "place": { title: "Place 🗺️" },
+                    "stay": { title: "Stay 🏨" },
+                    "flight": { title: "Flight ✈️" },
+                    "train": { title: "Train 🚆" },
+                    "bus": { title: "Bus 🚌" },
+                    "cab": { title: "Cab 🚕" },
+                    "itinerary": { title: "Itinerary 📝" },
+                    "thingstocarry": { title: "Things to Carry 🎒" },
+                }},
+                "home": { title: "Home Management 🏠", color: "#2563eb", color2: "#60a5fa", subtopics: {
+                    "livingroom": { title: "Living Room 🛋️" },
+                    "bedroom": { title: "Bedroom 🛏️" },
+                    "kitchen": { title: "Kitchen 🍳" },
+                    "garden": { title: "Garden 🪴" },
+                    "bathroom": { title: "Bathroom 🚽" },
+                }},
+                "people": { title: "People & Relationships 👨‍👩‍👧‍👦", color: "#ea580c", color2: "#fb923c", subtopics: {
+                    "self": { title: "Self ❤️" },
+                    "parents": { title: "Parents 🧑‍🦳" },
+                    "partner": { title: "Partner 💞" },
+                    "kids": { title: "Kids 👶" },
+                    "friends": { title: "Friends 🤗" },
+                    "relatives": { title: "Relatives 👨‍👩‍👧" },
+                    "colleagues": { title: "Colleagues 🤝" },
+                    "enemy": { title: "Difficult People 😒" },
+                }},
+                "pets": { title: "Pet Care 🐾", color: "#ca8a04", color2: "#facc15", subtopics: {
+                     "cats": { title: "Cats 🐈" },
+                     "dogs": { title: "Dogs 🐕" },
+                }},
+                "content": { title: "Content Consumption 📺", color: "#be185d", color2: "#f9a8d4", subtopics: {
+                    "news": { title: "News 📰" },
+                    "tvmovies": { title: "TV & Movies 🎞️" },
+                    "songs": { title: "Songs 🎵" },
+                    "books": { title: "Books 📚" },
+                    "games": { title: "Games 🎮" },
+                }},
+                "fashion": { title: "Fashion & Style 👗", color: "#86198f", color2: "#c084fc", subtopics: {
+                    "men": { title: "Men 👨" },
+                    "women": { title: "Women 👩" },
+                    "kids": { title: "Kids 👧" },
+                }},
+                "lifeskills": { title: "Essential Life Skills 🛠️", color: "#0d9488", color2: "#2dd4bf", subtopics: {
+                    "driving": { title: "Driving 🚗" },
+                    "swimming": { title: "Swimming 🏊" },
+                    "decisionmaking": { title: "Decision Making 🧠" },
+                    "problemsolving": { title: "Problem Solving 🧩" },
+                }},
+                "lifeevents": { title: "Major Life Events 🎉", color: "#65a30d", color2: "#a3e635", subtopics: {
+                    "buyinghouse": { title: "Buying House 🏠" },
+                    "gettingmarried": { title: "Getting Married 💍" },
+                    "pregnancy": { title: "Pregnancy 🤰" },
+                    "moving": { title: "Moving City 🏙️" },
+                }},
+            },
+            mainContent: document.getElementById('main-content'),
 
-        const topics = {
-            health: { 
-                title: "Health & Wellness", 
-                icon: "❤️", 
-                color1: "#1f2937", 
-                color2: "#ef4444",
-                subtopics: {
-                    food: { title: "Food", icon: "🥗", file: "health-food.json" },
-                    exercise: { title: "Exercise", icon: "🏋️", file: "health-exercise.json" },
-                    healthCheckUp: { title: "Health Check Up", icon: "🩺", file: "health-healthcheckup.json" },
-                    mentalHealth: { title: "Mental Health", icon: "🧠", file: "health-mentalhealth.json" },
-                    period: { title: "Period Health", icon: "🩸", file: "health-period.json" },
-                }
-            },
-            wealth: { 
-                title: "Wealth & Finance", 
-                icon: "💰",
-                color1: "#1e3a8a",
-                color2: "#3b82f6",
-                subtopics: {
-                    generate: { title: "Generate", icon: "📈", file: "wealth-generate.json" },
-                    invest: { title: "Invest", icon: "🏦", file: "wealth-invest.json" },
-                    insurance: { title: "Insurance", icon: "🛡️", file: "wealth-insurance.json" },
-                    spends: { title: "Spends", icon: "💸", file: "wealth-spends.json" },
-                    loans: { title: "Loans", icon: "🧾", file: "wealth-loans.json" },
-                }
-            },
-            career: { 
-                title: "Career & Ambition", 
-                icon: "🚀", 
-                color1: "#4a044e", 
-                color2: "#a21caf",
-                subtopics: {
-                    choosing: { title: "Choosing Career", icon: "🤔", file: "career-choosing.json" },
-                    jobsearch: { title: "Job Search", icon: "💼", file: "career-jobsearch.json" },
-                    ladder: { title: "Career Ladder", icon: "🧗", file: "career-ladder.json" },
-                    resignation: { title: "Resignation", icon: "👋", file: "career-resignation.json" },
-                }
-            },
-            homeManagement: {
-                title: "Home Management",
-                icon: "🏡",
-                color1: "#3f6212",
-                color2: "#84cc16",
-                subtopics: {
-                    livingroom: { title: "Living Room", icon: "🛋️", file: "home-livingroom.json" },
-                    bedroom: { title: "Bedroom", icon: "🛏️", file: "home-bedroom.json" },
-                    kitchen: { title: "Kitchen", icon: "🍳", file: "home-kitchen.json" },
-                    garden: { title: "Garden", icon: "🌳", file: "home-garden.json" },
-                    bathroom: { title: "Bathroom", icon: "🛁", file: "home-bathroom.json" },
-                }
-            },
-            travel: { 
-                title: "Travel & Exploration", 
-                icon: "✈️", 
-                color1: "#064e3b", 
-                color2: "#10b981",
-                subtopics: {
-                    place: { title: "Place", icon: "🗺️", file: "travel-place.json" },
-                    stay: { title: "Stay", icon: "🏨", file: "travel-stay.json" },
-                    flight: { title: "Flight", icon: "✈️", file: "travel-flight.json" },
-                    train: { title: "Train", icon: "🚆", file: "travel-train.json" },
-                    bus: { title: "Bus", icon: "🚌", file: "travel-bus.json" },
-                    cab: { title: "Cab", icon: "🚕", file: "travel-cab.json" },
-                    itinerary: { title: "Itinerary", icon: "📝", file: "travel-itinerary.json" },
-                    thingstocarry: { title: "Things to Carry", icon: "🎒", file: "travel-thingstocarry.json" },
-                }
-            },
-            people: {
-                title: "People & Relationships",
-                icon: "👥",
-                color1: "#581c87",
-                color2: "#a855f7",
-                subtopics: {
-                    self: { title: "Self", icon: "❤️‍🩹", file: "people-self.json" },
-                    parents: { title: "Parents", icon: "👨‍👩‍👧", file: "people-parents.json" },
-                    partner: { title: "Partner", icon: "💞", file: "people-partner.json" },
-                    kids: { title: "Kids", icon: "👶", file: "people-kids.json" },
-                    friends: { title: "Friends", icon: "🧑‍🤝‍🧑", file: "people-friends.json" },
-                    relatives: { title: "Relatives", icon: "👨‍👩‍👧‍👦", file: "people-relatives.json" },
-                    colleagues: { title: "Colleagues", icon: "👔", file: "people-colleagues.json" },
-                    enemy: { title: "Difficult People", icon: "😒", file: "people-enemy.json" },
-                }
-            },
-            lifeSkills: {
-                title: "Essential Life Skills",
-                icon: "🛠️",
-                color1: "#854d0e",
-                color2: "#f59e0b",
-                subtopics: {
-                    driving: { title: "Driving", icon: "🚗", file: "lifeskills-driving.json" },
-                    swimming: { title: "Swimming", icon: "🏊", file: "lifeskills-swimming.json" },
-                    decisionmaking: { title: "Decision Making", icon: "🧠", file: "lifeskills-decisionmaking.json" },
-                    problemsolving: { title: "Problem Solving", icon: "🧩", file: "lifeskills-problemsolving.json" }
-                }
-            },
-            lifeEvents: {
-                title: "Major Life Events",
-                icon: "🎉",
-                color1: "#0c4a6e",
-                color2: "#0ea5e9",
-                subtopics: {
-                    buyinghouse: { title: "Buying House", icon: "🏠", file: "lifeevents-buyinghouse.json" },
-                    gettingmarried: { title: "Getting Married", icon: "💍", file: "lifeevents-gettingmarried.json" },
-                    pregnancy: { title: "Pregnancy", icon: "🤰", file: "lifeevents-pregnancy.json" },
-                    moving: { title: "Moving to a New City", icon: "🏙️", file: "lifeevents-moving.json" }
-                }
-            },
-            pets: {
-                title: "Pet Care",
-                icon: "🐾",
-                color1: "#6d28d9",
-                color2: "#c084fc",
-                subtopics: {
-                    cats: { title: "Cats", icon: "🐈", file: "pets-cats.json" },
-                    dogs: { title: "Dogs", icon: "🐕", file: "pets-dogs.json" }
-                }
-            },
-            content: {
-                title: "Content Consumption",
-                icon: "🎬",
-                color1: "#0f766e",
-                color2: "#14b8a6",
-                subtopics: {
-                    news: { title: "News", icon: "📰", file: "content-news.json" },
-                    tvmovies: { title: "TV Shows & Movies", icon: "🎞️", file: "content-tvmovies.json" },
-                    songs: { title: "Songs", icon: "🎵", file: "content-songs.json" },
-                    books: { title: "Books", icon: "📚", file: "content-books.json" },
-                    games: { title: "Games", icon: "🎮", file: "content-games.json" }
-                }
-            },
-            fashion: {
-                title: "Fashion & Style",
-                icon: "👕",
-                color1: "#831843",
-                color2: "#e11d48",
-                subtopics: {
-                    men: { title: "Men", icon: "👨", file: "fashion-men.json" },
-                    women: { title: "Women", icon: "👩", file: "fashion-women.json" },
-                    kids: { title: "Kids", icon: "👧", file: "fashion-kids.json" }
-                }
-            }
-        };
+            init() {
+                this.renderNav();
+                window.addEventListener('hashchange', () => this.router());
+                this.router();
 
-        const defaultTheme = {
-            bgColor: "#121212",
-            color1: "#374151",
-            color2: "#4f46e5"
-        };
-        
-        const setTheme = (theme) => {
-            root.style.setProperty('--bg-color', theme.bgColor);
-            root.style.setProperty('--theme-color-1', theme.color1);
-            root.style.setProperty('--theme-color-2', theme.color2);
-        };
+                // Navigation menu logic
+                const navMenu = document.getElementById('nav-menu');
+                const navToggle = document.getElementById('nav-toggle');
+                const navOverlay = document.getElementById('nav-overlay');
 
-        const updateHeader = (title, icon = '🎓') => {
-            headerContent.innerHTML = `
-                <span class="text-3xl">${icon}</span>
-                <h1 class="text-3xl font-bold text-white">${title}</h1>
-            `;
-        };
-        
-        const renderNavLinks = () => {
-            let linksHtml = '<a href="#home" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="home">🏠 Home</a>';
-            for (const key in topics) {
-                const topic = topics[key];
-                if (topic.subtopics) {
-                    linksHtml += `
-                        <details class="group">
-                            <summary class="flex items-center justify-between font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10 cursor-pointer">
-                                <a href="#${key}" class="flex items-center flex-1" data-path="${key}">
-                                    <span class="mr-3">${topic.icon}</span>
-                                    <span>${topic.title}</span>
-                                </a>
-                                <i data-feather="chevron-down" class="ml-2 h-5 w-5 group-open:rotate-180 transition-transform flex-shrink-0"></i>
-                            </summary>
-                            <div class="pl-8 border-l-2 border-white/10 ml-6 mt-1 space-y-1">
-                                ${Object.entries(topic.subtopics).map(([subKey, subTopic]) => `
-                                    <a href="#${key}-${subKey}" class="nav-link flex items-center font-medium text-base py-1 px-2 rounded-lg hover:bg-white/10 text-gray-300" data-path="${key}-${subKey}">
-                                        <span class="mr-2">${subTopic.icon}</span>
-                                        <span>${subTopic.title}</span>
-                                    </a>
-                                `).join('')}
-                            </div>
-                        </details>
-                    `;
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('open');
+                    navOverlay.classList.toggle('hidden');
+                });
+                navOverlay.addEventListener('click', () => {
+                    navMenu.classList.remove('open');
+                    navOverlay.classList.add('hidden');
+                });
+            },
+
+            router() {
+                const hash = window.location.hash.substring(1);
+                const params = new URLSearchParams(hash);
+                const topicId = params.get('topic');
+                const categoryId = params.get('category');
+
+                if (topicId) {
+                    this.renderTopicContent(topicId);
+                } else if (categoryId) {
+                    this.renderCategoryPage(categoryId);
                 } else {
-                    linksHtml += `<a href="#${key}" class="nav-link block font-semibold text-lg py-2 px-4 rounded-lg hover:bg-white/10" data-path="${key}">${topic.icon} ${topic.title}</a>`;
+                    this.renderHomepage();
                 }
-            }
-            navLinksContainer.innerHTML = linksHtml;
-            feather.replace();
-        };
+            },
 
-        const renderHomeGrid = () => {
-            setTheme(defaultTheme);
-            homeGrid.innerHTML = '';
-            homeGrid.style.display = 'grid';
-            contentDisplay.style.display = 'none';
-            updateHeader("School of Adults");
-
-            homeGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
-            let rotation = -2;
-
-            for (const key in topics) {
-                const item = topics[key];
-                const tile = document.createElement('a');
-                const path = item.file ? key : key;
-                tile.href = `#${path}`;
-                tile.className = 'tile p-8 rounded-2xl flex flex-col items-center justify-center text-center text-white shadow-lg';
-                tile.style.backgroundColor = item.color1;
-                tile.style.setProperty('--rotate', `${rotation}deg`);
-                tile.style.setProperty('--rotate-hover', `${rotation > 0 ? rotation - 1 : rotation + 1}deg`);
-                
-                tile.innerHTML = `
-                    <span class="text-5xl mb-4">${item.icon}</span>
-                    <h3 class="text-2xl font-bold">${item.title}</h3>
+            renderHomepage() {
+                document.body.style.backgroundColor = '#111827'; // Reset to default dark
+                this.mainContent.innerHTML = `
+                    <div class="text-center mb-12">
+                        <h1 class="font-display text-5xl md:text-7xl font-bold text-white">School of Adults</h1>
+                        <p class="mt-4 text-lg text-gray-400">Your quirky guide to adulting, one topic at a time.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                        ${Object.keys(this.topics).map(key => this.createCard(key, this.topics[key])).join('')}
+                    </div>
                 `;
-                homeGrid.appendChild(tile);
-                rotation = (rotation + 4) * -1;
-            }
-        };
+                 document.title = 'School of Adults';
+            },
 
-        const renderSubtopicGrid = (parentKey) => {
-            const parentTopic = topics[parentKey];
-            setTheme({bgColor: parentTopic.color1, color1: parentTopic.color1, color2: parentTopic.color2});
-            homeGrid.innerHTML = '';
-            homeGrid.style.display = 'grid';
-            contentDisplay.style.display = 'none';
-            updateHeader(parentTopic.title, parentTopic.icon);
+            createCard(key, topic) {
+                return `
+                    <a href="#category=${key}" class="card block rounded-xl p-6" style="background-color: ${topic.color};">
+                        <h2 class="font-display text-3xl font-bold text-white">${topic.title}</h2>
+                    </a>
+                `;
+            },
 
-            homeGrid.className = 'grid grid-cols-2 md:grid-cols-3 gap-6';
-
-            for (const key in parentTopic.subtopics) {
-                const item = parentTopic.subtopics[key];
-                const tile = document.createElement('a');
-                tile.href = `#${parentKey}-${key}`;
-                tile.className = 'tile p-6 rounded-xl flex flex-col items-center justify-center text-center border-2';
-                tile.style.borderColor = parentTopic.color2;
-                tile.style.backgroundColor = 'rgba(0,0,0,0.2)';
+            renderCategoryPage(categoryId) {
+                const category = this.topics[categoryId];
+                if (!category) {
+                    this.renderHomepage();
+                    return;
+                }
+                const theme = { bg: category.color, color: category.color2 };
+                document.body.style.backgroundColor = theme.bg;
                 
-                tile.innerHTML = `
-                    <span class="text-4xl mb-3">${item.icon}</span>
-                    <h3 class="font-semibold text-white text-lg">${item.title}</h3>`;
-                homeGrid.appendChild(tile);
-            }
-        };
+                this.mainContent.innerHTML = `
+                    <div class="topic-page">
+                         <a href="#" class="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+                            Back to Home
+                        </a>
+                        <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-12">${category.title}</h1>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                           ${Object.keys(category.subtopics).map(subKey => {
+                               const subtopic = category.subtopics[subKey];
+                               return `
+                                <a href="#topic=${categoryId}-${subKey}" class="card block rounded-xl p-6 bg-black/20 hover:bg-black/40 border border-white/10 transition-all">
+                                    <h2 class="font-display text-3xl font-bold text-white">${subtopic.title}</h2>
+                                </a>
+                               `
+                           }).join('')}
+                        </div>
+                    </div>
+                `;
+                 document.title = category.title;
+            },
 
-        const renderTopicContent = async (filePath, theme, topicItem) => {
-            setTheme({bgColor: theme.color1, color1: theme.color1, color2: theme.color2});
-            try {
-                const response = await fetch(filePath);
-                if (!response.ok) throw new Error(`File not found: ${filePath}`);
-                const data = await response.json();
+            async renderTopicContent(topicId) {
+                try {
+                    const res = await fetch(`${topicId}.json`);
+                    if (!res.ok) throw new Error(`File not found for ${topicId}`);
+                    const data = await res.json();
+                    
+                    const [categoryId, subtopicId] = topicId.split('-');
+                    const theme = { bg: this.topics[categoryId].color, color: this.topics[categoryId].color, color2: this.topics[categoryId].color2 };
 
-                homeGrid.style.display = 'none';
-                contentDisplay.style.display = 'block';
-                updateHeader(data.title, topicItem.icon);
-                
-                contentDisplay.innerHTML = `
-                    <div class="animate-fade-in bg-black/20 p-6 sm:p-8 rounded-2xl">
-                        <p class="text-gray-300 text-lg mb-8 max-w-3xl">${data.description}</p>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            <div class="space-y-6">
-                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
-                                    <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="book-open" class="mr-2 h-5 w-5"></i>Key Information</h3>
-                                    <ul class="space-y-2 text-gray-300">
-                                        ${data.sentences.map(item => `<li class="flex items-start"><span style="color: ${theme.color2}" class="mr-2 mt-1">◆</span><span>${item}</span></li>`).join('')}
-                                    </ul>
-                                </div>
-                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
-                                    <h3 class="text-xl font-semibold mb-4 text-white flex items-center"><i data-feather="link" class="mr-2 h-5 w-5"></i>Websites</h3>
-                                    <div class="space-y-3">
-                                        ${data.websites.map(res => `
-                                            <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-black/20 p-3 rounded-lg hover:bg-black/40 transition-colors border border-white/10">
-                                                <p class="font-medium" style="color: ${theme.color2}">${res.name}</p>
-                                            </a>`).join('')}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="space-y-6">
-                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
-                                    <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center"><i data-feather="check-circle" class="mr-2 h-5 w-5"></i>Do's</h3>
-                                    <ul class="space-y-3 text-gray-300">
-                                        ${data.dos.map(item => `<li class="list-item-do">${item}</li>`).join('')}
-                                    </ul>
-                                </div>
-                                <div class="p-6 rounded-xl bg-black/20 border border-white/10">
-                                    <h3 class="text-xl font-semibold mb-4 text-red-400 flex items-center"><i data-feather="x-circle" class="mr-2 h-5 w-5"></i>Don'ts</h3>
-                                    <ul class="space-y-3 text-gray-300">
-                                        ${data.donts.map(item => `<li class="list-item-dont">${item}</li>`).join('')}
-                                    </ul>
-                                </div>
+                    document.body.style.backgroundColor = theme.bg;
+                    this.mainContent.innerHTML = `
+                        <div class="topic-page max-w-4xl mx-auto">
+                            <a href="#category=${categoryId}" class="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/></svg>
+                                Back to ${this.topics[categoryId].title}
+                            </a>
+                            <h1 class="font-display text-5xl md:text-6xl font-bold text-white">${data.title}</h1>
+                            <p class="mt-4 text-lg text-white/80">${data.description}</p>
+
+                            <div class="mt-12 space-y-10">
+                                ${this.renderSection('Key Info', data.sentences.map(s => `<p>${s}</p>`).join(''), theme)}
+                                ${this.renderWebsites(data.websites, theme)}
+                                ${this.renderDosDonts(data.dos, data.donts, theme)}
                             </div>
                         </div>
-                    </div>`;
-                feather.replace();
-                window.scrollTo(0, 0);
-
-            } catch (error) {
-                console.error("Error loading topic:", error);
-                contentDisplay.innerHTML = `<p class="text-red-400">Could not load content. Please try again.</p>`;
-            }
-        };
-        
-        const handleNavigation = (hash) => {
-            const cleanHash = hash.replace('#', '');
-            const [parentKey, childKey] = cleanHash.split('-');
-
-            if (!cleanHash || cleanHash === 'home') {
-                renderHomeGrid();
-            } else if (topics[parentKey] && topics[parentKey].subtopics && !childKey) {
-                renderSubtopicGrid(parentKey);
-            } else {
-                let topicItem, theme, filePath;
-                if (childKey) {
-                    topicItem = topics[parentKey]?.subtopics[childKey];
-                    theme = topics[parentKey];
-                    filePath = topicItem?.file;
-                } else {
-                    topicItem = topics[parentKey];
-                    theme = topicItem;
-                    filePath = topicItem?.file;
+                    `;
+                    document.title = data.title;
+                } catch (error) {
+                    console.error('Error loading topic:', error);
+                    this.mainContent.innerHTML = `<p class="text-center text-red-400">Could not load content. Please try again.</p>`;
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
                 }
+            },
+            
+            renderSection(title, content, theme) {
+                return `
+                    <div>
+                        <h3 class="font-display text-3xl font-bold border-b-2 pb-2 mb-4" style="border-color: ${theme.color2}; color: white;">${title}</h3>
+                        <div class="space-y-3 text-white/90 text-base leading-relaxed">${content}</div>
+                    </div>
+                `;
+            },
+            
+            renderWebsites(websites, theme) {
+                 if (!websites || websites.length === 0) return '';
+                 return `
+                    <div>
+                        <h3 class="font-display text-3xl font-bold border-b-2 pb-2 mb-4" style="border-color: ${theme.color2}; color: white;">Resources & Websites</h3>
+                        <div class="space-y-6">
+                            ${websites.map(category => `
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-3" style="color: ${theme.color2};">${category.category}</h4>
+                                    <div class="space-y-3 border-l-2 pl-4 ml-1" style="border-color: ${theme.color2 + '40'};">
+                                        ${category.links.map(res => `
+                                            <a href="${res.url}" target="_blank" rel="noopener noreferrer" class="block bg-black/20 p-4 rounded-lg hover:bg-black/40 transition-colors border border-white/10">
+                                                <p class="font-medium text-white">${res.name}</p>
+                                            </a>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                 `;
+            },
+
+            renderDosDonts(dos, donts, theme) {
+                return `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-display text-3xl font-bold mb-4 text-green-400">Do's 👍</h3>
+                            <ul class="space-y-3 list-inside">
+                                ${dos.map(item => `<li class="flex items-start gap-3"><span class="text-green-400 mt-1">✓</span><span class="text-white/90">${item}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-3xl font-bold mb-4 text-red-400">Don'ts 👎</h3>
+                            <ul class="space-y-3 list-inside">
+                                ${donts.map(item => `<li class="flex items-start gap-3"><span class="text-red-400 mt-1">✗</span><span class="text-white/90">${item}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            },
+
+            renderNav() {
+                const navLinks = document.getElementById('nav-links');
+                let html = '<li><a href="#" class="block py-2 px-3 rounded-md hover:bg-gray-700/80 transition-colors">Home</a></li>';
                 
-                if (filePath) {
-                    renderTopicContent(filePath, theme, topicItem);
-                } else {
-                    renderHomeGrid(); // Fallback to home
+                for (const key in this.topics) {
+                    const topic = this.topics[key];
+                    html += `
+                        <li>
+                            <button class="accordion-toggle w-full flex justify-between items-center py-2 px-3 rounded-md hover:bg-gray-700/80 transition-colors">
+                                <span class="font-semibold">${topic.title}</span>
+                                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content pl-4 mt-1">
+                                <ul class="space-y-1 border-l border-gray-600">
+                                     <li><a href="#category=${key}" data-category="${key}" class="block py-1 px-3 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-md transition-colors">Overview</a></li>
+                                    ${Object.keys(topic.subtopics).map(subKey => `
+                                        <li><a href="#topic=${key}-${subKey}" class="block py-1 px-3 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-md transition-colors">${topic.subtopics[subKey].title}</a></li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        </li>
+                    `;
                 }
-            }
-             // Close sidebar on nav
-            if(navSidebar.classList.contains('open')) {
-                navSidebar.classList.remove('open');
-                sidebarOverlay.classList.add('hidden');
-            }
-        };
+                navLinks.innerHTML = html;
+                this.addAccordionListeners();
+            },
 
-        const handleNavClick = (e) => {
-            const link = e.target.closest('a');
-            if (link) {
-                e.preventDefault();
-                const path = link.getAttribute('href');
-                history.pushState({ path }, '', path);
-                handleNavigation(path);
-            }
-        };
-
-        // Event Listeners
-        homeGrid.addEventListener('click', handleNavClick);
-        navLinksContainer.addEventListener('click', handleNavClick);
-
-        navToggle.addEventListener('click', () => {
-            navSidebar.classList.toggle('open');
-            sidebarOverlay.classList.toggle('hidden');
-        });
-        sidebarOverlay.addEventListener('click', () => {
-            navSidebar.classList.remove('open');
-            sidebarOverlay.classList.add('hidden');
-        });
-        
-        window.addEventListener('popstate', () => {
-             handleNavigation(window.location.hash);
-        });
-
-        // Initial Load
-        renderNavLinks();
-        handleNavigation(window.location.hash);
-        feather.replace();
-    });
-    </script>
-        <script>
-            // Check if service workers are supported by the browser
-            if ('serviceWorker' in navigator) {
-                // Register the service worker when the window loads
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js') // Adjust path if sw.js is not in the root
-                        .then(registration => {
-                            console.log('Service Worker registered with scope:', registration.scope);
-                        })
-                        .catch(error => {
-                            console.error('Service Worker registration failed:', error);
-                        });
+            addAccordionListeners() {
+                const toggles = document.querySelectorAll('.accordion-toggle');
+                toggles.forEach(toggle => {
+                    toggle.addEventListener('click', () => {
+                        const content = toggle.nextElementSibling;
+                        const icon = toggle.querySelector('svg');
+                        
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            icon.style.transform = 'rotate(180deg)';
+                        } 
+                    });
                 });
             }
-        </script>
+        };
 
-    
+        app.init();
+        
+        // --- PWA Installation Logic ---
+        let deferredPrompt;
+        const installButton = document.getElementById('install-button');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+          // Prevent the mini-infobar from appearing on mobile
+          e.preventDefault();
+          // Stash the event so it can be triggered later.
+          deferredPrompt = e;
+          // Update UI to notify the user they can install the PWA
+          installButton.classList.remove('hidden');
+          console.log(`'beforeinstallprompt' event was fired.`);
+        });
+
+        installButton.addEventListener('click', async () => {
+          // Hide the app provided install promotion
+          installButton.classList.add('hidden');
+          // Show the install prompt
+          deferredPrompt.prompt();
+          // Wait for the user to respond to the prompt
+          const { outcome } = await deferredPrompt.userChoice;
+          console.log(`User response to the install prompt: ${outcome}`);
+          // We've used the prompt, and can't use it again, throw it away
+          deferredPrompt = null;
+        });
+
+        window.addEventListener('appinstalled', (evt) => {
+          // Log install to analytics
+          console.log('INSTALL: Success');
+        });
+        
+        // --- Service Worker Registration ---
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+              .then(registration => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              }, err => {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+          });
+        }
+    </script>
 </body>
 </html>
 
