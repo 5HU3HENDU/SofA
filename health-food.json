@@ -1,28 +1,52 @@
 {
-    "title": "Nourishing Your Body",
-    "description": "Food is fuel. Understanding nutrition helps you make conscious choices that boost energy, improve mood, and support long-term health. It's not about restriction, but about abundance of the right things.",
-    "sentences": [
-        "Focus on a balanced plate: 1/2 vegetables, 1/4 protein, 1/4 complex carbs.",
-        "Prioritize whole, unprocessed foods over packaged items.",
-        "Meal prepping on weekends can save time and prevent unhealthy choices during the week.",
-        "Hydration is key; aim for at least 2-3 litres of water a day.",
-        "Understand your body's hunger and fullness cues."
-    ],
-    "websites": [
-        { "name": "EatRight.org", "url": "https://www.eatright.org/" },
-        { "name": "Budget Bytes (Affordable Recipes)", "url": "https://www.budgetbytes.com/" },
-        { "name": "Healthline Nutrition", "url": "https://www.healthline.com/nutrition" }
-    ],
-    "dos": [
-        "Learn to cook a few simple, healthy meals you love.",
-        "Read nutrition labels to understand what's in your food.",
-        "Incorporate a variety of colorful fruits and vegetables.",
-        "Eat mindfully, without distractions like your phone or TV."
-    ],
-    "donts": [
-        "Don't label foods as 'good' or 'bad'; focus on balance.",
-        "Don't rely on sugary drinks for energy.",
-        "Don't go grocery shopping when you're hungry.",
-        "Don't follow fad diets that promise quick, unsustainable results."
-    ]
+  "title": "Food 🥗",
+  "description": "Understanding nutrition, cooking, and eating habits is fundamental to a healthy life. It's about balancing taste with health and making informed choices for your body.",
+  "sentences": [
+    "A balanced diet includes a mix of carbohydrates, proteins, fats, vitamins, and minerals.",
+    "Meal prepping can save time and help maintain a healthy diet throughout the week.",
+    "Understanding food labels helps in making healthier choices at the grocery store.",
+    "Hydration is key; drink an adequate amount of water daily.",
+    "Indian cuisine offers a wide variety of healthy options, rich in spices with medicinal properties."
+  ],
+  "websites": [
+    {
+      "category": "Recipe Websites & Ideas (Indian)",
+      "links": [
+        { "name": "Tarla Dalal", "url": "https://www.tarladalal.com/" },
+        { "name": "Sanjeev Kapoor Khazana", "url": "https://www.sanjeevkapoor.com/" },
+        { "name": "Hebbar's Kitchen", "url": "https://hebbarskitchen.com/" },
+        { "name": "Veg Recipes of India", "url": "https://www.vegrecipesofindia.com/" }
+      ]
+    },
+    {
+      "category": "Nutritional Information",
+      "links": [
+        { "name": "HealthifyMe Blog", "url": "https://www.healthifyme.com/blog/" },
+        { "name": "National Institute of Nutrition, India", "url": "https://www.nin.res.in/" },
+        { "name": "FSSAI - Eat Right India", "url": "https://eatrightindia.gov.in/" }
+      ]
+    },
+    {
+      "category": "Online Grocery & Delivery (India)",
+      "links": [
+        { "name": "BigBasket", "url": "https://www.bigbasket.com/" },
+        { "name": "Blinkit", "url": "https://blinkit.com/" },
+        { "name": "Swiggy Instamart", "url": "https://www.swiggy.com/instamart" },
+        { "name": "Zepto", "url": "https://www.zeptonow.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Eat a variety of fruits and vegetables daily.",
+    "Include whole grains, lean proteins, and healthy fats in your meals.",
+    "Cook at home as much as possible to control ingredients.",
+    "Practice mindful eating by paying attention to your food without distractions."
+  ],
+  "donts": [
+    "Don't skip meals, especially breakfast.",
+    "Avoid excessive consumption of processed foods, sugar, and unhealthy fats.",
+    "Don't rely on supplements to replace a poor diet.",
+    "Avoid emotional eating; find other ways to cope with stress."
+  ]
 }
+
