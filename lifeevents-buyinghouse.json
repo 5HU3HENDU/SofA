@@ -1,29 +1,47 @@
 {
-    "title": "Buying a House",
-    "description": "Buying a house is a significant financial and emotional milestone. This guide covers the essential steps for navigating the Indian real estate market.",
-    "sentences": [
-        "Determine your budget, factoring in down payment, stamp duty, registration, and other miscellaneous charges.",
-        "Ensure the property is RERA (Real Estate Regulatory Authority) registered for transparency and accountability.",
-        "Secure a pre-approved home loan to understand your eligibility and streamline the process.",
-        "Conduct thorough legal due diligence. Hire a lawyer to verify property titles, deeds, and ensure there are no legal disputes.",
-        "Location is key. Consider proximity to your workplace, schools, hospitals, and public transport."
-    ],
-    "websites": [
+  "title": "Buying a House 🏠",
+  "description": "Buying a house is a major financial and emotional milestone. It requires careful planning, research, and understanding of the legal and financial processes involved.",
+  "sentences": [
+    "Determine your budget and get a home loan pre-approved.",
+    "Location is a critical factor; consider commute, amenities, and future development.",
+    "Differentiate between under-construction and ready-to-move-in properties.",
+    "Always perform due diligence on the property's legal documents.",
+    "Factor in additional costs like registration, stamp duty, and maintenance."
+  ],
+  "websites": [
+    {
+      "category": "Real Estate Portals",
+      "links": [
+        { "name": "99acres.com", "url": "https://www.99acres.com/" },
         { "name": "MagicBricks", "url": "https://www.magicbricks.com/" },
-        { "name": "99acres", "url": "https://www.99acres.com/" },
-        { "name": "Housing.com", "url": "https://housing.com/" },
-        { "name": "RERA Official Website (State-specific)", "url": "https://rera.gov.in/" }
-    ],
-    "dos": [
-        "Visit the property at different times of the day to check for sunlight, noise levels, and neighborhood activity.",
-        "Read every clause of the sale agreement carefully before signing.",
-        "Get a home inspection done by a professional to check for structural issues, plumbing, and electricals.",
-        "Negotiate the price with the seller or builder."
-    ],
-    "donts": [
-        "Don't exceed your budget, as it can lead to financial stress.",
-        "Don't make large cash payments as part of the deal.",
-        "Don't skip the legal verification process to save money.",
-        "Don't rely solely on the builder's promises; get everything in writing."
-    ]
+        { "name": "Housing.com", "url": "https://housing.com/" }
+      ]
+    },
+    {
+      "category": "Home Loan Providers",
+      "links": [
+        { "name": "SBI Home Loans", "url": "https://homeloans.sbi/" },
+        { "name": "HDFC Ltd.", "url": "https://www.hdfc.com/housing-loans" }
+      ]
+    },
+    {
+      "category": "Legal & Verification",
+      "links": [
+        { "name": "RERA (Real Estate Regulatory Authority)", "url": "https://rera.gov.in/index.php" }
+      ]
+    }
+  ],
+  "dos": [
+    "Engage a reputable lawyer to verify property documents.",
+    "Visit the property at different times of the day.",
+    "Get a home inspection done for resale properties.",
+    "Negotiate the price with the seller or builder."
+  ],
+  "donts": [
+    "Don't stretch your budget beyond your means.",
+    "Don't skip the fine print in the sale agreement.",
+    "Avoid making cash payments without proper documentation.",
+    "Don't rely solely on the builder's promises; get everything in writing."
+  ]
 }
+
