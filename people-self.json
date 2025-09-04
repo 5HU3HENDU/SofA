@@ -1,28 +1,40 @@
 {
-    "title": "Relationship with Yourself",
-    "description": "The most important relationship you'll ever have is the one with yourself. It's the foundation for how you interact with the world and everyone in it. Nurturing it is a lifelong practice of self-awareness and self-compassion.",
-    "sentences": [
-        "Schedule regular 'me time' in your calendar and protect it fiercely.",
-        "Practice self-compassion; talk to yourself like you would a dear friend.",
-        "Identify your personal values to guide your decisions and live authentically.",
-        "Continuously invest in your personal growth through learning and new experiences.",
-        "Learn to set and enforce healthy boundaries to protect your energy."
-    ],
-    "websites": [
-        { "name": "Tiny Buddha (Simple Wisdom)", "url": "https://tinybuddha.com/" },
-        { "name": "Mark Manson (Life Advice)", "url": "https://markmanson.net/" },
-        { "name": "The School of Life", "url": "https://www.theschooloflife.com/" }
-    ],
-    "dos": [
-        "Celebrate your wins, no matter how small.",
-        "Journal regularly to process your thoughts and emotions.",
-        "Forgive yourself for past mistakes.",
-        "Pursue hobbies that bring you joy and a sense of accomplishment."
-    ],
-    "donts": [
-        "Don't neglect your physical, mental, and emotional needs.",
-        "Don't compare your life journey to others, especially on social media.",
-        "Don't rely on others for your happiness and validation.",
-        "Don't engage in negative self-talk."
-    ]
+  "title": "Self ❤️",
+  "description": "Your relationship with yourself is the foundation for all others. Prioritizing self-care, self-awareness, and personal growth is crucial for a fulfilling adult life.",
+  "sentences": [
+    "Self-care is not selfish; it's necessary for your well-being.",
+    "Understand and respect your own boundaries in all aspects of life.",
+    "Continuously learn and pursue hobbies that bring you joy and fulfillment.",
+    "Practice self-compassion, especially when you make mistakes.",
+    "Regularly check in with your emotions and acknowledge how you're feeling."
+  ],
+  "websites": [
+    {
+      "category": "Mental Health & Well-being",
+      "links": [
+        { "name": "The Mighty", "url": "https://themighty.com/" },
+        { "name": "Headspace Blog", "url": "https://www.headspace.com/blog/" }
+      ]
+    },
+    {
+      "category": "Productivity & Personal Growth",
+      "links": [
+        { "name": "James Clear (Atomic Habits)", "url": "https://jamesclear.com/" },
+        { "name": "Medium - Personal Growth", "url": "https://medium.com/tag/personal-growth" }
+      ]
+    }
+  ],
+  "dos": [
+    "Schedule dedicated time for self-care activities.",
+    "Celebrate your achievements, no matter how small.",
+    "Learn to say 'no' to things that drain your energy.",
+    "Invest in your physical health through proper diet and exercise."
+  ],
+  "donts": [
+    "Don't compare your journey to others, especially on social media.",
+    "Don't neglect your mental and emotional health.",
+    "Avoid negative self-talk.",
+    "Don't feel guilty for resting and taking breaks."
+  ]
 }
+
