@@ -1,28 +1,40 @@
 {
-    "title": "Relationship with Your Kids",
-    "description": "Parenting is about raising a kind, resilient, and independent human being. It's a journey of guiding, teaching, and loving them unconditionally while also setting firm and consistent boundaries.",
-    "sentences": [
-        "Prioritize connection over correction; a strong bond is the foundation.",
-        "Be a good role model; children learn more from what you do than what you say.",
-        "Establish clear and consistent rules and consequences.",
-        "Validate their feelings, even if you don't agree with their behavior.",
-        "Encourage their independence and allow them to make age-appropriate mistakes."
-    ],
-    "websites": [
-        { "name": "Aha! Parenting (Dr. Laura Markham)", "url": "https://www.ahaparenting.com/" },
-        { "name": "Janet Lansbury (Respectful Parenting)", "url": "https://www.janetlansbury.com/" },
-        { "name": "FirstCry Parenting (Indian Parenting Resource)", "url": "https://parenting.firstcry.com/" }
-    ],
-    "dos": [
-        "Apologize when you make a mistake.",
-        "Spend regular one-on-one time with each child.",
-        "Read to them and encourage a love of learning.",
-        "Trust your instincts as a parent."
-    ],
-    "donts": [
-        "Don't use shame, blame, or pain as disciplinary tools.",
-        "Don't overschedule their lives; allow for free play.",
-        "Don't solve all their problems for them.",
-        "Don't compare your child to their siblings or other children."
-    ]
+  "title": "Kids 👶",
+  "description": "Parenting is a journey of guiding the next generation. It's about providing love, support, and structure while allowing children to grow into their own unique selves.",
+  "sentences": [
+    "Consistency in rules and discipline is crucial for children.",
+    "Create a safe and loving environment where they feel secure.",
+    "Prioritize quality time over expensive gifts.",
+    "Listen to your children and validate their feelings.",
+    "Be a good role model; they learn more from what you do than what you say."
+  ],
+  "websites": [
+    {
+      "category": "Parenting Resources (India)",
+      "links": [
+        { "name": "ParentCircle", "url": "https://www.parentcircle.com/" },
+        { "name": "Kidsstoppress", "url": "https://www.kidsstoppress.com/" },
+        { "name": "Indian Parenting Blog", "url": "https://indianparentingblog.com/" }
+      ]
+    },
+    {
+      "category": "Child Health Information",
+      "links": [
+        { "name": "Indian Academy of Pediatrics", "url": "https://iapindia.org/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Read to your children regularly.",
+    "Encourage their curiosity and hobbies.",
+    "Teach them about consent and boundaries from a young age.",
+    "Apologize when you are wrong."
+  ],
+  "donts": [
+    "Don't compare your child to other children.",
+    "Avoid over-scheduling them with too many activities.",
+    "Don't use threats or bribes for discipline.",
+    "Don't ignore your own well-being; you can't pour from an empty cup."
+  ]
 }
+
