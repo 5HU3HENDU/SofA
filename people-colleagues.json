@@ -1,27 +1,33 @@
 {
-    "title": "Relationship with Colleagues",
-    "description": "You spend a significant portion of your life with colleagues. Building positive, professional relationships makes your job more enjoyable and is crucial for your career growth. It's about being friendly, but not necessarily friends.",
-    "sentences": [
-        "Be reliable, meet your deadlines, and pull your weight on team projects.",
-        "Communicate clearly, respectfully, and professionally in all forms (email, chat, in-person).",
-        "Offer help when you can, and don't be afraid to ask for it when you need it.",
-        "Maintain a positive attitude and avoid complaining constantly.",
-        "Respect others' time, work styles, and personal boundaries."
-    ],
-    "websites": [
-        { "name": "The Muse (Career Advice)", "url": "https://www.themuse.com/advice" },
-        { "name": "Harvard Business Review (Workplace)", "url": "https://hbr.org/topic/workplace-behavior" }
-    ],
-    "dos": [
-        "Participate in team-building activities and social events.",
-        "Give credit where credit is due.",
-        "Practice active listening in meetings.",
-        "Keep your workspace tidy, especially in a shared office."
-    ],
-    "donts": [
-        "Don't participate in office gossip.",
-        "Don't overshare details of your personal life.",
-        "Don't eat smelly food at your desk.",
-        "Don't avoid difficult conversations; address conflicts professionally and directly."
-    ]
+  "title": "Colleagues 🤝",
+  "description": "Building professional and positive relationships with colleagues is key to a healthy work environment and career success.",
+  "sentences": [
+    "Maintain a professional and respectful demeanor at all times.",
+    "Be reliable and do your fair share of the work.",
+    "Networking with colleagues can open up future opportunities.",
+    "It's possible to be friendly without being best friends.",
+    "Understand the difference between a work friend and a personal friend."
+  ],
+  "websites": [
+    {
+      "category": "Workplace Etiquette & Professionalism",
+      "links": [
+        { "name": "LinkedIn Career Advice", "url": "https://www.linkedin.com/advice/topics/professional-etiquette" },
+        { "name": "Harvard Business Review", "url": "https://hbr.org/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Be approachable and willing to help.",
+    "Give credit where it's due.",
+    "Participate in team activities.",
+    "Respect people's time and workload."
+  ],
+  "donts": [
+    "Don't engage in office gossip.",
+    "Avoid discussing your salary with colleagues.",
+    "Don't bring personal problems to work excessively.",
+    "Don't be the person who always complains."
+  ]
 }
+
