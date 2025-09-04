@@ -1,29 +1,50 @@
 {
-    "title": "Booking Flights",
-    "description": "For long distances, flights are the fastest option. Booking smartly can save you a significant amount of money and potential hassle.",
-    "sentences": [
-        "For domestic travel, book flights at least 6-8 weeks in advance for better pricing.",
-        "Use search engines like Skyscanner or Google Flights to compare prices across all airlines.",
-        "Flights on weekdays (Tuesday, Wednesday) and at odd hours are often cheaper.",
-        "Always check the airline's baggage allowance to avoid expensive fees at the airport.",
-        "Web check-in is mandatory for most airlines now and saves a lot of time."
-    ],
-    "websites": [
+  "title": "Flights ✈️",
+  "description": "Booking flights efficiently can save you a significant amount of money and hassle. Knowing when to book and which platforms to use is key.",
+  "sentences": [
+    "Booking flights 6-8 weeks in advance usually offers the best prices for domestic travel.",
+    "Use flight comparison websites to check prices across multiple airlines.",
+    "Be flexible with your travel dates and times to find cheaper fares.",
+    "Consider budget airlines for short-haul flights but be mindful of baggage allowances.",
+    "Always double-check passenger details before confirming your booking."
+  ],
+  "websites": [
+    {
+      "category": "Flight Booking & Comparison",
+      "links": [
         { "name": "Skyscanner", "url": "https://www.skyscanner.co.in/" },
-        { "name": "EaseMyTrip", "url": "https://www.easemytrip.com/" },
+        { "name": "MakeMyTrip", "url": "https://www.makemytrip.com/flights/" },
+        { "name": "Ixigo", "url": "https://www.ixigo.com/flights" },
+        { "name": "Google Flights", "url": "https://www.google.com/flights" }
+      ]
+    },
+    {
+      "category": "Major Indian Airlines",
+      "links": [
         { "name": "IndiGo", "url": "https://www.goindigo.in/" },
-        { "name": "Vistara", "url": "https://www.airvistara.com/" }
-    ],
-    "dos": [
-        "Clear your browser cookies or use incognito mode when searching for flights to prevent price hikes.",
-        "Arrive at the airport at least 2 hours before your domestic flight's departure.",
-        "Keep your ID card and boarding pass (digital or physical) handy.",
-        "Check the flight's on-time performance history if possible."
-    ],
-    "donts": [
-        "Don't book the very last flight of the day, as it has a higher chance of being delayed or cancelled.",
-        "Don't carry prohibited items like power banks in your check-in luggage.",
-        "Don't forget to factor in the cost of travel to and from the airport, which can be far from the city.",
-        "Don't book tickets with very short layovers, especially at large airports."
-    ]
+        { "name": "Air India", "url": "https://www.airindia.com/" },
+        { "name": "Vistara", "url": "https://www.airvistara.com/" },
+        { "name": "Akasa Air", "url": "https://www.akasaair.com/" }
+      ]
+    },
+    {
+      "category": "Flight Tracking",
+      "links": [
+        { "name": "Flightradar24", "url": "https://www.flightradar24.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Do web check-in to save time at the airport.",
+    "Check the baggage allowance for your ticket.",
+    "Arrive at the airport well in advance of your flight.",
+    "Keep your ID and boarding pass handy."
+  ],
+  "donts": [
+    "Don't forget to check for hidden fees like seat selection or convenience charges.",
+    "Don't carry prohibited items in your cabin or check-in baggage.",
+    "Avoid booking flights with very short layovers.",
+    "Don't rely on public Wi-Fi to access your booking details at the last minute."
+  ]
 }
+
