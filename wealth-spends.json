@@ -1,24 +1,48 @@
 {
-    "title": "Manage Spends",
-    "description": "Managing your spending is about mindful allocation of resources. A budget isn't about restriction; it's about empowerment.",
-    "sentences": [
-        "Create a detailed monthly budget and track every dollar.",
-        "Use the 50/30/20 rule as a guideline: 50% for needs, 30% for wants, 20% for savings.",
-        "Differentiate between 'needs' and 'wants'.",
-        "Review your spending habits monthly to find areas for improvement."
-    ],
-    "websites": [
-        { "name": "YNAB (You Need A Budget)", "url": "https://www.youneedabudget.com/" },
-        { "name": "Mint (Budgeting App)", "url": "https://mint.intuit.com/" }
-    ],
-    "dos": [
-        "Set up a budget using an app or a spreadsheet.",
-        "Identify three non-essential expenses you can cut back on.",
-        "Try a 'no-spend' weekend."
-    ],
-    "donts": [
-        "Don't let lifestyle inflation consume every raise you get.",
-        "Don't make large purchases on impulse.",
-        "Don't ignore small, recurring subscriptions that add up."
-    ]
+  "title": "Spends 💸",
+  "description": "Managing your expenses is just as important as generating income. Effective budgeting and mindful spending are key to achieving your financial goals.",
+  "sentences": [
+    "Create a monthly budget to track your income and expenses.",
+    "Differentiate between your needs and wants.",
+    "The 50/30/20 rule (50% needs, 30% wants, 20% savings) is a good starting point for budgeting.",
+    "Use credit cards wisely and always pay the full balance on time.",
+    "Automate your savings and investments to pay yourself first."
+  ],
+  "websites": [
+    {
+      "category": "Budgeting & Expense Tracking Apps",
+      "links": [
+        { "name": "Walnut", "url": "https://www.getwalnut.com/" },
+        { "name": "Spendee", "url": "https://www.spendee.com/" },
+        { "name": "Google Sheets / Excel", "url": "https://docs.google.com/spreadsheets/" }
+      ]
+    },
+    {
+      "category": "Credit Score Check",
+      "links": [
+        { "name": "CIBIL Score", "url": "https://www.cibil.com/" },
+        { "name": "Paytm / GPay / Credit Card Apps (often free)", "url": "https://paytm.com/credit-score" }
+      ]
+    },
+    {
+      "category": "Deals & Offers",
+      "links": [
+        { "name": "DesiDime", "url": "https://www.desidime.com/" },
+        { "name": "CouponDunia", "url": "https://www.coupondunia.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Track every expense, no matter how small.",
+    "Review your budget regularly and make adjustments.",
+    "Look for ways to reduce your fixed expenses.",
+    "Set specific financial goals to motivate your saving."
+  ],
+  "donts": [
+    "Don't indulge in impulse buying.",
+    "Don't try to keep up with the spending habits of others.",
+    "Avoid accumulating credit card debt.",
+    "Don't neglect to budget for occasional or irregular expenses."
+  ]
 }
+
