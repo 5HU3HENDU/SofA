@@ -1,29 +1,49 @@
 {
-    "title": "The World of Words: Books",
-    "description": "Reading is a timeless and powerful way to learn, escape reality, and grow as a person. Finding the right books and making time to read is a highly rewarding habit.",
-    "sentences": [
-        "You can choose between physical books, e-books (on devices like Kindle), and audiobooks.",
-        "Goodreads is an excellent platform for tracking what you've read and getting recommendations.",
-        "Joining a local or online book club can make reading a more social and engaging activity.",
-        "Setting a small, achievable reading goal (e.g., 10 pages a day) can help build a consistent habit.",
-        "Exploring Indian authors offers unique perspectives and stories rooted in our culture."
-    ],
-    "websites": [
-        { "name": "Goodreads (Recommendations)", "url": "https://www.goodreads.com/" },
-        { "name": "Amazon Kindle Store", "url": "https://www.amazon.in/Kindle-eBooks/" },
-        { "name": "Audible (Audiobooks)", "url": "https://www.audible.in/" },
-        { "name": "Crossword Bookstores", "url": "https://www.crossword.in/" }
-    ],
-    "dos": [
-        "Try different genres to find out what you truly enjoy.",
-        "Visit local libraries and second-hand bookstores for hidden gems and budget-friendly options.",
-        "Make notes or highlight passages that resonate with you.",
-        "Give a book at least 50 pages before deciding to stop reading it."
-    ],
-    "donts": [
-        "Don't feel pressured to finish a book you genuinely don't enjoy.",
-        "Don't let your 'to-be-read' pile become a source of stress.",
-        "Don't just stick to bestsellers; explore diverse and indie authors too.",
-        "Don't be afraid to re-read your favorite books."
-    ]
+  "title": "Books 📚",
+  "description": "Reading is a powerful habit for personal growth, learning, and escaping into other worlds. Whether it's fiction, non-fiction, or audiobooks, there's a book for everyone.",
+  "sentences": [
+    "Reading for just 20-30 minutes a day can have significant benefits.",
+    "Joining a book club can enhance your reading experience.",
+    "Explore both Indian and international authors.",
+    "Audiobooks are a great way to 'read' while commuting or doing chores.",
+    "Libraries are a free and valuable resource for books."
+  ],
+  "websites": [
+    {
+      "category": "Book Discovery & Reviews",
+      "links": [
+        { "name": "Goodreads", "url": "https://www.goodreads.com/" },
+        { "name": "The Hindu Literary Review", "url": "https://www.thehindu.com/books/literary-review/" }
+      ]
+    },
+    {
+      "category": "Buying Books Online",
+      "links": [
+        { "name": "Amazon India Books", "url": "https://www.amazon.in/books/b?node=976389031" },
+        { "name": "Flipkart Books", "url": "https://www.flipkart.com/books" },
+        { "name": "BookChor (Second-hand books)", "url": "https://www.bookchor.com/" }
+      ]
+    },
+    {
+      "category": "Audiobooks & E-books",
+      "links": [
+        { "name": "Audible", "url": "https://www.audible.in/" },
+        { "name": "Amazon Kindle", "url": "https://www.amazon.in/kindle-store/" },
+        { "name": "Storytel", "url": "https://www.storytel.com/in/en/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Set a reading goal for the year.",
+    "Read books on topics outside your immediate interests.",
+    "Keep a list of books you want to read.",
+    "Re-read your favorite books."
+  ],
+  "donts": [
+    "Don't force yourself to finish a book you're not enjoying.",
+    "Don't buy books you'll never read.",
+    "Avoid comparing your reading speed or quantity with others.",
+    "Don't be intimidated by 'classic' literature; read what you enjoy."
+  ]
 }
+
