@@ -1,28 +1,41 @@
 {
-    "title": "Creating a Peaceful Bedroom",
-    "description": "Your bedroom should be a sanctuary for rest and rejuvenation. An organized and calm environment is essential for quality sleep and starting your day right.",
-    "sentences": [
-        "The primary function of the bedroom is sleep; minimize distractions like TVs and work desks.",
-        "Invest in quality bedding and pillows that are comfortable for you.",
-        "Use blackout curtains to control light for better sleep.",
-        "A clutter-free environment leads to a clutter-free mind and better rest.",
-        "Develop a system for managing laundry to prevent clothes from piling up."
-    ],
-    "websites": [
-        { "name": "The Sleep Foundation", "url": "https://www.sleepfoundation.org/bedroom-environment" },
-        { "name": "IKEA (Bedroom Storage Solutions)", "url": "https://www.ikea.com/in/en/" },
-        { "name": "Wakefit (Mattresses & Bedding)", "url": "https://www.wakefit.co/" }
-    ],
-    "dos": [
-        "Make your bed every morning to instantly make the room look tidier.",
-        "Use bedside tables with drawers for storage.",
-        "Organize your wardrobe seasonally to make more space.",
-        "Incorporate calming scents through diffusers or candles."
-    ],
-    "donts": [
-        "Don't use your bed as a storage area for clothes or other items.",
-        "Don't use bright, stimulating colors on all walls.",
-        "Don't let dust accumulate under the bed and on surfaces.",
-        "Don't work or eat in your bed."
-    ]
+  "title": "Bedroom 🛏️",
+  "description": "The bedroom is a personal sanctuary for rest and rejuvenation. Its design should promote tranquility, comfort, and a good night's sleep.",
+  "sentences": [
+    "The bed is the focal point; invest in a quality mattress and comfortable bedding.",
+    "Use calming colors on the walls to create a peaceful atmosphere.",
+    "Blackout curtains are essential for blocking out light and ensuring restful sleep.",
+    "Keep the bedroom clutter-free. A tidy room promotes a tidy mind.",
+    "Layer your lighting with a main light and softer bedside lamps for reading."
+  ],
+  "websites": [
+    {
+      "category": "Bedding & Mattresses (India)",
+      "links": [
+        { "name": "Wakefit", "url": "https://www.wakefit.co/" },
+        { "name": "The White Willow", "url": "https://thewhitewillow.in/" },
+        { "name": "SleepyCat", "url": "https://sleepycat.in/" }
+      ]
+    },
+    {
+      "category": "Wardrobe & Storage Solutions",
+      "links": [
+        { "name": "Godrej Interio", "url": "https://www.godrejinterio.com/furniture/bedroom" },
+        { "name": "IKEA Wardrobe Planners", "url": "https://www.ikea.com/in/en/planners/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Make your bed every morning to start the day with a sense of accomplishment.",
+    "Wash your bed linens regularly for hygiene.",
+    "Add personal touches like photos or favorite books on a nightstand.",
+    "Consider a comfortable chair or bench if space allows."
+  ],
+  "donts": [
+    "Don't let your bedroom become a dumping ground for laundry and clutter.",
+    "Avoid having a TV or other distracting electronics in the bedroom if you have trouble sleeping.",
+    "Don't use bright, stimulating colors on the walls.",
+    "Don't work from your bed; keep it as a space reserved for rest."
+  ]
 }
+
