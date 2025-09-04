@@ -1,27 +1,33 @@
 {
-    "title": "Managing Difficult People",
-    "description": "You will inevitably encounter difficult people—at work, in your family, or in your community. The key is not to change them, but to manage your own reactions and interactions to protect your peace of mind.",
-    "sentences": [
-        "You cannot control their behavior, but you can control your response.",
-        "Identify the type of difficult behavior (e.g., negativity, aggression, manipulation).",
-        "Set firm, clear, and unemotional boundaries.",
-        "Detachment is a powerful tool; don't take their behavior personally.",
-        "In a professional setting, document everything."
-    ],
-    "websites": [
-        { "name": "Psychology Today (Difficult People)", "url": "https://www.psychologytoday.com/intl/basics/difficult-people" },
-        { "name": "Forbes (Handling Toxic People)", "url": "https://www.forbes.com/sites/travisbradberry/2016/04/26/9-things-toxic-people-do-and-how-to-deal-with-them/" }
-    ],
-    "dos": [
-        "Stay calm and manage your own emotions during interactions.",
-        "Use 'I' statements to express how their behavior affects you.",
-        "Listen to understand their perspective, even if you don't agree.",
-        "Know when it's time to limit contact or walk away from the relationship."
-    ],
-    "donts": [
-        "Don't engage in arguments or try to 'win'.",
-        "Don't expect them to change or apologize.",
-        "Don't get sucked into their drama or negativity.",
-        "Don't try to be their therapist or solve their problems."
-    ]
+  "title": "Difficult People 😒",
+  "description": "Dealing with difficult people—whether they are toxic relatives, manipulative colleagues, or just challenging personalities—is a crucial life skill.",
+  "sentences": [
+    "You cannot control their behavior, but you can control your reaction.",
+    "Setting firm boundaries is your most powerful tool.",
+    "It's not your job to fix them.",
+    "Protect your energy; limit your interaction with them.",
+    "Choose your battles wisely; not every comment needs a response."
+  ],
+  "websites": [
+    {
+      "category": "Strategies for Dealing with Toxicity",
+      "links": [
+        { "name": "Psych Central - Toxic People", "url": "https://psychcentral.com/lib/toxic-people" },
+        { "name": "Mark Manson - The Subtle Art of Not Giving a F*ck", "url": "https://markmanson.net/not-giving-a-fuck" }
+      ]
+    }
+  ],
+  "dos": [
+    "Stay calm and objective in your interactions.",
+    "Use 'I' statements to express how their behavior affects you.",
+    "Document interactions in a professional setting if necessary.",
+    "Focus on the issue, not the person."
+  ],
+  "donts": [
+    "Don't engage in their drama or get pulled into arguments.",
+    "Don't take their behavior personally.",
+    "Don't try to reason with someone who is being deliberately unreasonable.",
+    "Don't expect them to change."
+  ]
 }
+
