@@ -1,29 +1,50 @@
 {
-    "title": "Men's Fashion & Grooming",
-    "description": "Developing a personal style is about more than just clothes; it's about presenting the best version of yourself. From office wear to festive occasions, here's a guide to men's style in India.",
-    "sentences": [
-        "A well-fitting wardrobe is key. It's better to have fewer, well-fitting clothes than many ill-fitting ones.",
-        "Master the basics: solid-colored t-shirts (white, black, grey), dark-wash jeans, and a versatile pair of chinos form the foundation.",
-        "Ethnic wear like a crisp kurta-pyjama or a Nehru jacket can be a stylish choice for festivals and weddings.",
-        "Invest in good quality footwear; a pair of classic white sneakers, formal leather shoes, and comfortable sandals are essential.",
-        "Basic grooming, including a neat haircut, trimmed beard or clean shave, and clean nails, is fundamental to good style."
-    ],
-    "websites": [
-        { "name": "Myntra", "url": "https://www.myntra.com/" },
-        { "name": "Ajio", "url": "https://www.ajio.com/" },
-        { "name": "Fabindia (for ethnic wear)", "url": "https://www.fabindia.com/" },
-        { "name": "The Man Company (Grooming)", "url": "https://www.themancompany.com/" }
-    ],
-    "dos": [
-        "Pay attention to your footwear; clean and appropriate shoes can elevate any outfit.",
-        "Understand your body type and choose clothes that are flattering.",
-        "Accessorize thoughtfully with a good watch, a simple belt, or sunglasses.",
-        "Iron your clothes. A wrinkle-free outfit instantly looks more put-together."
-    ],
-    "donts": [
-        "Don't wear clothes with overly large logos or loud prints for formal occasions.",
-        "Don't ignore the fit; avoid clothes that are too baggy or too tight.",
-        "Don't wear sports shoes with formal or ethnic wear.",
-        "Don't overdo it with cologne or deodorant."
-    ]
+  "title": "Men's Fashion 👨",
+  "description": "Men's fashion is about more than just clothes; it's about expressing personal style, confidence, and dressing appropriately for the occasion. Building a versatile and timeless wardrobe is a key skill.",
+  "sentences": [
+    "A well-fitting garment is the foundation of any great look.",
+    "Invest in timeless staples: a crisp white shirt, dark-wash jeans, a tailored blazer, and classic white sneakers.",
+    "Understand the dress code for different occasions, from casual outings to formal events and traditional ceremonies.",
+    "Accessories like a good watch, a quality belt, and proper footwear can elevate any outfit.",
+    "Grooming is an essential part of your overall style."
+  ],
+  "websites": [
+    {
+      "category": "Online Shopping & E-commerce",
+      "links": [
+        { "name": "Myntra", "url": "https://www.myntra.com/men" },
+        { "name": "Ajio", "url": "https://www.ajio.com/men" },
+        { "name": "The Souled Store", "url": "https://www.thesouledstore.com/men" },
+        { "name": "Uniqlo India", "url": "https://www.uniqlo.com/in/en/" }
+      ]
+    },
+    {
+      "category": "Ethnic & Occasion Wear",
+      "links": [
+        { "name": "Manyavar", "url": "https://www.manyavar.com/" },
+        { "name": "Fabindia", "url": "https://www.fabindia.com/collection/men-clothing" },
+        { "name": "House of Pataudi (on Myntra)", "url": "https://www.myntra.com/house-of-pataudi" }
+      ]
+    },
+    {
+      "category": "Style Inspiration & Blogs",
+      "links": [
+        { "name": "MensXP Fashion", "url": "https://www.mensxp.com/fashion.html" },
+        { "name": "GQ India", "url": "https://www.gqindia.com/fashion" }
+      ]
+    }
+  ],
+  "dos": [
+    "Prioritize fit over brand names.",
+    "Build your wardrobe around neutral colors (black, white, grey, navy) and add pops of color.",
+    "Learn to properly care for your clothes to make them last longer.",
+    "Experiment with your style to find what makes you feel most confident."
+  ],
+  "donts": [
+    "Don't wear wrinkled or stained clothes.",
+    "Avoid wearing too many logos or flashy prints at once.",
+    "Don't neglect your footwear; it's a crucial part of your outfit.",
+    "Don't blindly follow trends; wear what suits your body type and personality."
+  ]
 }
+
