@@ -1,27 +1,34 @@
 {
-    "title": "What to Pack: Things to Carry",
-    "description": "Packing smart is an art. It means carrying all your essentials without being weighed down by unnecessary luggage. Your packing list should be tailored to your destination, duration, and planned activities.",
-    "sentences": [
-        "Pack clothes according to the weather and local culture; rolling them saves more space than folding.",
-        "A portable power bank is non-negotiable for keeping your devices charged on the go.",
-        "Carry a basic first-aid kit with essentials like band-aids, pain relievers, antiseptic, and any personal medications.",
-        "Keep both physical and digital copies of your important documents: Aadhar/ID card, tickets, and hotel bookings.",
-        "A universal travel adapter is crucial if you're carrying multiple electronic devices."
-    ],
-    "websites": [
-        { "name": "PackPoint (Packing List App)", "url": "https://www.packpnt.com/" },
-        { "name": "Trawoc (Travel Bags & Gear)", "url": "https://www.trawoc.com/" }
-    ],
-    "dos": [
-        "Carry a reusable water bottle to stay hydrated and reduce plastic waste.",
-        "Pack a separate small bag for your laundry.",
-        "Use packing cubes to organize your luggage efficiently.",
-        "Always keep cash, cards, ID, and essential medicines in your carry-on bag, not your check-in luggage."
-    ],
-    "donts": [
-        "Don't overpack; you can always buy essentials at your destination. Travel light.",
-        "Don't pack full-sized toiletries; buy travel-sized bottles and fill them up.",
-        "Don't carry sharp objects like scissors or knives in your cabin baggage on flights.",
-        "Don't forget to leave some extra space in your luggage for souvenirs and shopping."
-    ]
+  "title": "Things to Carry 🎒",
+  "description": "Packing smart is an art. Carrying the right essentials ensures you are prepared for your journey without being weighed down by unnecessary luggage.",
+  "sentences": [
+    "Pack light, but smart.",
+    "Roll your clothes instead of folding them to save space and prevent wrinkles.",
+    "Always carry a basic first-aid kit with essential medicines.",
+    "A portable power bank is a lifesaver for keeping your devices charged.",
+    "Segregate your luggage using packing cubes for better organization."
+  ],
+  "websites": [
+    {
+      "category": "Travel Gear & Accessories",
+      "links": [
+        { "name": "Decathlon", "url": "https://www.decathlon.in/" },
+        { "name": "Wildcraft", "url": "https://wildcraft.com/" },
+        { "name": "Amazon India - Travel", "url": "https://www.amazon.in/luggage-bags-and-trolleys/b?node=2917435031" }
+      ]
+    }
+  ],
+  "dos": [
+    "Carry copies of your important documents (passport, visa, ID).",
+    "Pack a universal travel adapter for international trips.",
+    "Carry any prescription medication in your hand luggage.",
+    "Pack clothing appropriate for the destination's weather and cultural norms."
+  ],
+  "donts": [
+    "Don't pack valuables in your check-in luggage.",
+    "Don't carry full-size toiletries; use travel-size containers.",
+    "Avoid overpacking; you can often buy things at your destination.",
+    "Don't forget to leave some space for souvenirs."
+  ]
 }
+
