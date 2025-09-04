@@ -1,29 +1,42 @@
 {
-    "title": "Kids' Fashion: Comfort & Fun",
-    "description": "Dressing up kids is a delightful task. The key is to prioritize comfort, safety, and durability while allowing their little personalities to shine through.",
-    "sentences": [
-        "Prioritize comfort and fabric. Choose soft, breathable materials like cotton that are gentle on a child's skin.",
-        "Buy clothes that are one size larger to accommodate their rapid growth.",
-        "Opt for durable clothes that can withstand rough play and frequent washing.",
-        "Involve older kids in choosing their outfits to encourage their independence and sense of style.",
-        "For occasions, comfortable ethnic wear like cotton kurtas for boys and lehengas for girls are popular choices."
-    ],
-    "websites": [
-        { "name": "FirstCry", "url": "https://www.firstcry.com/" },
+  "title": "Kids' Fashion 👧",
+  "description": "Dressing children is about balancing style with comfort, durability, and practicality. Clothes should allow them to play and explore freely while being easy to maintain.",
+  "sentences": [
+    "Prioritize soft, breathable, and non-irritating fabrics like cotton.",
+    "Choose clothes that are easy for kids to put on and take off themselves to foster independence.",
+    "Buy clothes that are one size larger to accommodate growth spurts.",
+    "Look for durable clothes that can withstand rough play and frequent washing.",
+    "Involve older kids in choosing their clothes to help them develop their own sense of style."
+  ],
+  "websites": [
+    {
+      "category": "Kids' Clothing & E-commerce",
+      "links": [
+        { "name": "FirstCry", "url": "https://www.firstcry.com/kids-clothes-footwear" },
         { "name": "Hopscotch", "url": "https://www.hopscotch.in/" },
-        { "name": "Myntra Kids", "url": "https://www.myntra.com/shop/kids" },
-        { "name": "H&M Kids India", "url": "https://www2.hm.com/en_in/kids.html" }
-    ],
-    "dos": [
-        "Check for sales and stock up on basics like t-shirts, leggings, and shorts.",
-        "Look for easy-to-wear clothes with simple fastenings like elastic waists and velcro shoes.",
-        "Layering is a practical way to dress kids for changing temperatures.",
-        "Always wash new clothes before making your child wear them."
-    ],
-    "donts": [
-        "Don't choose clothes with too many buttons, drawstrings, or sequins that could be choking hazards for young children.",
-        "Don't buy expensive 'designer' outfits that they will outgrow in a few months.",
-        "Don't force a child to wear something they find uncomfortable, regardless of how cute it looks.",
-        "Don't forget to buy season-appropriate footwear with good grip."
-    ]
+        { "name": "Myntra Kids", "url": "https://www.myntra.com/kids" },
+        { "name": "H&M Kids India", "url": "https://hm.com/in/department/kids/" }
+      ]
+    },
+    {
+      "category": "Special Occasion & Ethnic Wear",
+      "links": [
+        { "name": "Biba for Girls", "url": "https://www.biba.in/girls-clothing" },
+        { "name": "Manyavar for Boys", "url": "https://www.manyavar.com/en-in/kids-boys" }
+      ]
+    }
+  ],
+  "dos": [
+    "Check for easy care instructions on the label.",
+    "Choose clothes with adjustable waistbands for a better fit and longer wear.",
+    "Layering is a practical way to dress kids for changing temperatures.",
+    "Prioritize comfortable and well-fitting shoes for healthy foot development."
+  ],
+  "donts": [
+    "Don't buy clothes with too many buttons, ties, or complicated fastenings for toddlers.",
+    "Avoid clothes with choking hazards like loose buttons or beads for young children.",
+    "Don't sacrifice comfort for style.",
+    "Don't spend a fortune on designer clothes that they will outgrow quickly."
+  ]
 }
+
