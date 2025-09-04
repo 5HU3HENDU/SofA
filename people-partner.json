@@ -1,28 +1,40 @@
 {
-    "title": "Relationship with Your Partner",
-    "description": "A healthy partnership is built on a foundation of trust, communication, shared values, and mutual respect. It requires continuous effort and a commitment to growing together through life's ups and downs.",
-    "sentences": [
-        "Master the art of active listening: hear to understand, not just to reply.",
-        "Schedule regular, dedicated time for each other, free from distractions.",
-        "Discuss finances openly and create a shared budget or financial plan.",
-        "Maintain your individual identities and hobbies outside of the relationship.",
-        "Learn each other's 'love languages' to show affection in meaningful ways."
-    ],
-    "websites": [
-        { "name": "The Gottman Institute (Relationship Research)", "url": "https://www.gottman.com/" },
-        { "name": "Talkspace (Couples Therapy)", "url": "https://www.talkspace.com/couples-therapy" },
-        { "name": "OurRelationship (Online Program)", "url": "https://www.ourrelationship.com/" }
-    ],
-    "dos": [
-        "Communicate your needs and expectations clearly and kindly.",
-        "Be each other's biggest cheerleader.",
-        "Learn to argue constructively, focusing on the problem, not the person.",
-        "Share responsibilities for household chores and life admin."
-    ],
-    "donts": [
-        "Don't assume your partner can read your mind.",
-        "Don't keep score or bring up past arguments in a new fight.",
-        "Don't neglect physical intimacy and affection.",
-        "Don't compare your relationship to others."
-    ]
+  "title": "Partner 💞",
+  "description": "A strong partnership is built on communication, trust, mutual respect, and shared effort. It requires continuous nurturing.",
+  "sentences": [
+    "Open and honest communication is the bedrock of a healthy relationship.",
+    "It's important to maintain your individuality while being part of a couple.",
+    "Learn each other's 'love languages' to show affection effectively.",
+    "Conflict is normal; learning to argue constructively is a vital skill.",
+    "Share financial goals and responsibilities openly."
+  ],
+  "websites": [
+    {
+      "category": "Relationship Advice",
+      "links": [
+        { "name": "The Gottman Institute Blog", "url": "https://www.gottman.com/blog/" },
+        { "name": "Esther Perel's Blog", "url": "https://www.estherperel.com/blog" }
+      ]
+    },
+    {
+      "category": "Couple Activities & Date Ideas",
+      "links": [
+        { "name": "LBB", "url": "https://lbb.in/" },
+        { "name": "Tripoto", "url": "https://www.tripoto.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Schedule regular date nights or quality time together.",
+    "Express appreciation for the small things.",
+    "Be each other's biggest cheerleader.",
+    "Discuss expectations about chores, finances, and family."
+  ],
+  "donts": [
+    "Don't go to bed angry.",
+    "Don't make major decisions without consulting your partner.",
+    "Avoid using ultimatums or threats.",
+    "Don't compare your relationship to others."
+  ]
 }
+
