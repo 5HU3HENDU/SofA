@@ -1,28 +1,45 @@
 {
-    "title": "The Pregnancy Journey",
-    "description": "Pregnancy is a transformative experience. This guide provides essential information for expecting parents in India to ensure a healthy and happy journey.",
-    "sentences": [
-        "Choose a trusted gynecologist and hospital early on for consistent prenatal care.",
-        "Focus on a nutritious diet rich in iron, folic acid, calcium, and protein.",
-        "Undergo all recommended prenatal scans and tests as advised by your doctor.",
-        "Plan your finances for delivery costs, and the baby's future needs.",
-        "Educate yourself about the stages of labor, delivery options, and newborn care."
-    ],
-    "websites": [
+  "title": "Pregnancy 🤰",
+  "description": "Pregnancy is a transformative journey for expecting parents. It requires healthcare planning, lifestyle adjustments, and preparation for the arrival of a new family member.",
+  "sentences": [
+    "Regular prenatal check-ups with a gynecologist are essential.",
+    "A healthy diet, proper hydration, and moderate exercise are important during pregnancy.",
+    "Plan your finances for maternity leave and the additional costs of a baby.",
+    "Educate yourself about the stages of pregnancy, labor, and newborn care.",
+    "Building a strong support system is crucial for emotional well-being."
+  ],
+  "websites": [
+    {
+      "category": "Parenting & Pregnancy Information",
+      "links": [
         { "name": "BabyCenter India", "url": "https://www.babycenter.in/" },
-        { "name": "Ministry of Women & Child Development (Govt. Schemes)", "url": "https://wcd.nic.in/" },
-        { "name": "World Health Organization (Pregnancy Care)", "url": "https://www.who.int/health-topics/maternal-health" }
-    ],
-    "dos": [
-        "Engage in light to moderate exercise like walking and prenatal yoga after consulting your doctor.",
-        "Get adequate rest and sleep.",
-        "Communicate your feelings and anxieties with your partner and support system.",
-        "Enroll in prenatal or 'birthing' classes to prepare for childbirth and parenting."
-    ],
-    "donts": [
-        "Don't take any medication without consulting your doctor, including over-the-counter drugs.",
-        "Don't ignore warning signs like severe pain, bleeding, or reduced fetal movement.",
-        "Don't consume alcohol, smoke, or be around secondhand smoke.",
-        "Don't hesitate to ask for help, both during pregnancy and after the baby arrives."
-    ]
+        { "name": "ParentCircle", "url": "https://www.parentcircle.com/" }
+      ]
+    },
+    {
+      "category": "Hospital & Doctor Search",
+      "links": [
+        { "name": "Practo", "url": "https://www.practo.com/search/doctors" }
+      ]
+    },
+    {
+      "category": "Maternity & Baby Products",
+      "links": [
+        { "name": "FirstCry", "url": "https://www.firstcry.com/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Choose a good hospital and doctor early on.",
+    "Take prenatal vitamins as prescribed.",
+    "Attend prenatal classes with your partner.",
+    "Plan your maternity and paternity leave in advance."
+  ],
+  "donts": [
+    "Don't ignore any unusual symptoms; consult your doctor immediately.",
+    "Don't consume alcohol, smoke, or take medication without medical advice.",
+    "Avoid high-risk activities and heavy lifting.",
+    "Don't hesitate to ask for help from your partner, family, and friends."
+  ]
 }
+
