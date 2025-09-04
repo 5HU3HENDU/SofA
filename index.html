@@ -6,6 +6,7 @@
     <title>School of Adults</title>
     <meta name="description" content="A modern, modular guide to managing every aspect of adult life.">
     <meta name="theme-color" content="#1a1a1a">
+    <link rel="manifest" href="/manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
@@ -479,6 +480,23 @@
         feather.replace();
     });
     </script>
+        <script>
+            // Check if service workers are supported by the browser
+            if ('serviceWorker' in navigator) {
+                // Register the service worker when the window loads
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js') // Adjust path if sw.js is not in the root
+                        .then(registration => {
+                            console.log('Service Worker registered with scope:', registration.scope);
+                        })
+                        .catch(error => {
+                            console.error('Service Worker registration failed:', error);
+                        });
+                });
+            }
+        </script>
+
+    
 </body>
 </html>
 
