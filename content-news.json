@@ -1,29 +1,49 @@
 {
-    "title": "Staying Informed: News",
-    "description": "Navigating the modern news landscape requires a balanced approach to stay informed without getting overwhelmed by the constant stream of information.",
-    "sentences": [
-        "Diversify your news sources to get multiple perspectives on the same issue.",
-        "Differentiate between breaking news, opinion pieces, and investigative journalism.",
-        "Set aside specific times to check the news, rather than being constantly connected.",
-        "Fact-checking is crucial; utilize reliable fact-checking websites to verify sensational claims.",
-        "Local news is just as important as national news for understanding your immediate community."
-    ],
-    "websites": [
+  "title": "News 📰",
+  "description": "Staying informed is important, but it's equally important to consume news from reliable sources and maintain a healthy balance to avoid information overload.",
+  "sentences": [
+    "Diversify your news sources to get a balanced perspective.",
+    "Fact-check information before sharing it.",
+    "Differentiate between news reporting and opinion pieces.",
+    "Set a specific time for consuming news to avoid constant, anxiety-inducing updates.",
+    "Be aware of clickbait and sensationalized headlines."
+  ],
+  "websites": [
+    {
+      "category": "Major News Outlets (India)",
+      "links": [
         { "name": "The Hindu", "url": "https://www.thehindu.com/" },
+        { "name": "The Times of India", "url": "https://timesofindia.indiatimes.com/" },
         { "name": "The Indian Express", "url": "https://indianexpress.com/" },
-        { "name": "Livemint", "url": "https://www.livemint.com/" },
-        { "name": "Reuters India", "url": "https://www.reuters.com/world/india/" }
-    ],
-    "dos": [
-        "Read editorials and opinion pieces from various publications to understand different viewpoints.",
-        "Follow reputed journalists or subject matter experts on social media for curated insights.",
-        "Discuss current events with friends and family to broaden your understanding.",
-        "Support credible journalism through subscriptions if possible."
-    ],
-    "donts": [
-        "Don't get all your news from social media feeds like WhatsApp or Facebook.",
-        "Don't engage in 'doomscrolling'—endlessly scrolling through negative news.",
-        "Don't share news articles without reading them first.",
-        "Don't treat unverified forwards as facts."
-    ]
+        { "name": "NDTV", "url": "https://www.ndtv.com/" }
+      ]
+    },
+    {
+      "category": "News Aggregators",
+      "links": [
+        { "name": "Inshorts", "url": "https://inshorts.com/" },
+        { "name": "Google News", "url": "https://news.google.com/" }
+      ]
+    },
+    {
+      "category": "Fact-Checking Websites",
+      "links": [
+        { "name": "BOOM Live", "url": "https://www.boomlive.in/" },
+        { "name": "Alt News", "url": "https://www.altnews.in/" }
+      ]
+    }
+  ],
+  "dos": [
+    "Read from multiple sources with different viewpoints.",
+    "Focus on in-depth articles rather than just headlines.",
+    "Take breaks from the news cycle to protect your mental health.",
+    "Support credible journalism by subscribing if you can."
+  ],
+  "donts": [
+    "Don't rely on social media forwards for news.",
+    "Don't get into arguments in online comment sections.",
+    "Avoid doomscrolling, especially before bed.",
+    "Don't believe everything you read online."
+  ]
 }
+
